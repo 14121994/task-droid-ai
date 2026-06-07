@@ -1,0 +1,201 @@
+id,category,prompt,difficulty,priority,review_status,review_notes,approved
+G-0001,authentication,Implement login and signup flow with clean architecture boundaries; include test coverage for ViewModel and repository.,low,p2,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0002,networking,Build background refresh flow with WorkManager for an Android app using Retrofit and coroutines; include unit and integration testing strategy.,medium,p2,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0003,database,Create Room schema for task and project entities using Kotlin and Room; include conflict resolution strategy.,high,p0,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0004,ui_compose,Implement multi-step checkout UI flow with Navigation Compose and ViewModel; include performance considerations for recomposition.,medium,p2,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0005,testing_quality,Stabilize release readiness checks for core user journeys for a Compose-heavy codebase; include coverage thresholds and enforcement.,low,p0,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0006,authentication,Stabilize session refresh and logout flow with clean architecture boundaries; include test coverage for ViewModel and repository.,low,p1,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0007,networking,Build network layer for feed pagination with Hilt dependency injection; handle HTTP timeout and 429 backoff scenarios.,medium,p1,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0008,database,Implement offline-first synchronization pipeline for Android app data layer; include performance checks for heavy queries.,high,p2,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0009,ui_compose,Polish Compose dashboard screen with filtering in a modular Android app; add screenshot or golden test coverage.,high,p0,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0010,testing_quality,Improve release readiness checks for core user journeys in a multi-module Android project; include coverage thresholds and enforcement.,low,p0,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0011,authentication,Refactor session refresh and logout flow in a Kotlin Android app using MVVM and Compose; include test coverage for ViewModel and repository.,low,p1,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0012,networking,Improve error mapping strategy for API failures using Kotlin serialization; include optimistic UI updates.,medium,p1,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0013,database,Refine offline-first synchronization pipeline for Android app data layer; document rollback behavior for failed sync.,high,p2,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0014,ui_compose,Launch settings module with nested navigation with Navigation Compose and ViewModel; ensure back stack behavior is deterministic.,medium,p1,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0015,testing_quality,Automate lint and static analysis quality gates for a Compose-heavy codebase; include coverage thresholds and enforcement.,low,p2,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0016,authentication,Harden password reset and OTP verification journey with clean architecture boundaries; include edge-case handling for expired tokens.,low,p0,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0017,networking,Improve resilient API client with retry policy with Hilt dependency injection; ensure logs are safe and redact sensitive fields.,high,p1,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0018,database,Refine offline-first synchronization pipeline using Kotlin and Room; include conflict resolution strategy.,high,p0,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0019,ui_compose,Launch profile and account management screens in a modular Android app; ensure back stack behavior is deterministic.,high,p1,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0020,testing_quality,Improve lint and static analysis quality gates in a multi-module Android project; include rollout safety checks.,medium,p2,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0021,authentication,Implement login and signup flow using Retrofit and token-based auth; include test coverage for ViewModel and repository.,high,p1,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0022,networking,Optimize network layer for feed pagination with Hilt dependency injection; ensure logs are safe and redact sensitive fields.,high,p1,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0023,database,Implement offline-first synchronization pipeline in an app with large dataset pagination; define migration tests for schema changes.,high,p0,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0024,ui_compose,Implement multi-step checkout UI flow for tablet and phone form factors; add screenshot or golden test coverage.,low,p1,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0025,testing_quality,Stabilize lint and static analysis quality gates for a legacy module under refactor; include coverage thresholds and enforcement.,high,p0,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0026,authentication,Harden multi-step onboarding with account creation using Retrofit and token-based auth; include accessibility requirements for forms.,low,p0,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0027,networking,Improve background refresh flow with WorkManager for a Jetpack Compose app; include optimistic UI updates.,low,p1,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0028,database,Refine database migration plan for version upgrades in an app with large dataset pagination; define migration tests for schema changes.,high,p1,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0029,ui_compose,Polish Compose dashboard screen with filtering using Jetpack Compose and Material 3; add screenshot or golden test coverage.,medium,p2,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0030,testing_quality,Increase lint and static analysis quality gates with Gradle-based CI pipelines; include coverage thresholds and enforcement.,low,p0,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0031,authentication,Stabilize login and signup flow targeting Android 12+ and Material 3; include test coverage for ViewModel and repository.,low,p0,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0032,networking,"Migrate background refresh flow with WorkManager in a modularized Android project; include loading, empty, and failure UI states.",high,p0,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0033,database,Rework local cache invalidation and refresh policy in an app with large dataset pagination; include conflict resolution strategy.,high,p1,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0034,ui_compose,Polish profile and account management screens with dark/light theme support; include performance considerations for recomposition.,medium,p2,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0035,testing_quality,Enforce lint and static analysis quality gates for a Kotlin Android app; include deterministic test data setup.,low,p0,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0036,authentication,Ship biometric authentication flow targeting Android 12+ and Material 3; include test coverage for ViewModel and repository.,low,p2,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0037,networking,Build resilient API client with retry policy for an Android app using Retrofit and coroutines; handle HTTP timeout and 429 backoff scenarios.,medium,p2,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0038,database,Implement local cache invalidation and refresh policy with repository mediation between API and local DB; include performance checks for heavy queries.,low,p0,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0039,ui_compose,Redesign multi-step checkout UI flow in a modular Android app; ensure back stack behavior is deterministic.,low,p1,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0040,testing_quality,Stabilize lint and static analysis quality gates for a Kotlin Android app; include coverage thresholds and enforcement.,high,p1,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0041,authentication,Harden password reset and OTP verification journey with offline-aware state handling; include analytics events for success and failure states.,high,p2,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0042,networking,"Build network layer for feed pagination with Hilt dependency injection; include loading, empty, and failure UI states.",low,p2,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0043,database,Refine local cache invalidation and refresh policy in an app with large dataset pagination; include performance checks for heavy queries.,low,p1,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0044,ui_compose,Redesign profile and account management screens with dark/light theme support; define UI state model for loading/empty/error.,low,p1,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0045,testing_quality,Automate unit and instrumentation coverage for critical flows for a Kotlin Android app; include rollout safety checks.,low,p2,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0046,authentication,Refactor biometric authentication flow with offline-aware state handling; include analytics events for success and failure states.,medium,p2,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0047,networking,Migrate network layer for feed pagination in a modularized Android project; ensure logs are safe and redact sensitive fields.,low,p1,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0048,database,Migrate DAO query strategy for dashboard metrics with repository mediation between API and local DB; include performance checks for heavy queries.,high,p0,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0049,ui_compose,Launch search experience with debounced queries with Navigation Compose and ViewModel; define UI state model for loading/empty/error.,medium,p2,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0050,testing_quality,Increase release readiness checks for core user journeys with Gradle-based CI pipelines; include coverage thresholds and enforcement.,high,p1,human_reviewed_approved,Approved for production-ready baseline set.,yes
+G-0051,authentication,Implement login and signup flow targeting Android 12+ and Material 3; include analytics events for success and failure states.,high,p0,seeded_needs_human_review,,no
+G-0052,networking,Design network layer for feed pagination for a Jetpack Compose app; handle HTTP timeout and 429 backoff scenarios.,low,p2,seeded_needs_human_review,,no
+G-0053,database,Implement Room schema for task and project entities using Kotlin and Room; include performance checks for heavy queries.,low,p0,seeded_needs_human_review,,no
+G-0054,ui_compose,Redesign multi-step checkout UI flow in a modular Android app; include accessibility and talkback support.,high,p2,seeded_needs_human_review,,no
+G-0055,testing_quality,Stabilize release readiness checks for core user journeys with Gradle-based CI pipelines; include rollout safety checks.,medium,p1,seeded_needs_human_review,,no
+G-0056,authentication,Refactor session refresh and logout flow using Retrofit and token-based auth; include explicit error messaging strategy.,medium,p2,seeded_needs_human_review,,no
+G-0057,networking,Improve error mapping strategy for API failures using Kotlin serialization; handle HTTP timeout and 429 backoff scenarios.,low,p1,seeded_needs_human_review,,no
+G-0058,database,Implement database migration plan for version upgrades for Android app data layer; define migration tests for schema changes.,high,p2,seeded_needs_human_review,,no
+G-0059,ui_compose,Launch profile and account management screens with Navigation Compose and ViewModel; add screenshot or golden test coverage.,low,p2,seeded_needs_human_review,,no
+G-0060,testing_quality,Improve flaky test triage and stabilization plan in a multi-module Android project; include lint baseline cleanup strategy.,high,p0,seeded_needs_human_review,,no
+G-0061,authentication,Harden multi-step onboarding with account creation targeting Android 12+ and Material 3; include edge-case handling for expired tokens.,high,p0,seeded_needs_human_review,,no
+G-0062,networking,"Improve network layer for feed pagination in a modularized Android project; include loading, empty, and failure UI states.",low,p2,seeded_needs_human_review,,no
+G-0063,database,Implement local cache invalidation and refresh policy with repository mediation between API and local DB; enforce transactional writes where needed.,high,p2,seeded_needs_human_review,,no
+G-0064,ui_compose,Build settings module with nested navigation for tablet and phone form factors; include performance considerations for recomposition.,medium,p1,seeded_needs_human_review,,no
+G-0065,testing_quality,Increase unit and instrumentation coverage for critical flows for a legacy module under refactor; include deterministic test data setup.,low,p2,seeded_needs_human_review,,no
+G-0066,authentication,Harden biometric authentication flow with clean architecture boundaries; include test coverage for ViewModel and repository.,high,p1,seeded_needs_human_review,,no
+G-0067,networking,Optimize error mapping strategy for API failures for a Jetpack Compose app; handle HTTP timeout and 429 backoff scenarios.,low,p2,seeded_needs_human_review,,no
+G-0068,database,Refine database migration plan for version upgrades for Android app data layer; enforce transactional writes where needed.,high,p0,seeded_needs_human_review,,no
+G-0069,ui_compose,Redesign search experience with debounced queries with Navigation Compose and ViewModel; include accessibility and talkback support.,medium,p1,seeded_needs_human_review,,no
+G-0070,testing_quality,Increase flaky test triage and stabilization plan in a multi-module Android project; include failure diagnostics and reporting.,high,p2,seeded_needs_human_review,,no
+G-0071,authentication,Harden multi-step onboarding with account creation with offline-aware state handling; include accessibility requirements for forms.,high,p2,seeded_needs_human_review,,no
+G-0072,networking,Design resilient API client with retry policy in a modularized Android project; ensure logs are safe and redact sensitive fields.,low,p2,seeded_needs_human_review,,no
+G-0073,database,Migrate DAO query strategy for dashboard metrics using Kotlin and Room; enforce transactional writes where needed.,low,p0,seeded_needs_human_review,,no
+G-0074,ui_compose,Implement search experience with debounced queries using Jetpack Compose and Material 3; ensure back stack behavior is deterministic.,low,p2,seeded_needs_human_review,,no
+G-0075,testing_quality,Stabilize flaky test triage and stabilization plan for a Compose-heavy codebase; include failure diagnostics and reporting.,low,p2,seeded_needs_human_review,,no
+G-0076,authentication,Refactor password reset and OTP verification journey with clean architecture boundaries; include explicit error messaging strategy.,low,p1,seeded_needs_human_review,,no
+G-0077,networking,Improve background refresh flow with WorkManager with Hilt dependency injection; include unit and integration testing strategy.,medium,p2,seeded_needs_human_review,,no
+G-0078,database,Create offline-first synchronization pipeline using Kotlin and Room; document rollback behavior for failed sync.,medium,p2,seeded_needs_human_review,,no
+G-0079,ui_compose,Implement multi-step checkout UI flow with dark/light theme support; add screenshot or golden test coverage.,high,p1,seeded_needs_human_review,,no
+G-0080,testing_quality,Stabilize release readiness checks for core user journeys with Gradle-based CI pipelines; include coverage thresholds and enforcement.,medium,p0,seeded_needs_human_review,,no
+G-0081,authentication,Refactor session refresh and logout flow in a Kotlin Android app using MVVM and Compose; include analytics events for success and failure states.,low,p0,seeded_needs_human_review,,no
+G-0082,networking,Optimize resilient API client with retry policy using Kotlin serialization; ensure logs are safe and redact sensitive fields.,low,p0,seeded_needs_human_review,,no
+G-0083,database,Migrate database migration plan for version upgrades with repository mediation between API and local DB; define migration tests for schema changes.,high,p1,seeded_needs_human_review,,no
+G-0084,ui_compose,Launch profile and account management screens with dark/light theme support; add screenshot or golden test coverage.,medium,p0,seeded_needs_human_review,,no
+G-0085,testing_quality,Improve release readiness checks for core user journeys in a multi-module Android project; include failure diagnostics and reporting.,medium,p0,seeded_needs_human_review,,no
+G-0086,authentication,Stabilize biometric authentication flow targeting Android 12+ and Material 3; include accessibility requirements for forms.,medium,p1,seeded_needs_human_review,,no
+G-0087,networking,"Optimize network layer for feed pagination using Kotlin serialization; include loading, empty, and failure UI states.",low,p1,seeded_needs_human_review,,no
+G-0088,database,Implement database migration plan for version upgrades with repository mediation between API and local DB; include performance checks for heavy queries.,medium,p1,seeded_needs_human_review,,no
+G-0089,ui_compose,Redesign multi-step checkout UI flow with dark/light theme support; define UI state model for loading/empty/error.,high,p2,seeded_needs_human_review,,no
+G-0090,testing_quality,Improve release readiness checks for core user journeys with Gradle-based CI pipelines; include deterministic test data setup.,low,p2,seeded_needs_human_review,,no
+G-0091,authentication,Harden biometric authentication flow using Retrofit and token-based auth; include test coverage for ViewModel and repository.,low,p2,seeded_needs_human_review,,no
+G-0092,networking,Design error mapping strategy for API failures for a Jetpack Compose app; handle HTTP timeout and 429 backoff scenarios.,medium,p1,seeded_needs_human_review,,no
+G-0093,database,Implement local cache invalidation and refresh policy for a Compose-first architecture; include performance checks for heavy queries.,medium,p2,seeded_needs_human_review,,no
+G-0094,ui_compose,Redesign Compose dashboard screen with filtering using Jetpack Compose and Material 3; ensure back stack behavior is deterministic.,low,p2,seeded_needs_human_review,,no
+G-0095,testing_quality,Automate CI quality gate for Android modules for a Kotlin Android app; include rollout safety checks.,low,p2,seeded_needs_human_review,,no
+G-0096,authentication,Stabilize biometric authentication flow with offline-aware state handling; include accessibility requirements for forms.,high,p0,seeded_needs_human_review,,no
+G-0097,networking,Improve error mapping strategy for API failures for a Jetpack Compose app; include unit and integration testing strategy.,medium,p0,seeded_needs_human_review,,no
+G-0098,database,Rework local cache invalidation and refresh policy for a Compose-first architecture; include performance checks for heavy queries.,medium,p2,seeded_needs_human_review,,no
+G-0099,ui_compose,Build multi-step checkout UI flow with dark/light theme support; define UI state model for loading/empty/error.,medium,p1,seeded_needs_human_review,,no
+G-0100,testing_quality,Increase flaky test triage and stabilization plan in a multi-module Android project; include deterministic test data setup.,medium,p1,seeded_needs_human_review,,no
+G-0101,authentication,Ship login and signup flow using Retrofit and token-based auth; include test coverage for ViewModel and repository.,low,p1,seeded_needs_human_review,,no
+G-0102,networking,Design resilient API client with retry policy for an Android app using Retrofit and coroutines; ensure logs are safe and redact sensitive fields.,medium,p1,seeded_needs_human_review,,no
+G-0103,database,Implement DAO query strategy for dashboard metrics for a Compose-first architecture; define migration tests for schema changes.,low,p1,seeded_needs_human_review,,no
+G-0104,ui_compose,Polish multi-step checkout UI flow using Jetpack Compose and Material 3; include performance considerations for recomposition.,medium,p1,seeded_needs_human_review,,no
+G-0105,testing_quality,Increase flaky test triage and stabilization plan for a Compose-heavy codebase; include lint baseline cleanup strategy.,medium,p0,seeded_needs_human_review,,no
+G-0106,authentication,Ship multi-step onboarding with account creation using Retrofit and token-based auth; include analytics events for success and failure states.,low,p1,seeded_needs_human_review,,no
+G-0107,networking,Migrate error mapping strategy for API failures for an Android app using Retrofit and coroutines; ensure logs are safe and redact sensitive fields.,medium,p0,seeded_needs_human_review,,no
+G-0108,database,Rework local cache invalidation and refresh policy for a Compose-first architecture; include conflict resolution strategy.,high,p0,seeded_needs_human_review,,no
+G-0109,ui_compose,Implement search experience with debounced queries in a modular Android app; include performance considerations for recomposition.,high,p2,seeded_needs_human_review,,no
+G-0110,testing_quality,Increase CI quality gate for Android modules in a multi-module Android project; include lint baseline cleanup strategy.,low,p2,seeded_needs_human_review,,no
+G-0111,authentication,Harden password reset and OTP verification journey with clean architecture boundaries; include test coverage for ViewModel and repository.,medium,p1,seeded_needs_human_review,,no
+G-0112,networking,Improve error mapping strategy for API failures using Kotlin serialization; ensure logs are safe and redact sensitive fields.,medium,p2,seeded_needs_human_review,,no
+G-0113,database,Rework Room schema for task and project entities in an app with large dataset pagination; define migration tests for schema changes.,medium,p2,seeded_needs_human_review,,no
+G-0114,ui_compose,Implement Compose dashboard screen with filtering using Jetpack Compose and Material 3; define UI state model for loading/empty/error.,low,p2,seeded_needs_human_review,,no
+G-0115,testing_quality,Automate lint and static analysis quality gates in a multi-module Android project; include failure diagnostics and reporting.,medium,p0,seeded_needs_human_review,,no
+G-0116,authentication,Implement multi-step onboarding with account creation using Retrofit and token-based auth; include analytics events for success and failure states.,high,p1,seeded_needs_human_review,,no
+G-0117,networking,Improve resilient API client with retry policy for a Jetpack Compose app; include unit and integration testing strategy.,high,p0,seeded_needs_human_review,,no
+G-0118,database,Create local cache invalidation and refresh policy with repository mediation between API and local DB; define migration tests for schema changes.,high,p2,seeded_needs_human_review,,no
+G-0119,ui_compose,Build multi-step checkout UI flow with dark/light theme support; ensure back stack behavior is deterministic.,high,p2,seeded_needs_human_review,,no
+G-0120,testing_quality,Increase release readiness checks for core user journeys in a multi-module Android project; include coverage thresholds and enforcement.,high,p1,seeded_needs_human_review,,no
+G-0121,authentication,Ship login and signup flow targeting Android 12+ and Material 3; include edge-case handling for expired tokens.,medium,p0,seeded_needs_human_review,,no
+G-0122,networking,Migrate repository sync flow for remote-first data for an Android app using Retrofit and coroutines; include unit and integration testing strategy.,high,p1,seeded_needs_human_review,,no
+G-0123,database,Create DAO query strategy for dashboard metrics for a Compose-first architecture; define migration tests for schema changes.,medium,p1,seeded_needs_human_review,,no
+G-0124,ui_compose,Polish settings module with nested navigation with dark/light theme support; define UI state model for loading/empty/error.,high,p0,seeded_needs_human_review,,no
+G-0125,testing_quality,Improve release readiness checks for core user journeys with Gradle-based CI pipelines; include lint baseline cleanup strategy.,medium,p1,seeded_needs_human_review,,no
+G-0126,authentication,Ship session refresh and logout flow with clean architecture boundaries; include test coverage for ViewModel and repository.,low,p1,seeded_needs_human_review,,no
+G-0127,networking,Migrate resilient API client with retry policy with Hilt dependency injection; include unit and integration testing strategy.,high,p0,seeded_needs_human_review,,no
+G-0128,database,Rework offline-first synchronization pipeline for Android app data layer; include performance checks for heavy queries.,medium,p2,seeded_needs_human_review,,no
+G-0129,ui_compose,Polish settings module with nested navigation for tablet and phone form factors; add screenshot or golden test coverage.,medium,p1,seeded_needs_human_review,,no
+G-0130,testing_quality,Automate flaky test triage and stabilization plan with Gradle-based CI pipelines; include coverage thresholds and enforcement.,high,p2,seeded_needs_human_review,,no
+G-0131,authentication,Implement biometric authentication flow with offline-aware state handling; include analytics events for success and failure states.,high,p2,seeded_needs_human_review,,no
+G-0132,networking,Migrate error mapping strategy for API failures with Hilt dependency injection; handle HTTP timeout and 429 backoff scenarios.,low,p1,seeded_needs_human_review,,no
+G-0133,database,Refine DAO query strategy for dashboard metrics using Kotlin and Room; enforce transactional writes where needed.,high,p0,seeded_needs_human_review,,no
+G-0134,ui_compose,Build search experience with debounced queries in a modular Android app; include performance considerations for recomposition.,medium,p1,seeded_needs_human_review,,no
+G-0135,testing_quality,Automate flaky test triage and stabilization plan for a Compose-heavy codebase; include lint baseline cleanup strategy.,medium,p1,seeded_needs_human_review,,no
+G-0136,authentication,Harden biometric authentication flow in a Kotlin Android app using MVVM and Compose; include test coverage for ViewModel and repository.,medium,p2,seeded_needs_human_review,,no
+G-0137,networking,Optimize resilient API client with retry policy in a modularized Android project; include optimistic UI updates.,high,p1,seeded_needs_human_review,,no
+G-0138,database,Migrate database migration plan for version upgrades in an app with large dataset pagination; document rollback behavior for failed sync.,medium,p2,seeded_needs_human_review,,no
+G-0139,ui_compose,Redesign profile and account management screens with Navigation Compose and ViewModel; add screenshot or golden test coverage.,low,p1,seeded_needs_human_review,,no
+G-0140,testing_quality,Increase release readiness checks for core user journeys in a multi-module Android project; include deterministic test data setup.,low,p2,seeded_needs_human_review,,no
+G-0141,authentication,Ship session refresh and logout flow using Retrofit and token-based auth; include analytics events for success and failure states.,low,p2,seeded_needs_human_review,,no
+G-0142,networking,Optimize repository sync flow for remote-first data with Hilt dependency injection; ensure logs are safe and redact sensitive fields.,medium,p1,seeded_needs_human_review,,no
+G-0143,database,Refine Room schema for task and project entities with repository mediation between API and local DB; include performance checks for heavy queries.,low,p2,seeded_needs_human_review,,no
+G-0144,ui_compose,Polish search experience with debounced queries using Jetpack Compose and Material 3; include performance considerations for recomposition.,high,p0,seeded_needs_human_review,,no
+G-0145,testing_quality,Increase lint and static analysis quality gates in a multi-module Android project; include rollout safety checks.,medium,p2,seeded_needs_human_review,,no
+G-0146,authentication,Refactor login and signup flow targeting Android 12+ and Material 3; include analytics events for success and failure states.,high,p0,seeded_needs_human_review,,no
+G-0147,networking,Optimize resilient API client with retry policy for a Jetpack Compose app; ensure logs are safe and redact sensitive fields.,medium,p1,seeded_needs_human_review,,no
+G-0148,database,Migrate database migration plan for version upgrades for a Compose-first architecture; enforce transactional writes where needed.,high,p0,seeded_needs_human_review,,no
+G-0149,ui_compose,Implement multi-step checkout UI flow using Jetpack Compose and Material 3; define UI state model for loading/empty/error.,high,p2,seeded_needs_human_review,,no
+G-0150,testing_quality,Improve unit and instrumentation coverage for critical flows in a multi-module Android project; include failure diagnostics and reporting.,low,p0,seeded_needs_human_review,,no
+G-0151,authentication,Implement biometric authentication flow in a Kotlin Android app using MVVM and Compose; include analytics events for success and failure states.,medium,p0,seeded_needs_human_review,,no
+G-0152,networking,Optimize error mapping strategy for API failures using Kotlin serialization; handle HTTP timeout and 429 backoff scenarios.,low,p1,seeded_needs_human_review,,no
+G-0153,database,Migrate DAO query strategy for dashboard metrics for Android app data layer; include conflict resolution strategy.,medium,p0,seeded_needs_human_review,,no
+G-0154,ui_compose,Launch settings module with nested navigation with dark/light theme support; include accessibility and talkback support.,high,p2,seeded_needs_human_review,,no
+G-0155,testing_quality,Enforce flaky test triage and stabilization plan in a multi-module Android project; include coverage thresholds and enforcement.,low,p2,seeded_needs_human_review,,no
+G-0156,authentication,Harden multi-step onboarding with account creation targeting Android 12+ and Material 3; include explicit error messaging strategy.,medium,p2,seeded_needs_human_review,,no
+G-0157,networking,"Migrate repository sync flow for remote-first data with Hilt dependency injection; include loading, empty, and failure UI states.",high,p0,seeded_needs_human_review,,no
+G-0158,database,Rework DAO query strategy for dashboard metrics for Android app data layer; document rollback behavior for failed sync.,low,p1,seeded_needs_human_review,,no
+G-0159,ui_compose,Build multi-step checkout UI flow for tablet and phone form factors; include accessibility and talkback support.,low,p2,seeded_needs_human_review,,no
+G-0160,testing_quality,Automate release readiness checks for core user journeys for a Kotlin Android app; include deterministic test data setup.,high,p2,seeded_needs_human_review,,no
+G-0161,authentication,Refactor password reset and OTP verification journey targeting Android 12+ and Material 3; include analytics events for success and failure states.,medium,p2,seeded_needs_human_review,,no
+G-0162,networking,Optimize error mapping strategy for API failures with Hilt dependency injection; handle HTTP timeout and 429 backoff scenarios.,medium,p1,seeded_needs_human_review,,no
+G-0163,database,Rework offline-first synchronization pipeline with repository mediation between API and local DB; define migration tests for schema changes.,low,p1,seeded_needs_human_review,,no
+G-0164,ui_compose,Polish search experience with debounced queries for tablet and phone form factors; ensure back stack behavior is deterministic.,high,p2,seeded_needs_human_review,,no
+G-0165,testing_quality,Stabilize unit and instrumentation coverage for critical flows for a Compose-heavy codebase; include deterministic test data setup.,medium,p2,seeded_needs_human_review,,no
+G-0166,authentication,Stabilize multi-step onboarding with account creation in a Kotlin Android app using MVVM and Compose; include accessibility requirements for forms.,medium,p1,seeded_needs_human_review,,no
+G-0167,networking,"Build resilient API client with retry policy for a Jetpack Compose app; include loading, empty, and failure UI states.",high,p1,seeded_needs_human_review,,no
+G-0168,database,Rework Room schema for task and project entities using Kotlin and Room; enforce transactional writes where needed.,high,p2,seeded_needs_human_review,,no
+G-0169,ui_compose,Build search experience with debounced queries with dark/light theme support; include accessibility and talkback support.,low,p0,seeded_needs_human_review,,no
+G-0170,testing_quality,Automate lint and static analysis quality gates in a multi-module Android project; include deterministic test data setup.,high,p2,seeded_needs_human_review,,no
+G-0171,authentication,Ship password reset and OTP verification journey in a Kotlin Android app using MVVM and Compose; include test coverage for ViewModel and repository.,low,p1,seeded_needs_human_review,,no
+G-0172,networking,"Build resilient API client with retry policy with Hilt dependency injection; include loading, empty, and failure UI states.",high,p0,seeded_needs_human_review,,no
+G-0173,database,Migrate DAO query strategy for dashboard metrics for a Compose-first architecture; include performance checks for heavy queries.,low,p1,seeded_needs_human_review,,no
+G-0174,ui_compose,Launch settings module with nested navigation with dark/light theme support; define UI state model for loading/empty/error.,high,p0,seeded_needs_human_review,,no
+G-0175,testing_quality,Enforce unit and instrumentation coverage for critical flows for a Compose-heavy codebase; include lint baseline cleanup strategy.,medium,p0,seeded_needs_human_review,,no
+G-0176,authentication,Harden login and signup flow with clean architecture boundaries; include explicit error messaging strategy.,high,p0,seeded_needs_human_review,,no
+G-0177,networking,Migrate resilient API client with retry policy with Hilt dependency injection; include unit and integration testing strategy.,medium,p1,seeded_needs_human_review,,no
+G-0178,database,Migrate database migration plan for version upgrades in an app with large dataset pagination; include performance checks for heavy queries.,medium,p1,seeded_needs_human_review,,no
+G-0179,ui_compose,Redesign settings module with nested navigation in a modular Android app; ensure back stack behavior is deterministic.,low,p1,seeded_needs_human_review,,no
+G-0180,testing_quality,Increase flaky test triage and stabilization plan for a legacy module under refactor; include lint baseline cleanup strategy.,medium,p0,seeded_needs_human_review,,no
+G-0181,authentication,Refactor password reset and OTP verification journey in a Kotlin Android app using MVVM and Compose; include test coverage for ViewModel and repository.,high,p0,seeded_needs_human_review,,no
+G-0182,networking,Improve network layer for feed pagination with Hilt dependency injection; handle HTTP timeout and 429 backoff scenarios.,high,p1,seeded_needs_human_review,,no
+G-0183,database,Create local cache invalidation and refresh policy for a Compose-first architecture; include conflict resolution strategy.,low,p1,seeded_needs_human_review,,no
+G-0184,ui_compose,Build profile and account management screens in a modular Android app; ensure back stack behavior is deterministic.,high,p2,seeded_needs_human_review,,no
+G-0185,testing_quality,Improve release readiness checks for core user journeys for a legacy module under refactor; include deterministic test data setup.,high,p0,seeded_needs_human_review,,no
+G-0186,authentication,Stabilize multi-step onboarding with account creation in a Kotlin Android app using MVVM and Compose; include accessibility requirements for forms.,low,p2,seeded_needs_human_review,,no
+G-0187,networking,Improve resilient API client with retry policy for an Android app using Retrofit and coroutines; ensure logs are safe and redact sensitive fields.,low,p0,seeded_needs_human_review,,no
+G-0188,database,Create DAO query strategy for dashboard metrics using Kotlin and Room; enforce transactional writes where needed.,low,p2,seeded_needs_human_review,,no
+G-0189,ui_compose,Build Compose dashboard screen with filtering for tablet and phone form factors; add screenshot or golden test coverage.,medium,p1,seeded_needs_human_review,,no
+G-0190,testing_quality,Enforce lint and static analysis quality gates with Gradle-based CI pipelines; include lint baseline cleanup strategy.,high,p0,seeded_needs_human_review,,no
+G-0191,authentication,Refactor biometric authentication flow using Retrofit and token-based auth; include edge-case handling for expired tokens.,high,p1,seeded_needs_human_review,,no
+G-0192,networking,Optimize resilient API client with retry policy with Hilt dependency injection; include unit and integration testing strategy.,low,p2,seeded_needs_human_review,,no
+G-0193,database,Rework offline-first synchronization pipeline for a Compose-first architecture; enforce transactional writes where needed.,high,p2,seeded_needs_human_review,,no
+G-0194,ui_compose,Polish profile and account management screens in a modular Android app; define UI state model for loading/empty/error.,low,p1,seeded_needs_human_review,,no
+G-0195,testing_quality,Improve release readiness checks for core user journeys for a Compose-heavy codebase; include lint baseline cleanup strategy.,high,p1,seeded_needs_human_review,,no
+G-0196,authentication,Stabilize session refresh and logout flow using Retrofit and token-based auth; include analytics events for success and failure states.,medium,p2,seeded_needs_human_review,,no
+G-0197,networking,"Design error mapping strategy for API failures for a Jetpack Compose app; include loading, empty, and failure UI states.",high,p1,seeded_needs_human_review,,no
+G-0198,database,Migrate Room schema for task and project entities for a Compose-first architecture; enforce transactional writes where needed.,low,p0,seeded_needs_human_review,,no
+G-0199,ui_compose,Implement multi-step checkout UI flow with dark/light theme support; add screenshot or golden test coverage.,low,p0,seeded_needs_human_review,,no
+G-0200,testing_quality,Improve lint and static analysis quality gates in a multi-module Android project; include rollout safety checks.,medium,p0,seeded_needs_human_review,,no

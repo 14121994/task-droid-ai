@@ -1,0 +1,1601 @@
+id,prompt,is_android_related
+A-00742,Build Material 3 dashboard layout with ViewModel state handling.,1
+A-00795,Improve login and signup flow with unit tests and lint checks.,1
+A-00200,Optimize DAO queries for dashboard for Android app.,1
+N-00246,Create a PowerPoint deck for investor updates.,0
+A-01065,Improve lint and static analysis quality gate with flaky test mitigation.,1
+N-00247,Generate SQL queries for warehouse ETL dashboard.,0
+N-00106,Create a Photoshop workflow for product photos.,0
+A-00021,Optimize error mapping for network responses with offline cache fallback.,1
+A-00969,Implement Jetpack Compose profile screen with ViewModel state handling.,1
+A-01155,Build navigation graph with nested routes for Android 14+.,1
+N-00084,Create a Photoshop workflow for product photos.,0
+A-00894,Build API client layer with clean architecture boundaries.,1
+A-00149,Redesign state-driven settings screen with Compose navigation.,1
+A-00104,Increase instrumentation test reliability with flaky test mitigation.,1
+A-00838,Build pagination for feed API in an Android app.,1
+N-00308,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-01035,Ship state-driven settings screen with Compose navigation.,1
+A-00204,Stabilize crash-free startup flow with flaky test mitigation.,1
+N-00232,Create a Photoshop workflow for product photos.,0
+A-00491,Create biometric login with MVVM and repository pattern.,1
+A-00228,Create password reset screen with unit tests and lint checks.,1
+A-00799,Implement Material 3 dashboard layout with ViewModel state handling.,1
+A-00606,Migrate DAO queries for dashboard using Kotlin data classes.,1
+N-00043,Design a WordPress blog theme for travel agency.,0
+N-00218,Improve Excel macros for monthly finance workbook.,0
+A-00734,Implement navigation graph with nested routes for Android 14+.,1
+A-00203,Build navigation graph with nested routes with ViewModel state handling.,1
+N-00292,Design a WordPress blog theme for travel agency.,0
+A-00851,Implement state-driven settings screen with ViewModel state handling.,1
+A-00150,Increase instrumentation test reliability with flaky test mitigation.,1
+A-00097,Build navigation graph with nested routes with ViewModel state handling.,1
+A-00336,Optimize synchronization between API and Room with repository layer updates.,1
+A-00096,Stabilize crash-free startup flow for Android project.,1
+A-00163,Optimize DAO queries for dashboard using Kotlin data classes.,1
+A-00589,Improve OAuth token refresh with MVVM and repository pattern.,1
+A-01046,Build biometric login with MVVM and repository pattern.,1
+N-00001,Create a Photoshop workflow for product photos.,0
+N-00186,Create a Photoshop workflow for product photos.,0
+A-00780,Migrate local cache invalidation strategy for Android app.,1
+A-00206,Design API client layer with offline cache fallback.,1
+N-00000,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00009,Increase test coverage for ViewModel layer with flaky test mitigation.,1
+A-00651,Build OAuth token refresh with unit tests and lint checks.,1
+N-00115,Improve Excel macros for monthly finance workbook.,0
+N-00233,Design a WordPress blog theme for travel agency.,0
+A-00584,Implement local cache invalidation strategy for Android app.,1
+A-00372,Optimize pagination for feed API in an Android app.,1
+A-01103,Increase lint and static analysis quality gate with Espresso and JUnit.,1
+N-00078,Generate SQL queries for warehouse ETL dashboard.,0
+N-00253,Generate SQL queries for warehouse ETL dashboard.,0
+A-00514,Build biometric login with MVVM and repository pattern.,1
+A-01175,Optimize pagination for feed API with clean architecture boundaries.,1
+A-01081,Increase crash-free startup flow for Android project.,1
+A-00032,Design pagination for feed API in an Android app.,1
+A-00749,Redesign Jetpack Compose profile screen with ViewModel state handling.,1
+A-00364,Stabilize local cache invalidation strategy with repository layer updates.,1
+N-00279,Create a Photoshop workflow for product photos.,0
+N-00322,Create a PowerPoint deck for investor updates.,0
+N-00248,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00708,Ship Material 3 dashboard layout for Android 14+.,1
+A-00897,Implement biometric login with MVVM and repository pattern.,1
+A-00001,Build API client layer in an Android app.,1
+A-00153,Ship Material 3 dashboard layout for Android 14+.,1
+A-00479,Implement Room database schema for tasks using Kotlin data classes.,1
+A-01018,Optimize API client layer with offline cache fallback.,1
+A-00972,Create OAuth token refresh with MVVM and repository pattern.,1
+A-01149,Redesign Jetpack Compose profile screen with Compose navigation.,1
+N-00102,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00869,Redesign Jetpack Compose profile screen with UI tests for critical paths.,1
+A-00193,Add retry and timeout handling in an Android app.,1
+A-00864,Redesign Material 3 dashboard layout with Compose navigation.,1
+A-00703,Implement OAuth token refresh using Kotlin and Compose.,1
+N-00348,Create a Photoshop workflow for product photos.,0
+A-01054,Create biometric login with unit tests and lint checks.,1
+A-01013,Migrate local cache invalidation strategy with instrumentation tests.,1
+A-00338,Implement synchronization between API and Room with instrumentation tests.,1
+A-00324,Build biometric login integrated with Retrofit APIs.,1
+A-00371,Stabilize Room database schema for tasks with instrumentation tests.,1
+N-00331,Design a WordPress blog theme for travel agency.,0
+A-00373,Increase test coverage for ViewModel layer for Android project.,1
+A-00401,Implement OAuth token refresh integrated with Retrofit APIs.,1
+A-00146,Enforce crash-free startup flow for Android project.,1
+N-00336,Create a Photoshop workflow for product photos.,0
+N-00280,Build an iOS SwiftUI shopping app checkout flow.,0
+A-01129,Implement biometric login using Kotlin and Compose.,1
+N-00205,Improve Excel macros for monthly finance workbook.,0
+A-00826,Ship state-driven settings screen for Android 14+.,1
+A-00468,Improve biometric login integrated with Retrofit APIs.,1
+A-00814,Enforce lint and static analysis quality gate with flaky test mitigation.,1
+N-00083,Create a Photoshop workflow for product photos.,0
+A-00226,Implement biometric login with MVVM and repository pattern.,1
+N-00316,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00477,Stabilize instrumentation test reliability with flaky test mitigation.,1
+A-00221,Optimize pagination for feed API in an Android app.,1
+A-00202,Build password reset screen integrated with Retrofit APIs.,1
+A-00736,Build biometric login integrated with Retrofit APIs.,1
+N-00094,Build an iOS SwiftUI shopping app checkout flow.,0
+N-00012,Create a PowerPoint deck for investor updates.,0
+N-00302,Create a PowerPoint deck for investor updates.,0
+A-00292,Redesign Jetpack Compose profile screen with ViewModel state handling.,1
+N-00235,Generate SQL queries for warehouse ETL dashboard.,0
+N-00277,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00506,Build state-driven settings screen with ViewModel state handling.,1
+N-00149,Design a WordPress blog theme for travel agency.,0
+A-00015,Optimize local cache invalidation strategy with instrumentation tests.,1
+A-00704,Optimize retry and timeout handling with clean architecture boundaries.,1
+A-01023,Create password reset screen with MVVM and repository pattern.,1
+A-00914,Add error mapping for network responses with offline cache fallback.,1
+N-00127,Generate SQL queries for warehouse ETL dashboard.,0
+A-00671,Create password reset screen using Kotlin and Compose.,1
+A-00419,Migrate DAO queries for dashboard using Kotlin data classes.,1
+A-00018,Stabilize crash-free startup flow for Android project.,1
+A-00131,Improve test coverage for ViewModel layer with flaky test mitigation.,1
+A-01078,Optimize local cache invalidation strategy using Kotlin data classes.,1
+A-00161,Increase instrumentation test reliability with Espresso and JUnit.,1
+A-00004,Stabilize instrumentation test reliability with Gradle CI tasks.,1
+A-00342,Enforce crash-free startup flow with Gradle CI tasks.,1
+A-00616,Stabilize Room database schema for tasks for Android app.,1
+N-00121,Create a PowerPoint deck for investor updates.,0
+N-00071,Create a PowerPoint deck for investor updates.,0
+A-00047,Refactor password reset screen integrated with Retrofit APIs.,1
+A-01055,Add API client layer in an Android app.,1
+A-00440,Improve test coverage for ViewModel layer with flaky test mitigation.,1
+A-00169,Implement Room database schema for tasks with instrumentation tests.,1
+N-00176,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00843,Optimize retry and timeout handling with clean architecture boundaries.,1
+A-00164,Build password reset screen using Kotlin and Compose.,1
+N-00330,Create a Photoshop workflow for product photos.,0
+A-00583,Create biometric login with unit tests and lint checks.,1
+A-00212,Stabilize DAO queries for dashboard with instrumentation tests.,1
+A-00039,Stabilize synchronization between API and Room for Android app.,1
+A-00252,Stabilize DAO queries for dashboard for Android app.,1
+A-00822,Enforce test coverage for ViewModel layer with flaky test mitigation.,1
+A-00504,Enforce test coverage for ViewModel layer with flaky test mitigation.,1
+A-00660,Build Jetpack Compose profile screen with UI tests for critical paths.,1
+A-00481,Add error mapping for network responses with offline cache fallback.,1
+A-00892,Implement biometric login integrated with Retrofit APIs.,1
+A-01132,Migrate local cache invalidation strategy with instrumentation tests.,1
+A-00534,Implement synchronization between API and Room with instrumentation tests.,1
+N-00183,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00821,Enforce crash-free startup flow with Espresso and JUnit.,1
+A-00471,Stabilize local cache invalidation strategy using Kotlin data classes.,1
+A-00304,Enforce instrumentation test reliability with Espresso and JUnit.,1
+A-01071,Ship Jetpack Compose profile screen with Compose navigation.,1
+N-00281,Build an iOS SwiftUI shopping app checkout flow.,0
+N-00157,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00563,Redesign navigation graph with nested routes with ViewModel state handling.,1
+A-00837,Stabilize local cache invalidation strategy for Android app.,1
+A-00745,Build login and signup flow using Kotlin and Compose.,1
+A-00417,Migrate local cache invalidation strategy with instrumentation tests.,1
+A-00675,Build OAuth token refresh integrated with Retrofit APIs.,1
+A-00782,Increase lint and static analysis quality gate for Android project.,1
+A-00777,Migrate local cache invalidation strategy with repository layer updates.,1
+A-00526,Optimize Room database schema for tasks using Kotlin data classes.,1
+A-00824,Improve test coverage for ViewModel layer for Android project.,1
+A-00818,Add error mapping for network responses in an Android app.,1
+A-00344,Create password reset screen with MVVM and repository pattern.,1
+A-00083,Add retry and timeout handling with offline cache fallback.,1
+N-00231,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00530,Enforce lint and static analysis quality gate with Gradle CI tasks.,1
+A-00966,Build retry and timeout handling in an Android app.,1
+A-01192,Improve biometric login integrated with Retrofit APIs.,1
+A-01144,Stabilize test coverage for ViewModel layer with Espresso and JUnit.,1
+A-00551,Build error mapping for network responses using Retrofit and coroutines.,1
+A-00918,Implement password reset screen with unit tests and lint checks.,1
+A-00725,Design API client layer with clean architecture boundaries.,1
+A-00334,Stabilize test coverage for ViewModel layer with Gradle CI tasks.,1
+N-00057,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+N-00193,Improve Excel macros for monthly finance workbook.,0
+A-00887,Optimize API client layer using Retrofit and coroutines.,1
+N-00070,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00416,Improve test coverage for ViewModel layer with Gradle CI tasks.,1
+A-00718,Improve instrumentation test reliability for Android project.,1
+A-00380,Build Material 3 dashboard layout with Compose navigation.,1
+A-00800,Add API client layer with offline cache fallback.,1
+N-00389,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00317,Implement synchronization between API and Room for Android app.,1
+A-00641,Ship state-driven settings screen with UI tests for critical paths.,1
+A-00740,Implement local cache invalidation strategy with instrumentation tests.,1
+A-00005,Implement Jetpack Compose profile screen with Compose navigation.,1
+A-01110,Build pagination for feed API with offline cache fallback.,1
+A-00570,Design API client layer using Retrofit and coroutines.,1
+A-00848,Refactor OAuth token refresh with MVVM and repository pattern.,1
+A-00629,Migrate synchronization between API and Room for Android app.,1
+A-00127,Redesign state-driven settings screen with Compose navigation.,1
+A-00601,Redesign Material 3 dashboard layout with UI tests for critical paths.,1
+A-00978,Increase instrumentation test reliability with flaky test mitigation.,1
+A-00262,Design API client layer with clean architecture boundaries.,1
+A-00220,Build state-driven settings screen for Android 14+.,1
+A-00813,Improve instrumentation test reliability with flaky test mitigation.,1
+N-00199,Generate SQL queries for warehouse ETL dashboard.,0
+N-00305,Generate SQL queries for warehouse ETL dashboard.,0
+A-00772,Create OAuth token refresh with MVVM and repository pattern.,1
+A-00753,Migrate local cache invalidation strategy with instrumentation tests.,1
+A-00854,Increase crash-free startup flow for Android project.,1
+A-00461,Stabilize crash-free startup flow with flaky test mitigation.,1
+A-00862,Enforce crash-free startup flow with Espresso and JUnit.,1
+N-00033,Create a Photoshop workflow for product photos.,0
+A-00816,Stabilize test coverage for ViewModel layer with flaky test mitigation.,1
+A-00525,Migrate local cache invalidation strategy with repository layer updates.,1
+N-00095,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00515,Add API client layer with clean architecture boundaries.,1
+A-00443,Stabilize crash-free startup flow with Espresso and JUnit.,1
+A-00158,Stabilize instrumentation test reliability with flaky test mitigation.,1
+A-00783,Redesign Material 3 dashboard layout for Android 14+.,1
+N-00049,Build an iOS SwiftUI shopping app checkout flow.,0
+A-01117,Implement synchronization between API and Room for Android app.,1
+N-00365,Generate SQL queries for warehouse ETL dashboard.,0
+A-00136,Build Jetpack Compose profile screen with ViewModel state handling.,1
+A-00246,Build retry and timeout handling with clean architecture boundaries.,1
+N-00168,Design a WordPress blog theme for travel agency.,0
+A-00995,Increase lint and static analysis quality gate with Espresso and JUnit.,1
+A-00134,Implement Material 3 dashboard layout with UI tests for critical paths.,1
+N-00079,Generate SQL queries for warehouse ETL dashboard.,0
+A-00610,Build password reset screen with MVVM and repository pattern.,1
+A-01168,Build login and signup flow with MVVM and repository pattern.,1
+A-00689,Build biometric login integrated with Retrofit APIs.,1
+A-00095,Stabilize Room database schema for tasks with repository layer updates.,1
+N-00394,Improve Excel macros for monthly finance workbook.,0
+N-00173,Create a Photoshop workflow for product photos.,0
+N-00047,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00710,Implement Room database schema for tasks using Kotlin data classes.,1
+A-00898,Stabilize crash-free startup flow with Gradle CI tasks.,1
+N-00392,Create a Photoshop workflow for product photos.,0
+A-00794,Migrate synchronization between API and Room using Kotlin data classes.,1
+A-00404,Redesign Jetpack Compose profile screen with Compose navigation.,1
+A-01068,Migrate DAO queries for dashboard for Android app.,1
+A-00430,Improve crash-free startup flow with Gradle CI tasks.,1
+N-00146,Generate SQL queries for warehouse ETL dashboard.,0
+N-00376,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+N-00391,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00771,Stabilize test coverage for ViewModel layer with flaky test mitigation.,1
+A-00808,Stabilize DAO queries for dashboard using Kotlin data classes.,1
+N-00264,Generate SQL queries for warehouse ETL dashboard.,0
+A-00758,Build API client layer with offline cache fallback.,1
+N-00329,Improve Excel macros for monthly finance workbook.,0
+N-00188,Create a PowerPoint deck for investor updates.,0
+A-00997,Implement biometric login using Kotlin and Compose.,1
+N-00017,Design a WordPress blog theme for travel agency.,0
+A-00029,Create biometric login with MVVM and repository pattern.,1
+N-00011,Design a WordPress blog theme for travel agency.,0
+N-00134,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+N-00301,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00835,Optimize error mapping for network responses with clean architecture boundaries.,1
+A-01001,Add error mapping for network responses in an Android app.,1
+A-00930,Ship Jetpack Compose profile screen for Android 14+.,1
+A-00181,Add pagination for feed API in an Android app.,1
+A-00328,Implement DAO queries for dashboard with repository layer updates.,1
+A-00954,Redesign Jetpack Compose profile screen for Android 14+.,1
+A-00905,Stabilize Room database schema for tasks for Android app.,1
+A-01082,Increase crash-free startup flow with flaky test mitigation.,1
+A-00668,Implement OAuth token refresh integrated with Retrofit APIs.,1
+A-00733,Stabilize DAO queries for dashboard with instrumentation tests.,1
+A-00516,Ship state-driven settings screen with Compose navigation.,1
+N-00100,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00769,Increase lint and static analysis quality gate with flaky test mitigation.,1
+A-00387,Implement Material 3 dashboard layout for Android 14+.,1
+A-00187,Add API client layer using Retrofit and coroutines.,1
+A-00196,Implement state-driven settings screen with ViewModel state handling.,1
+N-00381,Design a WordPress blog theme for travel agency.,0
+A-00406,Create password reset screen using Kotlin and Compose.,1
+N-00313,Create a PowerPoint deck for investor updates.,0
+A-00028,Improve password reset screen with unit tests and lint checks.,1
+A-00945,Refactor password reset screen integrated with Retrofit APIs.,1
+A-00495,Migrate synchronization between API and Room with instrumentation tests.,1
+A-01033,Build retry and timeout handling in an Android app.,1
+A-00356,Implement Jetpack Compose profile screen for Android 14+.,1
+A-00866,Design error mapping for network responses with clean architecture boundaries.,1
+N-00034,Improve Excel macros for monthly finance workbook.,0
+A-00352,Stabilize crash-free startup flow with flaky test mitigation.,1
+A-00170,Optimize API client layer in an Android app.,1
+N-00194,Create a Photoshop workflow for product photos.,0
+A-01060,Redesign state-driven settings screen with UI tests for critical paths.,1
+A-00823,Refactor OAuth token refresh with MVVM and repository pattern.,1
+A-00739,Implement Room database schema for tasks using Kotlin data classes.,1
+N-00019,Design a WordPress blog theme for travel agency.,0
+A-00698,Create login and signup flow with MVVM and repository pattern.,1
+N-00028,Create a Photoshop workflow for product photos.,0
+A-00070,Build password reset screen with unit tests and lint checks.,1
+A-00438,Increase test coverage for ViewModel layer for Android project.,1
+N-00148,Create a PowerPoint deck for investor updates.,0
+A-01080,Optimize API client layer in an Android app.,1
+A-00235,Implement Material 3 dashboard layout with UI tests for critical paths.,1
+A-00732,Build retry and timeout handling with clean architecture boundaries.,1
+A-00156,Optimize Room database schema for tasks using Kotlin data classes.,1
+A-01084,Ship Jetpack Compose profile screen with UI tests for critical paths.,1
+N-00382,Improve Excel macros for monthly finance workbook.,0
+A-00523,Build password reset screen with MVVM and repository pattern.,1
+A-00982,Optimize API client layer using Retrofit and coroutines.,1
+N-00388,Design a WordPress blog theme for travel agency.,0
+A-00357,Implement local cache invalidation strategy with instrumentation tests.,1
+A-00067,Implement Jetpack Compose profile screen for Android 14+.,1
+A-00649,Design API client layer with offline cache fallback.,1
+A-00208,Build biometric login with unit tests and lint checks.,1
+A-00006,Implement Material 3 dashboard layout with Compose navigation.,1
+A-00778,Implement navigation graph with nested routes with ViewModel state handling.,1
+N-00270,Generate SQL queries for warehouse ETL dashboard.,0
+A-00519,Build navigation graph with nested routes with Compose navigation.,1
+N-00230,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+N-00065,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00381,Build login and signup flow with unit tests and lint checks.,1
+A-00245,Optimize synchronization between API and Room using Kotlin data classes.,1
+N-00030,Design a WordPress blog theme for travel agency.,0
+A-01102,Build Material 3 dashboard layout with ViewModel state handling.,1
+A-00217,Build Material 3 dashboard layout with UI tests for critical paths.,1
+A-00017,Optimize error mapping for network responses with clean architecture boundaries.,1
+A-01145,Optimize error mapping for network responses with offline cache fallback.,1
+A-00994,Build pagination for feed API with offline cache fallback.,1
+A-00508,Add API client layer with offline cache fallback.,1
+A-00409,Build pagination for feed API with offline cache fallback.,1
+A-00844,Design API client layer with clean architecture boundaries.,1
+A-00642,Ship state-driven settings screen with Compose navigation.,1
+A-00833,Implement Material 3 dashboard layout with UI tests for critical paths.,1
+N-00117,Design a WordPress blog theme for travel agency.,0
+N-00101,Generate SQL queries for warehouse ETL dashboard.,0
+A-00681,Improve login and signup flow with MVVM and repository pattern.,1
+A-00790,Stabilize Room database schema for tasks with repository layer updates.,1
+A-01007,Stabilize crash-free startup flow with Espresso and JUnit.,1
+A-00167,Design pagination for feed API with clean architecture boundaries.,1
+N-00103,Create a PowerPoint deck for investor updates.,0
+A-00126,Create password reset screen integrated with Retrofit APIs.,1
+N-00003,Build an iOS SwiftUI shopping app checkout flow.,0
+N-00006,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00977,Implement Material 3 dashboard layout for Android 14+.,1
+A-00236,Stabilize DAO queries for dashboard using Kotlin data classes.,1
+A-01061,Design error mapping for network responses with clean architecture boundaries.,1
+A-00302,Build API client layer in an Android app.,1
+A-00462,Enforce crash-free startup flow with Gradle CI tasks.,1
+A-00250,Refactor login and signup flow with unit tests and lint checks.,1
+A-00730,Build Jetpack Compose profile screen with Compose navigation.,1
+A-00597,Stabilize DAO queries for dashboard with repository layer updates.,1
+A-00044,Stabilize crash-free startup flow with flaky test mitigation.,1
+A-00385,Stabilize synchronization between API and Room with repository layer updates.,1
+A-01051,Enforce lint and static analysis quality gate with flaky test mitigation.,1
+N-00133,Generate SQL queries for warehouse ETL dashboard.,0
+A-00792,Implement password reset screen using Kotlin and Compose.,1
+N-00170,Improve Excel macros for monthly finance workbook.,0
+A-00326,Optimize API client layer with offline cache fallback.,1
+A-01187,Enforce lint and static analysis quality gate with Espresso and JUnit.,1
+A-00309,Design retry and timeout handling with clean architecture boundaries.,1
+A-00151,Implement Material 3 dashboard layout with Compose navigation.,1
+A-01116,Optimize DAO queries for dashboard with instrumentation tests.,1
+A-00175,Build retry and timeout handling in an Android app.,1
+A-00087,Add error mapping for network responses in an Android app.,1
+A-00984,Refactor password reset screen using Kotlin and Compose.,1
+A-01048,Improve test coverage for ViewModel layer for Android project.,1
+A-01138,Stabilize test coverage for ViewModel layer with flaky test mitigation.,1
+A-00965,Refactor password reset screen with unit tests and lint checks.,1
+N-00074,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00910,Create password reset screen with MVVM and repository pattern.,1
+N-00319,Design a WordPress blog theme for travel agency.,0
+N-00332,Create a PowerPoint deck for investor updates.,0
+A-00975,Stabilize local cache invalidation strategy using Kotlin data classes.,1
+A-00538,Optimize Room database schema for tasks using Kotlin data classes.,1
+A-00557,Improve biometric login using Kotlin and Compose.,1
+A-01124,Optimize DAO queries for dashboard with repository layer updates.,1
+N-00243,Create a Photoshop workflow for product photos.,0
+A-00183,Build password reset screen with unit tests and lint checks.,1
+N-00372,Create a Photoshop workflow for product photos.,0
+A-00861,Stabilize crash-free startup flow with Gradle CI tasks.,1
+A-01053,Design error mapping for network responses using Retrofit and coroutines.,1
+N-00160,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00191,Improve instrumentation test reliability with Espresso and JUnit.,1
+A-00198,Ship Material 3 dashboard layout with UI tests for critical paths.,1
+A-00492,Implement Material 3 dashboard layout with ViewModel state handling.,1
+N-00362,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00806,Ship state-driven settings screen with ViewModel state handling.,1
+A-01121,Build retry and timeout handling with offline cache fallback.,1
+N-00191,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00885,Increase instrumentation test reliability with Gradle CI tasks.,1
+A-00916,Implement local cache invalidation strategy with repository layer updates.,1
+N-00310,Improve Excel macros for monthly finance workbook.,0
+A-00299,Stabilize instrumentation test reliability with flaky test mitigation.,1
+A-00804,Build OAuth token refresh with unit tests and lint checks.,1
+A-01002,Implement DAO queries for dashboard for Android app.,1
+A-00439,Stabilize synchronization between API and Room with instrumentation tests.,1
+A-01135,Ship Material 3 dashboard layout with UI tests for critical paths.,1
+A-00102,Increase instrumentation test reliability for Android project.,1
+A-01166,Improve login and signup flow with unit tests and lint checks.,1
+N-00363,Create a Photoshop workflow for product photos.,0
+A-00561,Design retry and timeout handling with clean architecture boundaries.,1
+A-00050,Build pagination for feed API with offline cache fallback.,1
+A-00536,Stabilize Room database schema for tasks for Android app.,1
+A-00386,Implement navigation graph with nested routes with UI tests for critical paths.,1
+A-00603,Stabilize lint and static analysis quality gate for Android project.,1
+A-00117,Implement navigation graph with nested routes with ViewModel state handling.,1
+A-00664,Optimize pagination for feed API with offline cache fallback.,1
+A-00346,Build pagination for feed API in an Android app.,1
+A-00382,Stabilize synchronization between API and Room with instrumentation tests.,1
+A-00101,Optimize error mapping for network responses using Retrofit and coroutines.,1
+A-00453,Optimize Room database schema for tasks with repository layer updates.,1
+A-00166,Implement Material 3 dashboard layout for Android 14+.,1
+A-01020,Stabilize instrumentation test reliability with Gradle CI tasks.,1
+A-00896,Build Jetpack Compose profile screen with ViewModel state handling.,1
+A-00227,Implement Room database schema for tasks with instrumentation tests.,1
+A-00369,Enforce test coverage for ViewModel layer for Android project.,1
+A-00497,Build error mapping for network responses using Retrofit and coroutines.,1
+A-00796,Enforce test coverage for ViewModel layer with flaky test mitigation.,1
+N-00309,Create a PowerPoint deck for investor updates.,0
+A-00669,Build state-driven settings screen with Compose navigation.,1
+A-00600,Optimize retry and timeout handling with clean architecture boundaries.,1
+A-01199,Build biometric login with MVVM and repository pattern.,1
+A-00850,Increase crash-free startup flow with flaky test mitigation.,1
+N-00108,Design a WordPress blog theme for travel agency.,0
+N-00393,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00917,Build state-driven settings screen with UI tests for critical paths.,1
+A-00026,Optimize API client layer with offline cache fallback.,1
+A-00379,Redesign navigation graph with nested routes for Android 14+.,1
+A-00774,Build OAuth token refresh using Kotlin and Compose.,1
+A-00942,Redesign state-driven settings screen for Android 14+.,1
+A-00232,Redesign navigation graph with nested routes with UI tests for critical paths.,1
+A-00852,Optimize retry and timeout handling with offline cache fallback.,1
+A-00572,Migrate local cache invalidation strategy with repository layer updates.,1
+A-01043,Stabilize crash-free startup flow with Gradle CI tasks.,1
+A-01140,Design API client layer in an Android app.,1
+A-00781,Enforce test coverage for ViewModel layer with Gradle CI tasks.,1
+A-00107,Design pagination for feed API using Retrofit and coroutines.,1
+A-00760,Increase instrumentation test reliability with Espresso and JUnit.,1
+N-00229,Build an iOS SwiftUI shopping app checkout flow.,0
+N-00147,Create a Photoshop workflow for product photos.,0
+A-00432,Build API client layer in an Android app.,1
+A-00022,Design pagination for feed API using Retrofit and coroutines.,1
+A-00936,Optimize Room database schema for tasks for Android app.,1
+A-00902,Implement login and signup flow integrated with Retrofit APIs.,1
+A-00888,Build pagination for feed API in an Android app.,1
+A-00254,Stabilize test coverage for ViewModel layer with flaky test mitigation.,1
+N-00227,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-01134,Implement password reset screen with unit tests and lint checks.,1
+N-00250,Design a WordPress blog theme for travel agency.,0
+A-00407,Increase crash-free startup flow with Gradle CI tasks.,1
+A-00934,Stabilize Room database schema for tasks for Android app.,1
+A-00541,Increase crash-free startup flow with flaky test mitigation.,1
+A-00834,Improve lint and static analysis quality gate with flaky test mitigation.,1
+A-00141,Migrate Room database schema for tasks using Kotlin data classes.,1
+A-00709,Redesign Material 3 dashboard layout with Compose navigation.,1
+A-00741,Add pagination for feed API with clean architecture boundaries.,1
+A-00992,Improve crash-free startup flow with flaky test mitigation.,1
+N-00212,Create a Photoshop workflow for product photos.,0
+A-01174,Create OAuth token refresh using Kotlin and Compose.,1
+A-00999,Redesign navigation graph with nested routes with Compose navigation.,1
+A-00883,Increase lint and static analysis quality gate for Android project.,1
+N-00138,Improve Excel macros for monthly finance workbook.,0
+N-00395,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+N-00155,Create a Photoshop workflow for product photos.,0
+A-00827,Design error mapping for network responses using Retrofit and coroutines.,1
+A-00316,Create OAuth token refresh integrated with Retrofit APIs.,1
+A-00048,Ship Jetpack Compose profile screen for Android 14+.,1
+A-00659,Design error mapping for network responses with offline cache fallback.,1
+N-00369,Improve Excel macros for monthly finance workbook.,0
+A-00098,Build Material 3 dashboard layout with ViewModel state handling.,1
+A-00120,Optimize DAO queries for dashboard for Android app.,1
+A-00285,Implement Material 3 dashboard layout with ViewModel state handling.,1
+A-00002,Enforce test coverage for ViewModel layer for Android project.,1
+A-00214,Optimize error mapping for network responses with clean architecture boundaries.,1
+N-00269,Design a WordPress blog theme for travel agency.,0
+A-00812,Create biometric login with MVVM and repository pattern.,1
+N-00145,Design a WordPress blog theme for travel agency.,0
+A-01143,Implement synchronization between API and Room with instrumentation tests.,1
+A-00321,Stabilize crash-free startup flow with Espresso and JUnit.,1
+A-00490,Optimize retry and timeout handling using Retrofit and coroutines.,1
+A-00620,Implement DAO queries for dashboard for Android app.,1
+A-00255,Stabilize Room database schema for tasks using Kotlin data classes.,1
+A-00841,Ship Jetpack Compose profile screen for Android 14+.,1
+A-00726,Refactor password reset screen using Kotlin and Compose.,1
+A-01034,Optimize retry and timeout handling in an Android app.,1
+A-00550,Ship navigation graph with nested routes with ViewModel state handling.,1
+A-00677,Redesign state-driven settings screen for Android 14+.,1
+A-00312,Increase test coverage for ViewModel layer with flaky test mitigation.,1
+N-00215,Create a PowerPoint deck for investor updates.,0
+A-00690,Build biometric login using Kotlin and Compose.,1
+A-01077,Implement password reset screen with unit tests and lint checks.,1
+A-00230,Stabilize lint and static analysis quality gate with Gradle CI tasks.,1
+N-00044,Improve Excel macros for monthly finance workbook.,0
+N-00067,Create a PowerPoint deck for investor updates.,0
+N-00219,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00554,Add pagination for feed API in an Android app.,1
+A-00989,Improve login and signup flow using Kotlin and Compose.,1
+A-00520,Implement login and signup flow integrated with Retrofit APIs.,1
+A-01056,Improve instrumentation test reliability with Gradle CI tasks.,1
+A-00789,Optimize error mapping for network responses with offline cache fallback.,1
+N-00323,Create a PowerPoint deck for investor updates.,0
+N-00304,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00617,Design retry and timeout handling with clean architecture boundaries.,1
+A-00355,Build retry and timeout handling in an Android app.,1
+A-00213,Create password reset screen integrated with Retrofit APIs.,1
+A-00901,Implement navigation graph with nested routes for Android 14+.,1
+A-00454,Increase test coverage for ViewModel layer with flaky test mitigation.,1
+N-00163,Design a WordPress blog theme for travel agency.,0
+A-00333,Build Material 3 dashboard layout for Android 14+.,1
+N-00326,Design a WordPress blog theme for travel agency.,0
+A-00045,Build error mapping for network responses using Retrofit and coroutines.,1
+A-01100,Optimize API client layer with offline cache fallback.,1
+N-00189,Create a Photoshop workflow for product photos.,0
+A-00909,Optimize synchronization between API and Room with instrumentation tests.,1
+A-00762,Create login and signup flow integrated with Retrofit APIs.,1
+A-00041,Improve OAuth token refresh with MVVM and repository pattern.,1
+A-00571,Stabilize instrumentation test reliability for Android project.,1
+A-00787,Optimize Room database schema for tasks for Android app.,1
+A-00715,Optimize retry and timeout handling with clean architecture boundaries.,1
+A-01059,Enforce crash-free startup flow with Espresso and JUnit.,1
+A-00575,Refactor OAuth token refresh using Kotlin and Compose.,1
+N-00337,Create a Photoshop workflow for product photos.,0
+A-00313,Refactor login and signup flow integrated with Retrofit APIs.,1
+A-00750,Implement biometric login using Kotlin and Compose.,1
+A-00433,Stabilize synchronization between API and Room using Kotlin data classes.,1
+A-01112,Design error mapping for network responses with clean architecture boundaries.,1
+A-00757,Stabilize local cache invalidation strategy with repository layer updates.,1
+A-00068,Build Jetpack Compose profile screen with Compose navigation.,1
+A-00020,Implement local cache invalidation strategy with instrumentation tests.,1
+N-00158,Create a Photoshop workflow for product photos.,0
+A-00473,Improve OAuth token refresh with MVVM and repository pattern.,1
+N-00124,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00449,Ship navigation graph with nested routes with Compose navigation.,1
+A-00168,Design API client layer using Retrofit and coroutines.,1
+A-00809,Build Material 3 dashboard layout with UI tests for critical paths.,1
+A-00172,Implement navigation graph with nested routes for Android 14+.,1
+N-00041,Improve Excel macros for monthly finance workbook.,0
+A-00878,Ship state-driven settings screen for Android 14+.,1
+A-00280,Optimize synchronization between API and Room with instrumentation tests.,1
+N-00364,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00533,Redesign Material 3 dashboard layout with Compose navigation.,1
+A-00957,Add retry and timeout handling with offline cache fallback.,1
+A-00979,Create OAuth token refresh with unit tests and lint checks.,1
+A-01188,Stabilize DAO queries for dashboard for Android app.,1
+N-00356,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00329,Build Jetpack Compose profile screen with ViewModel state handling.,1
+A-00950,Increase crash-free startup flow with Gradle CI tasks.,1
+A-00123,Implement state-driven settings screen with UI tests for critical paths.,1
+N-00338,Create a PowerPoint deck for investor updates.,0
+A-00411,Stabilize test coverage for ViewModel layer for Android project.,1
+A-00564,Implement login and signup flow integrated with Retrofit APIs.,1
+A-00436,Stabilize Room database schema for tasks for Android app.,1
+A-00595,Stabilize instrumentation test reliability for Android project.,1
+N-00025,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00225,Migrate Room database schema for tasks with repository layer updates.,1
+N-00390,Improve Excel macros for monthly finance workbook.,0
+A-00116,Enforce lint and static analysis quality gate with flaky test mitigation.,1
+A-00643,Improve login and signup flow with MVVM and repository pattern.,1
+A-00065,Migrate DAO queries for dashboard using Kotlin data classes.,1
+N-00224,Design a WordPress blog theme for travel agency.,0
+A-00467,Implement Material 3 dashboard layout with ViewModel state handling.,1
+A-00746,Build OAuth token refresh with MVVM and repository pattern.,1
+A-00314,Create biometric login integrated with Retrofit APIs.,1
+A-01193,Increase test coverage for ViewModel layer with Espresso and JUnit.,1
+N-00171,Generate SQL queries for warehouse ETL dashboard.,0
+A-00819,Redesign navigation graph with nested routes with ViewModel state handling.,1
+A-00687,Increase test coverage for ViewModel layer with Espresso and JUnit.,1
+A-00248,Implement synchronization between API and Room for Android app.,1
+A-01163,Add pagination for feed API with offline cache fallback.,1
+A-00482,Design API client layer in an Android app.,1
+N-00203,Build an iOS SwiftUI shopping app checkout flow.,0
+N-00169,Improve Excel macros for monthly finance workbook.,0
+A-00144,Improve OAuth token refresh using Kotlin and Compose.,1
+A-00876,Stabilize instrumentation test reliability for Android project.,1
+A-00961,Create OAuth token refresh integrated with Retrofit APIs.,1
+A-00238,Implement Material 3 dashboard layout with ViewModel state handling.,1
+N-00015,Create a Photoshop workflow for product photos.,0
+A-00549,Increase crash-free startup flow with flaky test mitigation.,1
+A-00469,Migrate DAO queries for dashboard for Android app.,1
+A-01191,Refactor OAuth token refresh using Kotlin and Compose.,1
+N-00050,Create a Photoshop workflow for product photos.,0
+A-00121,Build pagination for feed API with offline cache fallback.,1
+A-00985,Implement login and signup flow with MVVM and repository pattern.,1
+A-00043,Implement password reset screen using Kotlin and Compose.,1
+A-00723,Enforce lint and static analysis quality gate with Gradle CI tasks.,1
+A-00057,Implement state-driven settings screen with ViewModel state handling.,1
+A-00347,Implement Room database schema for tasks with instrumentation tests.,1
+A-00037,Redesign Material 3 dashboard layout with UI tests for critical paths.,1
+A-01106,Optimize retry and timeout handling with clean architecture boundaries.,1
+N-00140,Create a PowerPoint deck for investor updates.,0
+N-00350,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00511,Build error mapping for network responses with clean architecture boundaries.,1
+A-01190,Build API client layer using Retrofit and coroutines.,1
+A-00615,Implement synchronization between API and Room for Android app.,1
+N-00013,Generate SQL queries for warehouse ETL dashboard.,0
+A-00398,Implement Material 3 dashboard layout with UI tests for critical paths.,1
+A-00500,Enforce crash-free startup flow for Android project.,1
+A-00244,Increase lint and static analysis quality gate for Android project.,1
+N-00192,Create a PowerPoint deck for investor updates.,0
+A-00702,Build Material 3 dashboard layout with Compose navigation.,1
+A-00855,Build Material 3 dashboard layout with ViewModel state handling.,1
+A-00143,Enforce instrumentation test reliability with Gradle CI tasks.,1
+A-00194,Optimize error mapping for network responses with clean architecture boundaries.,1
+A-00448,Implement OAuth token refresh with unit tests and lint checks.,1
+A-01031,Redesign navigation graph with nested routes for Android 14+.,1
+A-00955,Design pagination for feed API with clean architecture boundaries.,1
+A-00607,Ship Jetpack Compose profile screen with UI tests for critical paths.,1
+A-00109,Build state-driven settings screen with UI tests for critical paths.,1
+N-00317,Design a WordPress blog theme for travel agency.,0
+A-00306,Create biometric login with unit tests and lint checks.,1
+A-00195,Optimize error mapping for network responses in an Android app.,1
+N-00135,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00040,Build API client layer with clean architecture boundaries.,1
+A-00567,Implement Jetpack Compose profile screen for Android 14+.,1
+A-00180,Implement local cache invalidation strategy using Kotlin data classes.,1
+A-00207,Build login and signup flow integrated with Retrofit APIs.,1
+A-00857,Build pagination for feed API in an Android app.,1
+A-00470,Implement DAO queries for dashboard with repository layer updates.,1
+A-00082,Implement DAO queries for dashboard using Kotlin data classes.,1
+A-00348,Stabilize instrumentation test reliability with Gradle CI tasks.,1
+A-00871,Build pagination for feed API with clean architecture boundaries.,1
+A-00374,Ship Jetpack Compose profile screen with UI tests for critical paths.,1
+A-00092,Enforce crash-free startup flow for Android project.,1
+A-00056,Build biometric login using Kotlin and Compose.,1
+A-01159,Build login and signup flow with unit tests and lint checks.,1
+A-00310,Implement biometric login integrated with Retrofit APIs.,1
+A-00341,Redesign Jetpack Compose profile screen with ViewModel state handling.,1
+A-01000,Design pagination for feed API in an Android app.,1
+A-00548,Optimize pagination for feed API with offline cache fallback.,1
+A-01136,Build error mapping for network responses with offline cache fallback.,1
+A-00919,Improve OAuth token refresh with unit tests and lint checks.,1
+N-00177,Improve Excel macros for monthly finance workbook.,0
+N-00237,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00622,Build pagination for feed API using Retrofit and coroutines.,1
+N-00179,Generate SQL queries for warehouse ETL dashboard.,0
+A-00647,Optimize Room database schema for tasks with repository layer updates.,1
+A-00656,Optimize API client layer with clean architecture boundaries.,1
+A-01015,Enforce lint and static analysis quality gate for Android project.,1
+A-00446,Implement Material 3 dashboard layout with ViewModel state handling.,1
+A-00489,Refactor login and signup flow with MVVM and repository pattern.,1
+A-00502,Stabilize lint and static analysis quality gate with Espresso and JUnit.,1
+A-00527,Ship Jetpack Compose profile screen with ViewModel state handling.,1
+N-00086,Create a Photoshop workflow for product photos.,0
+N-00107,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00731,Build Jetpack Compose profile screen with UI tests for critical paths.,1
+A-00337,Implement DAO queries for dashboard for Android app.,1
+A-00155,Design retry and timeout handling with clean architecture boundaries.,1
+A-00272,Build password reset screen using Kotlin and Compose.,1
+N-00007,Create a Photoshop workflow for product photos.,0
+A-01049,Redesign Jetpack Compose profile screen with UI tests for critical paths.,1
+A-01004,Build API client layer with clean architecture boundaries.,1
+A-00152,Create biometric login with MVVM and repository pattern.,1
+A-00509,Implement Room database schema for tasks for Android app.,1
+A-00019,Add retry and timeout handling with offline cache fallback.,1
+A-01153,Improve login and signup flow with MVVM and repository pattern.,1
+A-00256,Implement password reset screen integrated with Retrofit APIs.,1
+N-00267,Create a PowerPoint deck for investor updates.,0
+N-00090,Create a PowerPoint deck for investor updates.,0
+A-01178,Implement synchronization between API and Room with repository layer updates.,1
+A-00035,Build login and signup flow using Kotlin and Compose.,1
+N-00206,Design a WordPress blog theme for travel agency.,0
+N-00226,Improve Excel macros for monthly finance workbook.,0
+A-00452,Increase instrumentation test reliability for Android project.,1
+A-00108,Add API client layer using Retrofit and coroutines.,1
+A-00628,Improve lint and static analysis quality gate with Espresso and JUnit.,1
+N-00114,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00441,Design retry and timeout handling with offline cache fallback.,1
+A-00553,Implement biometric login with MVVM and repository pattern.,1
+A-00958,Improve OAuth token refresh integrated with Retrofit APIs.,1
+N-00261,Create a Photoshop workflow for product photos.,0
+A-00655,Optimize DAO queries for dashboard for Android app.,1
+A-00658,Migrate synchronization between API and Room with repository layer updates.,1
+A-00402,Enforce test coverage for ViewModel layer with Espresso and JUnit.,1
+A-00889,Stabilize test coverage for ViewModel layer with Espresso and JUnit.,1
+A-00205,Build Jetpack Compose profile screen with Compose navigation.,1
+N-00282,Create a Photoshop workflow for product photos.,0
+A-00071,Optimize retry and timeout handling in an Android app.,1
+A-00451,Increase crash-free startup flow with flaky test mitigation.,1
+A-00182,Ship state-driven settings screen with ViewModel state handling.,1
+A-01180,Stabilize crash-free startup flow with Espresso and JUnit.,1
+A-00264,Migrate Room database schema for tasks with repository layer updates.,1
+A-01089,Improve OAuth token refresh integrated with Retrofit APIs.,1
+N-00265,Generate SQL queries for warehouse ETL dashboard.,0
+N-00116,Generate SQL queries for warehouse ETL dashboard.,0
+A-00752,Refactor biometric login with MVVM and repository pattern.,1
+N-00009,Create a Photoshop workflow for product photos.,0
+A-00685,Stabilize DAO queries for dashboard using Kotlin data classes.,1
+N-00159,Create a Photoshop workflow for product photos.,0
+A-00165,Stabilize lint and static analysis quality gate with Gradle CI tasks.,1
+A-01070,Increase test coverage for ViewModel layer with Gradle CI tasks.,1
+A-00331,Build state-driven settings screen with Compose navigation.,1
+A-00437,Ship navigation graph with nested routes with Compose navigation.,1
+N-00396,Create a Photoshop workflow for product photos.,0
+N-00092,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00654,Increase lint and static analysis quality gate with Espresso and JUnit.,1
+A-00077,Implement password reset screen with MVVM and repository pattern.,1
+A-00791,Stabilize lint and static analysis quality gate with flaky test mitigation.,1
+A-00478,Redesign Material 3 dashboard layout with ViewModel state handling.,1
+A-00858,Enforce crash-free startup flow with Gradle CI tasks.,1
+A-00259,Stabilize instrumentation test reliability for Android project.,1
+A-00188,Optimize synchronization between API and Room for Android app.,1
+A-00113,Enforce test coverage for ViewModel layer with Gradle CI tasks.,1
+A-01196,Stabilize DAO queries for dashboard for Android app.,1
+A-00579,Enforce test coverage for ViewModel layer with Espresso and JUnit.,1
+N-00333,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00695,Migrate Room database schema for tasks for Android app.,1
+N-00357,Design a WordPress blog theme for travel agency.,0
+A-01088,Implement synchronization between API and Room with instrumentation tests.,1
+A-00926,Enforce instrumentation test reliability with Gradle CI tasks.,1
+A-00088,Redesign navigation graph with nested routes with UI tests for critical paths.,1
+A-00122,Build API client layer with offline cache fallback.,1
+A-00124,Build biometric login integrated with Retrofit APIs.,1
+A-01154,Create password reset screen with MVVM and repository pattern.,1
+A-01026,Implement DAO queries for dashboard with instrumentation tests.,1
+A-01044,Stabilize Room database schema for tasks using Kotlin data classes.,1
+A-01104,Design error mapping for network responses with clean architecture boundaries.,1
+A-00608,Enforce instrumentation test reliability with flaky test mitigation.,1
+A-00058,Ship navigation graph with nested routes with Compose navigation.,1
+A-01167,Implement navigation graph with nested routes with ViewModel state handling.,1
+A-00634,Build password reset screen using Kotlin and Compose.,1
+A-00024,Migrate local cache invalidation strategy with repository layer updates.,1
+A-00912,Stabilize synchronization between API and Room with repository layer updates.,1
+A-00197,Implement local cache invalidation strategy with instrumentation tests.,1
+A-00257,Implement OAuth token refresh with MVVM and repository pattern.,1
+A-00290,Create password reset screen with unit tests and lint checks.,1
+A-00224,Build Jetpack Compose profile screen with Compose navigation.,1
+N-00347,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00456,Optimize pagination for feed API using Retrofit and coroutines.,1
+A-00701,Add error mapping for network responses in an Android app.,1
+A-00106,Create password reset screen using Kotlin and Compose.,1
+A-00537,Build error mapping for network responses using Retrofit and coroutines.,1
+N-00340,Build an iOS SwiftUI shopping app checkout flow.,0
+N-00335,Generate SQL queries for warehouse ETL dashboard.,0
+N-00320,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00069,Increase lint and static analysis quality gate with Espresso and JUnit.,1
+N-00093,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00727,Build error mapping for network responses with offline cache fallback.,1
+A-00010,Improve instrumentation test reliability for Android project.,1
+A-01148,Design retry and timeout handling with clean architecture boundaries.,1
+A-00320,Migrate Room database schema for tasks for Android app.,1
+A-00938,Create OAuth token refresh with MVVM and repository pattern.,1
+A-00706,Implement password reset screen integrated with Retrofit APIs.,1
+A-01131,Migrate Room database schema for tasks with repository layer updates.,1
+A-00345,Design error mapping for network responses using Retrofit and coroutines.,1
+A-00532,Enforce instrumentation test reliability with Gradle CI tasks.,1
+A-01050,Enforce crash-free startup flow for Android project.,1
+N-00263,Generate SQL queries for warehouse ETL dashboard.,0
+A-00688,Build error mapping for network responses with clean architecture boundaries.,1
+A-00247,Design error mapping for network responses with clean architecture boundaries.,1
+A-00691,Improve crash-free startup flow with Espresso and JUnit.,1
+N-00343,Create a Photoshop workflow for product photos.,0
+A-01029,Optimize retry and timeout handling with clean architecture boundaries.,1
+A-00598,Stabilize local cache invalidation strategy with instrumentation tests.,1
+A-01042,Build error mapping for network responses using Retrofit and coroutines.,1
+A-00261,Migrate synchronization between API and Room with repository layer updates.,1
+N-00151,Design a WordPress blog theme for travel agency.,0
+A-00273,Optimize API client layer in an Android app.,1
+N-00386,Generate SQL queries for warehouse ETL dashboard.,0
+A-00343,Improve instrumentation test reliability with Espresso and JUnit.,1
+A-00279,Stabilize test coverage for ViewModel layer with Gradle CI tasks.,1
+N-00119,Create a Photoshop workflow for product photos.,0
+A-00625,Build navigation graph with nested routes with UI tests for critical paths.,1
+A-00993,Ship Jetpack Compose profile screen with UI tests for critical paths.,1
+N-00311,Design a WordPress blog theme for travel agency.,0
+A-01122,Enforce test coverage for ViewModel layer for Android project.,1
+A-00544,Implement navigation graph with nested routes with ViewModel state handling.,1
+A-00099,Create password reset screen integrated with Retrofit APIs.,1
+A-00042,Implement login and signup flow with MVVM and repository pattern.,1
+A-00763,Increase lint and static analysis quality gate with Gradle CI tasks.,1
+A-00542,Implement Material 3 dashboard layout with ViewModel state handling.,1
+N-00380,Create a PowerPoint deck for investor updates.,0
+N-00023,Build an iOS SwiftUI shopping app checkout flow.,0
+N-00105,Improve Excel macros for monthly finance workbook.,0
+A-00459,Optimize pagination for feed API with offline cache fallback.,1
+A-00967,Stabilize local cache invalidation strategy for Android app.,1
+N-00061,Improve Excel macros for monthly finance workbook.,0
+A-00983,Enforce test coverage for ViewModel layer with Gradle CI tasks.,1
+A-00543,Stabilize synchronization between API and Room for Android app.,1
+A-00870,Increase instrumentation test reliability for Android project.,1
+A-00268,Design pagination for feed API in an Android app.,1
+A-00485,Migrate Room database schema for tasks with instrumentation tests.,1
+A-00399,Improve OAuth token refresh with unit tests and lint checks.,1
+A-00722,Stabilize instrumentation test reliability with Espresso and JUnit.,1
+N-00097,Create a Photoshop workflow for product photos.,0
+N-00272,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+N-00293,Design a WordPress blog theme for travel agency.,0
+A-00545,Stabilize Room database schema for tasks using Kotlin data classes.,1
+A-00764,Build OAuth token refresh with unit tests and lint checks.,1
+A-01176,Increase instrumentation test reliability with Gradle CI tasks.,1
+A-00308,Build password reset screen with MVVM and repository pattern.,1
+N-00184,Create a PowerPoint deck for investor updates.,0
+A-00408,Design pagination for feed API in an Android app.,1
+N-00344,Design a WordPress blog theme for travel agency.,0
+A-00784,Design retry and timeout handling using Retrofit and coroutines.,1
+N-00341,Create a Photoshop workflow for product photos.,0
+A-00118,Enforce lint and static analysis quality gate with Espresso and JUnit.,1
+A-00773,Migrate DAO queries for dashboard for Android app.,1
+A-00270,Add API client layer using Retrofit and coroutines.,1
+N-00257,Create a PowerPoint deck for investor updates.,0
+A-00055,Ship navigation graph with nested routes with UI tests for critical paths.,1
+A-00353,Design error mapping for network responses with offline cache fallback.,1
+A-01087,Implement DAO queries for dashboard using Kotlin data classes.,1
+N-00285,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00215,Stabilize synchronization between API and Room with instrumentation tests.,1
+A-00856,Optimize DAO queries for dashboard with instrumentation tests.,1
+A-01139,Optimize synchronization between API and Room with instrumentation tests.,1
+N-00249,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00450,Optimize local cache invalidation strategy with repository layer updates.,1
+A-01093,Build pagination for feed API with clean architecture boundaries.,1
+A-00243,Create biometric login using Kotlin and Compose.,1
+A-00392,Stabilize Room database schema for tasks with instrumentation tests.,1
+A-00788,Refactor biometric login integrated with Retrofit APIs.,1
+A-00422,Implement password reset screen with MVVM and repository pattern.,1
+A-00770,Implement login and signup flow with MVVM and repository pattern.,1
+A-00507,Refactor password reset screen using Kotlin and Compose.,1
+A-00968,Design API client layer with clean architecture boundaries.,1
+A-00609,Improve crash-free startup flow for Android project.,1
+A-00148,Build state-driven settings screen with ViewModel state handling.,1
+A-00951,Design API client layer with clean architecture boundaries.,1
+A-01041,Optimize error mapping for network responses with offline cache fallback.,1
+A-00033,Increase instrumentation test reliability for Android project.,1
+A-00540,Stabilize instrumentation test reliability with Gradle CI tasks.,1
+A-01039,Design pagination for feed API with offline cache fallback.,1
+A-00832,Build OAuth token refresh with unit tests and lint checks.,1
+N-00081,Generate SQL queries for warehouse ETL dashboard.,0
+N-00167,Design a WordPress blog theme for travel agency.,0
+A-00801,Enforce lint and static analysis quality gate for Android project.,1
+A-00267,Improve OAuth token refresh with MVVM and repository pattern.,1
+N-00110,Design a WordPress blog theme for travel agency.,0
+A-01009,Build error mapping for network responses with clean architecture boundaries.,1
+A-00457,Improve login and signup flow with MVVM and repository pattern.,1
+N-00122,Create a Photoshop workflow for product photos.,0
+A-00154,Implement navigation graph with nested routes with UI tests for critical paths.,1
+A-00756,Ship Jetpack Compose profile screen for Android 14+.,1
+A-00605,Refactor biometric login with MVVM and repository pattern.,1
+N-00290,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00941,Improve login and signup flow integrated with Retrofit APIs.,1
+N-00039,Generate SQL queries for warehouse ETL dashboard.,0
+A-00884,Create password reset screen integrated with Retrofit APIs.,1
+A-00014,Stabilize DAO queries for dashboard using Kotlin data classes.,1
+A-00263,Increase test coverage for ViewModel layer with flaky test mitigation.,1
+N-00325,Generate SQL queries for warehouse ETL dashboard.,0
+A-00287,Implement biometric login using Kotlin and Compose.,1
+N-00221,Create a Photoshop workflow for product photos.,0
+A-01063,Build biometric login with MVVM and repository pattern.,1
+A-00258,Ship Material 3 dashboard layout with UI tests for critical paths.,1
+N-00064,Create a PowerPoint deck for investor updates.,0
+A-01095,Build Jetpack Compose profile screen with UI tests for critical paths.,1
+N-00288,Create a Photoshop workflow for product photos.,0
+A-00517,Optimize retry and timeout handling using Retrofit and coroutines.,1
+A-00129,Implement state-driven settings screen with Compose navigation.,1
+A-00084,Stabilize lint and static analysis quality gate with Gradle CI tasks.,1
+A-00496,Create password reset screen with MVVM and repository pattern.,1
+N-00156,Create a PowerPoint deck for investor updates.,0
+A-00027,Ship Material 3 dashboard layout for Android 14+.,1
+A-01114,Add pagination for feed API with clean architecture boundaries.,1
+A-00755,Stabilize crash-free startup flow with flaky test mitigation.,1
+A-00828,Enforce test coverage for ViewModel layer with flaky test mitigation.,1
+N-00371,Create a PowerPoint deck for investor updates.,0
+A-00672,Migrate Room database schema for tasks with repository layer updates.,1
+A-00052,Redesign Jetpack Compose profile screen with UI tests for critical paths.,1
+N-00036,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00173,Stabilize Room database schema for tasks for Android app.,1
+A-00592,Build biometric login with unit tests and lint checks.,1
+A-00484,Ship navigation graph with nested routes with UI tests for critical paths.,1
+N-00014,Design a WordPress blog theme for travel agency.,0
+A-00062,Add API client layer using Retrofit and coroutines.,1
+N-00129,Improve Excel macros for monthly finance workbook.,0
+A-00577,Stabilize synchronization between API and Room using Kotlin data classes.,1
+A-00803,Stabilize local cache invalidation strategy for Android app.,1
+A-01096,Optimize synchronization between API and Room with instrumentation tests.,1
+N-00358,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00767,Increase crash-free startup flow for Android project.,1
+N-00154,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00711,Improve test coverage for ViewModel layer for Android project.,1
+A-00036,Build navigation graph with nested routes with Compose navigation.,1
+A-00171,Increase instrumentation test reliability with flaky test mitigation.,1
+N-00307,Create a Photoshop workflow for product photos.,0
+A-01011,Ship Material 3 dashboard layout with ViewModel state handling.,1
+A-00877,Optimize error mapping for network responses with offline cache fallback.,1
+A-00361,Optimize API client layer with clean architecture boundaries.,1
+A-00431,Build Material 3 dashboard layout with UI tests for critical paths.,1
+N-00020,Design a WordPress blog theme for travel agency.,0
+A-00751,Optimize error mapping for network responses with offline cache fallback.,1
+A-00587,Improve crash-free startup flow with flaky test mitigation.,1
+A-00868,Refactor login and signup flow using Kotlin and Compose.,1
+A-00524,Increase crash-free startup flow with Gradle CI tasks.,1
+A-00464,Enforce lint and static analysis quality gate with Gradle CI tasks.,1
+A-00480,Improve lint and static analysis quality gate with flaky test mitigation.,1
+A-00962,Design pagination for feed API using Retrofit and coroutines.,1
+A-00895,Build Material 3 dashboard layout with Compose navigation.,1
+A-00547,Migrate local cache invalidation strategy with instrumentation tests.,1
+A-00351,Implement state-driven settings screen with Compose navigation.,1
+A-01005,Improve lint and static analysis quality gate with Espresso and JUnit.,1
+A-00627,Build retry and timeout handling in an Android app.,1
+A-00319,Implement Material 3 dashboard layout with Compose navigation.,1
+A-00593,Implement state-driven settings screen for Android 14+.,1
+A-00817,Build pagination for feed API using Retrofit and coroutines.,1
+N-00318,Generate SQL queries for warehouse ETL dashboard.,0
+A-01027,Stabilize instrumentation test reliability with flaky test mitigation.,1
+N-00259,Create a PowerPoint deck for investor updates.,0
+A-00079,Improve test coverage for ViewModel layer for Android project.,1
+A-00684,Build login and signup flow integrated with Retrofit APIs.,1
+N-00315,Design a WordPress blog theme for travel agency.,0
+A-00759,Stabilize synchronization between API and Room with instrumentation tests.,1
+A-00645,Increase lint and static analysis quality gate with flaky test mitigation.,1
+A-01181,Implement navigation graph with nested routes for Android 14+.,1
+A-00251,Improve instrumentation test reliability with Espresso and JUnit.,1
+N-00294,Create a PowerPoint deck for investor updates.,0
+A-00624,Redesign navigation graph with nested routes with UI tests for critical paths.,1
+A-00535,Improve OAuth token refresh using Kotlin and Compose.,1
+N-00278,Design a WordPress blog theme for travel agency.,0
+A-00529,Design error mapping for network responses using Retrofit and coroutines.,1
+N-00089,Create a PowerPoint deck for investor updates.,0
+A-00286,Optimize API client layer in an Android app.,1
+N-00144,Design a WordPress blog theme for travel agency.,0
+N-00022,Create a PowerPoint deck for investor updates.,0
+A-00879,Improve OAuth token refresh with unit tests and lint checks.,1
+A-00539,Add error mapping for network responses using Retrofit and coroutines.,1
+A-00921,Implement state-driven settings screen with Compose navigation.,1
+A-00747,Implement Jetpack Compose profile screen with ViewModel state handling.,1
+A-01073,Stabilize lint and static analysis quality gate for Android project.,1
+A-00081,Redesign Jetpack Compose profile screen with ViewModel state handling.,1
+A-00707,Implement DAO queries for dashboard for Android app.,1
+A-00493,Improve crash-free startup flow with Espresso and JUnit.,1
+N-00112,Generate SQL queries for warehouse ETL dashboard.,0
+A-00115,Increase instrumentation test reliability with flaky test mitigation.,1
+N-00373,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00721,Migrate DAO queries for dashboard with instrumentation tests.,1
+A-00494,Add API client layer with offline cache fallback.,1
+A-00581,Optimize pagination for feed API with offline cache fallback.,1
+N-00032,Create a Photoshop workflow for product photos.,0
+A-00034,Create password reset screen with MVVM and repository pattern.,1
+N-00345,Create a PowerPoint deck for investor updates.,0
+A-00590,Redesign navigation graph with nested routes with ViewModel state handling.,1
+A-00559,Improve biometric login with MVVM and repository pattern.,1
+A-01179,Increase instrumentation test reliability with Gradle CI tasks.,1
+N-00125,Create a PowerPoint deck for investor updates.,0
+A-00513,Improve OAuth token refresh with unit tests and lint checks.,1
+A-00729,Build biometric login with unit tests and lint checks.,1
+N-00085,Create a Photoshop workflow for product photos.,0
+A-00748,Implement login and signup flow with MVVM and repository pattern.,1
+A-01022,Build biometric login with MVVM and repository pattern.,1
+A-00510,Build Material 3 dashboard layout with UI tests for critical paths.,1
+N-00201,Improve Excel macros for monthly finance workbook.,0
+N-00195,Improve Excel macros for monthly finance workbook.,0
+N-00002,Design a WordPress blog theme for travel agency.,0
+N-00284,Generate SQL queries for warehouse ETL dashboard.,0
+A-01130,Refactor login and signup flow using Kotlin and Compose.,1
+A-01086,Build retry and timeout handling with offline cache fallback.,1
+N-00141,Generate SQL queries for warehouse ETL dashboard.,0
+N-00180,Improve Excel macros for monthly finance workbook.,0
+A-00460,Enforce test coverage for ViewModel layer with Gradle CI tasks.,1
+N-00178,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00565,Ship state-driven settings screen for Android 14+.,1
+N-00072,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+N-00068,Create a Photoshop workflow for product photos.,0
+A-00465,Optimize local cache invalidation strategy with instrumentation tests.,1
+N-00236,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00638,Implement navigation graph with nested routes with Compose navigation.,1
+A-00435,Optimize error mapping for network responses with offline cache fallback.,1
+A-01186,Improve biometric login with MVVM and repository pattern.,1
+A-00712,Add error mapping for network responses with clean architecture boundaries.,1
+N-00296,Create a Photoshop workflow for product photos.,0
+A-01030,Ship Jetpack Compose profile screen with Compose navigation.,1
+A-00466,Migrate synchronization between API and Room with instrumentation tests.,1
+N-00385,Create a Photoshop workflow for product photos.,0
+N-00166,Create a PowerPoint deck for investor updates.,0
+A-00825,Optimize synchronization between API and Room with instrumentation tests.,1
+A-01160,Build state-driven settings screen with Compose navigation.,1
+A-00140,Stabilize instrumentation test reliability with Espresso and JUnit.,1
+N-00283,Create a Photoshop workflow for product photos.,0
+A-00139,Build error mapping for network responses in an Android app.,1
+A-00447,Build error mapping for network responses in an Android app.,1
+A-00673,Migrate synchronization between API and Room for Android app.,1
+A-00498,Implement state-driven settings screen with UI tests for critical paths.,1
+A-00906,Add retry and timeout handling with clean architecture boundaries.,1
+A-00738,Optimize retry and timeout handling with offline cache fallback.,1
+A-00147,Increase test coverage for ViewModel layer with flaky test mitigation.,1
+A-00016,Improve OAuth token refresh with MVVM and repository pattern.,1
+N-00062,Create a PowerPoint deck for investor updates.,0
+N-00161,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+N-00187,Design a WordPress blog theme for travel agency.,0
+A-00137,Add API client layer in an Android app.,1
+A-00128,Stabilize synchronization between API and Room for Android app.,1
+N-00042,Generate SQL queries for warehouse ETL dashboard.,0
+A-00893,Build Material 3 dashboard layout with UI tests for critical paths.,1
+A-00295,Increase test coverage for ViewModel layer with Gradle CI tasks.,1
+A-00157,Build biometric login integrated with Retrofit APIs.,1
+A-00427,Ship state-driven settings screen with Compose navigation.,1
+A-00860,Ship state-driven settings screen for Android 14+.,1
+N-00298,Create a Photoshop workflow for product photos.,0
+A-00946,Redesign Material 3 dashboard layout with UI tests for critical paths.,1
+A-00863,Build retry and timeout handling in an Android app.,1
+A-00393,Enforce crash-free startup flow for Android project.,1
+A-00568,Build error mapping for network responses with clean architecture boundaries.,1
+A-00192,Increase test coverage for ViewModel layer for Android project.,1
+A-01045,Ship navigation graph with nested routes for Android 14+.,1
+N-00239,Create a Photoshop workflow for product photos.,0
+N-00010,Improve Excel macros for monthly finance workbook.,0
+N-00153,Create a PowerPoint deck for investor updates.,0
+A-01123,Design pagination for feed API with clean architecture boundaries.,1
+N-00142,Generate SQL queries for warehouse ETL dashboard.,0
+A-01038,Add pagination for feed API in an Android app.,1
+A-00390,Create password reset screen with unit tests and lint checks.,1
+N-00196,Generate SQL queries for warehouse ETL dashboard.,0
+A-00391,Ship navigation graph with nested routes with UI tests for critical paths.,1
+A-01115,Build state-driven settings screen with ViewModel state handling.,1
+N-00056,Design a WordPress blog theme for travel agency.,0
+N-00297,Design a WordPress blog theme for travel agency.,0
+A-00403,Stabilize local cache invalidation strategy with instrumentation tests.,1
+A-00604,Redesign state-driven settings screen with ViewModel state handling.,1
+A-01085,Create login and signup flow integrated with Retrofit APIs.,1
+N-00004,Create a Photoshop workflow for product photos.,0
+N-00096,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-01146,Build error mapping for network responses with offline cache fallback.,1
+A-00886,Stabilize DAO queries for dashboard using Kotlin data classes.,1
+A-00288,Migrate Room database schema for tasks with instrumentation tests.,1
+A-00881,Build OAuth token refresh with unit tests and lint checks.,1
+N-00162,Create a Photoshop workflow for product photos.,0
+A-00367,Create OAuth token refresh with unit tests and lint checks.,1
+A-00840,Migrate DAO queries for dashboard with instrumentation tests.,1
+A-00573,Increase instrumentation test reliability with Gradle CI tasks.,1
+A-00720,Improve biometric login using Kotlin and Compose.,1
+A-01194,Add API client layer using Retrofit and coroutines.,1
+A-00054,Build OAuth token refresh integrated with Retrofit APIs.,1
+A-00991,Improve crash-free startup flow with Espresso and JUnit.,1
+N-00256,Create a PowerPoint deck for investor updates.,0
+A-00922,Improve test coverage for ViewModel layer with Gradle CI tasks.,1
+N-00164,Build an iOS SwiftUI shopping app checkout flow.,0
+N-00024,Generate SQL queries for warehouse ETL dashboard.,0
+A-00301,Optimize Room database schema for tasks for Android app.,1
+A-00872,Ship navigation graph with nested routes with ViewModel state handling.,1
+A-00130,Redesign Jetpack Compose profile screen with UI tests for critical paths.,1
+A-00867,Optimize DAO queries for dashboard with repository layer updates.,1
+A-01197,Increase test coverage for ViewModel layer for Android project.,1
+A-00522,Ship navigation graph with nested routes with Compose navigation.,1
+N-00185,Improve Excel macros for monthly finance workbook.,0
+A-00626,Enforce instrumentation test reliability for Android project.,1
+A-01173,Build Material 3 dashboard layout for Android 14+.,1
+A-01032,Increase lint and static analysis quality gate with Gradle CI tasks.,1
+A-00091,Implement DAO queries for dashboard with instrumentation tests.,1
+A-01014,Implement login and signup flow using Kotlin and Compose.,1
+A-00705,Design pagination for feed API with clean architecture boundaries.,1
+A-00890,Refactor password reset screen using Kotlin and Compose.,1
+N-00268,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+N-00037,Create a Photoshop workflow for product photos.,0
+N-00361,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00421,Design API client layer in an Android app.,1
+A-00400,Implement Material 3 dashboard layout with Compose navigation.,1
+A-00915,Enforce lint and static analysis quality gate with flaky test mitigation.,1
+A-00798,Create OAuth token refresh with MVVM and repository pattern.,1
+N-00271,Create a PowerPoint deck for investor updates.,0
+A-00927,Refactor biometric login integrated with Retrofit APIs.,1
+A-01150,Design API client layer with offline cache fallback.,1
+A-00300,Implement navigation graph with nested routes with ViewModel state handling.,1
+A-00000,Implement password reset screen with MVVM and repository pattern.,1
+A-00284,Ship Jetpack Compose profile screen with ViewModel state handling.,1
+A-00445,Improve lint and static analysis quality gate for Android project.,1
+N-00254,Design a WordPress blog theme for travel agency.,0
+A-00125,Improve instrumentation test reliability with flaky test mitigation.,1
+A-01012,Build navigation graph with nested routes for Android 14+.,1
+A-01184,Enforce lint and static analysis quality gate for Android project.,1
+N-00132,Create a PowerPoint deck for investor updates.,0
+A-00222,Implement Material 3 dashboard layout with UI tests for critical paths.,1
+A-00142,Implement Room database schema for tasks with instrumentation tests.,1
+A-00831,Optimize DAO queries for dashboard with repository layer updates.,1
+N-00066,Create a Photoshop workflow for product photos.,0
+A-00360,Build state-driven settings screen with ViewModel state handling.,1
+A-00911,Refactor biometric login integrated with Retrofit APIs.,1
+A-01105,Migrate synchronization between API and Room with repository layer updates.,1
+A-00666,Stabilize instrumentation test reliability with Espresso and JUnit.,1
+A-00948,Optimize retry and timeout handling with clean architecture boundaries.,1
+N-00073,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00996,Implement local cache invalidation strategy for Android app.,1
+A-00159,Build Jetpack Compose profile screen with ViewModel state handling.,1
+A-00354,Stabilize synchronization between API and Room using Kotlin data classes.,1
+A-00483,Implement DAO queries for dashboard with instrumentation tests.,1
+A-00700,Stabilize local cache invalidation strategy for Android app.,1
+A-00891,Improve test coverage for ViewModel layer for Android project.,1
+A-00882,Migrate Room database schema for tasks with repository layer updates.,1
+N-00175,Create a PowerPoint deck for investor updates.,0
+A-00697,Build navigation graph with nested routes with ViewModel state handling.,1
+N-00027,Improve Excel macros for monthly finance workbook.,0
+N-00222,Create a PowerPoint deck for investor updates.,0
+A-00987,Ship state-driven settings screen with UI tests for critical paths.,1
+A-00325,Enforce crash-free startup flow with Espresso and JUnit.,1
+A-00499,Stabilize lint and static analysis quality gate for Android project.,1
+A-00488,Optimize error mapping for network responses with clean architecture boundaries.,1
+N-00245,Improve Excel macros for monthly finance workbook.,0
+A-00820,Implement Room database schema for tasks with repository layer updates.,1
+N-00111,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00618,Redesign state-driven settings screen with ViewModel state handling.,1
+A-01133,Redesign navigation graph with nested routes with Compose navigation.,1
+A-00667,Implement login and signup flow integrated with Retrofit APIs.,1
+A-00219,Build password reset screen using Kotlin and Compose.,1
+A-00830,Optimize Room database schema for tasks with instrumentation tests.,1
+A-00210,Redesign state-driven settings screen with Compose navigation.,1
+A-01040,Improve crash-free startup flow for Android project.,1
+A-00260,Ship Material 3 dashboard layout for Android 14+.,1
+A-00713,Redesign navigation graph with nested routes for Android 14+.,1
+A-00578,Stabilize synchronization between API and Room using Kotlin data classes.,1
+N-00214,Build an iOS SwiftUI shopping app checkout flow.,0
+N-00266,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00980,Improve test coverage for ViewModel layer with Gradle CI tasks.,1
+A-00719,Implement Material 3 dashboard layout with ViewModel state handling.,1
+N-00252,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00973,Optimize DAO queries for dashboard with instrumentation tests.,1
+A-00133,Stabilize DAO queries for dashboard using Kotlin data classes.,1
+A-00061,Stabilize test coverage for ViewModel layer for Android project.,1
+A-00998,Migrate DAO queries for dashboard using Kotlin data classes.,1
+A-00928,Refactor biometric login with unit tests and lint checks.,1
+N-00306,Design a WordPress blog theme for travel agency.,0
+N-00295,Improve Excel macros for monthly finance workbook.,0
+A-00375,Optimize Room database schema for tasks with instrumentation tests.,1
+A-01118,Migrate local cache invalidation strategy with instrumentation tests.,1
+A-00744,Stabilize test coverage for ViewModel layer with flaky test mitigation.,1
+A-00528,Implement state-driven settings screen with UI tests for critical paths.,1
+A-00294,Stabilize instrumentation test reliability for Android project.,1
+A-00458,Refactor password reset screen integrated with Retrofit APIs.,1
+A-00474,Improve OAuth token refresh with MVVM and repository pattern.,1
+A-00963,Stabilize local cache invalidation strategy for Android app.,1
+A-01109,Migrate synchronization between API and Room with repository layer updates.,1
+N-00139,Generate SQL queries for warehouse ETL dashboard.,0
+A-00933,Optimize retry and timeout handling with offline cache fallback.,1
+A-00199,Improve instrumentation test reliability for Android project.,1
+A-00959,Design API client layer with offline cache fallback.,1
+N-00397,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+N-00197,Design a WordPress blog theme for travel agency.,0
+A-00953,Build Jetpack Compose profile screen for Android 14+.,1
+A-00160,Optimize pagination for feed API with clean architecture boundaries.,1
+A-01092,Build retry and timeout handling using Retrofit and coroutines.,1
+A-00405,Refactor OAuth token refresh integrated with Retrofit APIs.,1
+A-00680,Optimize pagination for feed API using Retrofit and coroutines.,1
+A-01162,Build biometric login integrated with Retrofit APIs.,1
+A-00728,Build password reset screen using Kotlin and Compose.,1
+N-00202,Create a Photoshop workflow for product photos.,0
+N-00342,Improve Excel macros for monthly finance workbook.,0
+A-00802,Implement synchronization between API and Room for Android app.,1
+A-00873,Add error mapping for network responses with clean architecture boundaries.,1
+A-00176,Add error mapping for network responses using Retrofit and coroutines.,1
+A-00110,Stabilize instrumentation test reliability with flaky test mitigation.,1
+A-00785,Create biometric login using Kotlin and Compose.,1
+A-00216,Build error mapping for network responses using Retrofit and coroutines.,1
+A-01128,Build error mapping for network responses in an Android app.,1
+N-00126,Design a WordPress blog theme for travel agency.,0
+N-00262,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00266,Migrate local cache invalidation strategy using Kotlin data classes.,1
+A-00103,Optimize local cache invalidation strategy with repository layer updates.,1
+A-01195,Build state-driven settings screen for Android 14+.,1
+A-01107,Implement state-driven settings screen with Compose navigation.,1
+A-00693,Stabilize instrumentation test reliability for Android project.,1
+A-00637,Optimize pagination for feed API using Retrofit and coroutines.,1
+A-00145,Implement Room database schema for tasks with instrumentation tests.,1
+A-00350,Refactor password reset screen with MVVM and repository pattern.,1
+N-00172,Create a Photoshop workflow for product photos.,0
+A-00580,Add API client layer with clean architecture boundaries.,1
+A-00289,Refactor password reset screen integrated with Retrofit APIs.,1
+A-00555,Optimize retry and timeout handling in an Android app.,1
+N-00368,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-01125,Stabilize DAO queries for dashboard with repository layer updates.,1
+A-00717,Improve lint and static analysis quality gate with Gradle CI tasks.,1
+A-01111,Build biometric login integrated with Retrofit APIs.,1
+N-00398,Improve Excel macros for monthly finance workbook.,0
+A-00209,Increase instrumentation test reliability with flaky test mitigation.,1
+A-01052,Implement Jetpack Compose profile screen with UI tests for critical paths.,1
+A-00031,Improve crash-free startup flow with Gradle CI tasks.,1
+A-00234,Implement navigation graph with nested routes for Android 14+.,1
+N-00359,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00322,Build API client layer using Retrofit and coroutines.,1
+N-00026,Create a Photoshop workflow for product photos.,0
+A-00558,Improve password reset screen with unit tests and lint checks.,1
+N-00198,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00903,Add API client layer in an Android app.,1
+A-00653,Build API client layer with clean architecture boundaries.,1
+A-01090,Optimize local cache invalidation strategy with instrumentation tests.,1
+A-00566,Build login and signup flow integrated with Retrofit APIs.,1
+A-00586,Implement login and signup flow with unit tests and lint checks.,1
+A-00394,Refactor password reset screen with MVVM and repository pattern.,1
+A-00410,Create password reset screen integrated with Retrofit APIs.,1
+A-00657,Build pagination for feed API using Retrofit and coroutines.,1
+N-00118,Design a WordPress blog theme for travel agency.,0
+A-01164,Improve OAuth token refresh integrated with Retrofit APIs.,1
+A-00046,Ship navigation graph with nested routes for Android 14+.,1
+A-00639,Stabilize Room database schema for tasks with instrumentation tests.,1
+N-00287,Improve Excel macros for monthly finance workbook.,0
+A-00211,Redesign navigation graph with nested routes for Android 14+.,1
+A-00094,Implement biometric login with unit tests and lint checks.,1
+A-00956,Migrate Room database schema for tasks with instrumentation tests.,1
+N-00059,Improve Excel macros for monthly finance workbook.,0
+A-00178,Stabilize DAO queries for dashboard for Android app.,1
+A-00090,Build biometric login with unit tests and lint checks.,1
+A-00636,Redesign state-driven settings screen with UI tests for critical paths.,1
+A-00008,Build Material 3 dashboard layout with ViewModel state handling.,1
+A-00237,Ship Jetpack Compose profile screen with Compose navigation.,1
+A-01069,Improve instrumentation test reliability with flaky test mitigation.,1
+N-00276,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00940,Design API client layer with offline cache fallback.,1
+A-00074,Optimize local cache invalidation strategy with instrumentation tests.,1
+A-00420,Implement local cache invalidation strategy using Kotlin data classes.,1
+A-00271,Create OAuth token refresh with unit tests and lint checks.,1
+N-00275,Create a PowerPoint deck for investor updates.,0
+A-00201,Build state-driven settings screen with UI tests for critical paths.,1
+A-00293,Increase test coverage for ViewModel layer with Espresso and JUnit.,1
+A-00670,Design pagination for feed API with clean architecture boundaries.,1
+A-00635,Design pagination for feed API with offline cache fallback.,1
+N-00223,Create a PowerPoint deck for investor updates.,0
+N-00109,Create a PowerPoint deck for investor updates.,0
+A-00696,Implement state-driven settings screen with UI tests for critical paths.,1
+A-00389,Increase crash-free startup flow for Android project.,1
+A-00315,Implement Jetpack Compose profile screen with UI tests for critical paths.,1
+A-01024,Build password reset screen integrated with Retrofit APIs.,1
+A-00988,Implement Jetpack Compose profile screen with UI tests for critical paths.,1
+N-00370,Generate SQL queries for warehouse ETL dashboard.,0
+A-01036,Stabilize instrumentation test reliability for Android project.,1
+A-00908,Implement OAuth token refresh with MVVM and repository pattern.,1
+A-00189,Implement state-driven settings screen with ViewModel state handling.,1
+N-00238,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00076,Implement biometric login with unit tests and lint checks.,1
+A-00766,Migrate local cache invalidation strategy using Kotlin data classes.,1
+A-00229,Redesign navigation graph with nested routes with UI tests for critical paths.,1
+A-00358,Redesign state-driven settings screen for Android 14+.,1
+N-00182,Build an iOS SwiftUI shopping app checkout flow.,0
+N-00291,Design a WordPress blog theme for travel agency.,0
+A-00442,Implement synchronization between API and Room for Android app.,1
+A-00619,Build state-driven settings screen with UI tests for critical paths.,1
+N-00255,Generate SQL queries for warehouse ETL dashboard.,0
+A-00761,Add retry and timeout handling using Retrofit and coroutines.,1
+A-00486,Optimize retry and timeout handling using Retrofit and coroutines.,1
+A-01017,Stabilize local cache invalidation strategy with instrumentation tests.,1
+A-00177,Enforce instrumentation test reliability with flaky test mitigation.,1
+N-00349,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00556,Enforce instrumentation test reliability for Android project.,1
+A-00064,Improve instrumentation test reliability with Espresso and JUnit.,1
+A-00644,Implement DAO queries for dashboard using Kotlin data classes.,1
+A-00631,Enforce test coverage for ViewModel layer with Espresso and JUnit.,1
+A-00239,Refactor password reset screen using Kotlin and Compose.,1
+A-00383,Build password reset screen with unit tests and lint checks.,1
+A-00797,Optimize pagination for feed API in an Android app.,1
+A-01169,Implement Jetpack Compose profile screen with Compose navigation.,1
+A-00339,Migrate DAO queries for dashboard for Android app.,1
+A-01094,Add API client layer in an Android app.,1
+A-00768,Migrate local cache invalidation strategy with repository layer updates.,1
+A-00694,Improve login and signup flow using Kotlin and Compose.,1
+A-00063,Build navigation graph with nested routes for Android 14+.,1
+A-00574,Improve password reset screen using Kotlin and Compose.,1
+A-00305,Add retry and timeout handling with offline cache fallback.,1
+N-00360,Design a WordPress blog theme for travel agency.,0
+N-00099,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00679,Create password reset screen with unit tests and lint checks.,1
+A-01182,Stabilize instrumentation test reliability with Espresso and JUnit.,1
+A-00426,Implement OAuth token refresh integrated with Retrofit APIs.,1
+A-00038,Build retry and timeout handling with offline cache fallback.,1
+A-01097,Redesign Material 3 dashboard layout with UI tests for critical paths.,1
+A-01137,Increase crash-free startup flow with flaky test mitigation.,1
+A-00646,Enforce test coverage for ViewModel layer for Android project.,1
+A-01157,Stabilize DAO queries for dashboard with repository layer updates.,1
+A-00613,Migrate local cache invalidation strategy with repository layer updates.,1
+A-01067,Enforce test coverage for ViewModel layer for Android project.,1
+A-00114,Refactor OAuth token refresh integrated with Retrofit APIs.,1
+N-00077,Create a PowerPoint deck for investor updates.,0
+A-00947,Optimize synchronization between API and Room using Kotlin data classes.,1
+N-00260,Build an iOS SwiftUI shopping app checkout flow.,0
+A-01099,Build Material 3 dashboard layout with UI tests for critical paths.,1
+A-00943,Improve instrumentation test reliability with flaky test mitigation.,1
+A-00318,Optimize error mapping for network responses in an Android app.,1
+A-00986,Implement local cache invalidation strategy with instrumentation tests.,1
+A-00278,Build Jetpack Compose profile screen with ViewModel state handling.,1
+A-00072,Increase test coverage for ViewModel layer with Gradle CI tasks.,1
+A-00971,Stabilize instrumentation test reliability with flaky test mitigation.,1
+A-00981,Improve test coverage for ViewModel layer with Gradle CI tasks.,1
+A-00692,Optimize error mapping for network responses with clean architecture boundaries.,1
+A-00676,Implement password reset screen using Kotlin and Compose.,1
+A-00397,Stabilize Room database schema for tasks using Kotlin data classes.,1
+A-00359,Optimize retry and timeout handling in an Android app.,1
+A-00059,Migrate Room database schema for tasks for Android app.,1
+A-01165,Implement Material 3 dashboard layout with Compose navigation.,1
+A-00811,Improve lint and static analysis quality gate for Android project.,1
+A-00699,Design error mapping for network responses in an Android app.,1
+A-00682,Implement navigation graph with nested routes with Compose navigation.,1
+N-00228,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00012,Implement OAuth token refresh with unit tests and lint checks.,1
+N-00234,Create a PowerPoint deck for investor updates.,0
+A-01126,Redesign navigation graph with nested routes for Android 14+.,1
+A-01037,Add pagination for feed API using Retrofit and coroutines.,1
+A-00614,Stabilize synchronization between API and Room using Kotlin data classes.,1
+N-00204,Improve Excel macros for monthly finance workbook.,0
+N-00131,Generate SQL queries for warehouse ETL dashboard.,0
+A-00521,Improve lint and static analysis quality gate for Android project.,1
+A-00576,Stabilize DAO queries for dashboard for Android app.,1
+A-00412,Stabilize synchronization between API and Room with repository layer updates.,1
+A-00023,Increase instrumentation test reliability with flaky test mitigation.,1
+A-00434,Design retry and timeout handling using Retrofit and coroutines.,1
+A-01147,Design API client layer with offline cache fallback.,1
+A-00716,Improve password reset screen using Kotlin and Compose.,1
+A-00683,Ship navigation graph with nested routes for Android 14+.,1
+A-00093,Create OAuth token refresh with unit tests and lint checks.,1
+N-00120,Generate SQL queries for warehouse ETL dashboard.,0
+A-00849,Improve lint and static analysis quality gate with Espresso and JUnit.,1
+N-00060,Improve Excel macros for monthly finance workbook.,0
+A-00424,Increase crash-free startup flow with flaky test mitigation.,1
+A-00241,Design pagination for feed API using Retrofit and coroutines.,1
+N-00080,Design a WordPress blog theme for travel agency.,0
+A-00952,Enforce instrumentation test reliability with Espresso and JUnit.,1
+A-00049,Refactor password reset screen using Kotlin and Compose.,1
+N-00374,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00003,Build OAuth token refresh using Kotlin and Compose.,1
+A-00396,Add pagination for feed API with clean architecture boundaries.,1
+A-00594,Optimize local cache invalidation strategy with repository layer updates.,1
+A-00476,Build navigation graph with nested routes for Android 14+.,1
+N-00048,Create a Photoshop workflow for product photos.,0
+N-00251,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-01008,Redesign Jetpack Compose profile screen with ViewModel state handling.,1
+N-00190,Improve Excel macros for monthly finance workbook.,0
+A-01064,Build biometric login with unit tests and lint checks.,1
+A-01016,Increase instrumentation test reliability with Gradle CI tasks.,1
+A-01152,Design API client layer using Retrofit and coroutines.,1
+N-00058,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00265,Build login and signup flow using Kotlin and Compose.,1
+A-00724,Add error mapping for network responses in an Android app.,1
+N-00076,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-01177,Refactor password reset screen with MVVM and repository pattern.,1
+A-01076,Ship navigation graph with nested routes for Android 14+.,1
+A-00531,Migrate synchronization between API and Room for Android app.,1
+A-00648,Stabilize instrumentation test reliability for Android project.,1
+N-00046,Design a WordPress blog theme for travel agency.,0
+A-00874,Design API client layer in an Android app.,1
+A-00588,Create biometric login integrated with Retrofit APIs.,1
+N-00334,Improve Excel macros for monthly finance workbook.,0
+A-00990,Improve test coverage for ViewModel layer with Espresso and JUnit.,1
+N-00152,Improve Excel macros for monthly finance workbook.,0
+A-01083,Ship navigation graph with nested routes with ViewModel state handling.,1
+N-00088,Build an iOS SwiftUI shopping app checkout flow.,0
+A-01170,Implement synchronization between API and Room using Kotlin data classes.,1
+N-00181,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00119,Build Material 3 dashboard layout with Compose navigation.,1
+N-00220,Design a WordPress blog theme for travel agency.,0
+A-00428,Migrate DAO queries for dashboard with instrumentation tests.,1
+A-00429,Stabilize local cache invalidation strategy with instrumentation tests.,1
+A-01074,Migrate Room database schema for tasks using Kotlin data classes.,1
+N-00366,Create a PowerPoint deck for investor updates.,0
+A-01079,Ship Jetpack Compose profile screen with ViewModel state handling.,1
+A-00674,Implement OAuth token refresh integrated with Retrofit APIs.,1
+A-00562,Build Material 3 dashboard layout with UI tests for critical paths.,1
+A-00249,Build error mapping for network responses with clean architecture boundaries.,1
+A-00275,Redesign Jetpack Compose profile screen with ViewModel state handling.,1
+A-00964,Build API client layer with offline cache fallback.,1
+A-00599,Migrate synchronization between API and Room with instrumentation tests.,1
+A-00132,Optimize pagination for feed API in an Android app.,1
+N-00217,Generate SQL queries for warehouse ETL dashboard.,0
+N-00303,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+N-00378,Design a WordPress blog theme for travel agency.,0
+A-00776,Build Material 3 dashboard layout with ViewModel state handling.,1
+A-00754,Stabilize local cache invalidation strategy for Android app.,1
+A-00661,Increase crash-free startup flow with flaky test mitigation.,1
+A-00612,Build Jetpack Compose profile screen for Android 14+.,1
+A-00190,Enforce instrumentation test reliability for Android project.,1
+A-00073,Implement Room database schema for tasks using Kotlin data classes.,1
+A-00737,Stabilize Room database schema for tasks with instrumentation tests.,1
+A-01185,Increase lint and static analysis quality gate with Espresso and JUnit.,1
+A-00932,Implement Material 3 dashboard layout for Android 14+.,1
+A-00363,Migrate local cache invalidation strategy for Android app.,1
+A-01151,Enforce crash-free startup flow with flaky test mitigation.,1
+A-01172,Implement local cache invalidation strategy using Kotlin data classes.,1
+N-00018,Improve Excel macros for monthly finance workbook.,0
+N-00051,Create a Photoshop workflow for product photos.,0
+A-00582,Optimize Room database schema for tasks for Android app.,1
+A-00330,Implement Room database schema for tasks with repository layer updates.,1
+A-00365,Build Jetpack Compose profile screen for Android 14+.,1
+A-00853,Improve test coverage for ViewModel layer with Espresso and JUnit.,1
+N-00286,Create a Photoshop workflow for product photos.,0
+N-00165,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00179,Improve lint and static analysis quality gate with Gradle CI tasks.,1
+A-00678,Optimize API client layer in an Android app.,1
+A-00611,Improve instrumentation test reliability with Espresso and JUnit.,1
+N-00035,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-01183,Optimize synchronization between API and Room for Android app.,1
+N-00321,Generate SQL queries for warehouse ETL dashboard.,0
+N-00383,Create a Photoshop workflow for product photos.,0
+A-00075,Design error mapping for network responses with clean architecture boundaries.,1
+A-00714,Enforce lint and static analysis quality gate with Espresso and JUnit.,1
+N-00137,Improve Excel macros for monthly finance workbook.,0
+A-00112,Refactor OAuth token refresh with MVVM and repository pattern.,1
+A-00303,Stabilize synchronization between API and Room with repository layer updates.,1
+N-00354,Build an iOS SwiftUI shopping app checkout flow.,0
+N-00375,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00425,Optimize retry and timeout handling with offline cache fallback.,1
+N-00384,Design a WordPress blog theme for travel agency.,0
+N-00087,Create a Photoshop workflow for product photos.,0
+N-00069,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00569,Implement password reset screen using Kotlin and Compose.,1
+A-01120,Refactor password reset screen integrated with Retrofit APIs.,1
+A-00501,Improve test coverage for ViewModel layer with Gradle CI tasks.,1
+A-00013,Build login and signup flow integrated with Retrofit APIs.,1
+N-00029,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+N-00031,Build an iOS SwiftUI shopping app checkout flow.,0
+N-00339,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00904,Migrate synchronization between API and Room with instrumentation tests.,1
+A-00839,Add error mapping for network responses in an Android app.,1
+N-00240,Generate SQL queries for warehouse ETL dashboard.,0
+A-00974,Optimize API client layer in an Android app.,1
+N-00211,Design a WordPress blog theme for travel agency.,0
+N-00005,Design a WordPress blog theme for travel agency.,0
+A-00444,Refactor biometric login with unit tests and lint checks.,1
+A-00487,Create password reset screen with MVVM and repository pattern.,1
+A-01010,Migrate DAO queries for dashboard with repository layer updates.,1
+N-00300,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00011,Increase crash-free startup flow with Gradle CI tasks.,1
+A-01113,Implement synchronization between API and Room for Android app.,1
+A-01021,Build error mapping for network responses with clean architecture boundaries.,1
+A-01019,Implement local cache invalidation strategy using Kotlin data classes.,1
+A-00939,Refactor OAuth token refresh integrated with Retrofit APIs.,1
+A-00025,Implement login and signup flow with MVVM and repository pattern.,1
+A-00518,Migrate Room database schema for tasks for Android app.,1
+N-00075,Generate SQL queries for warehouse ETL dashboard.,0
+A-00007,Design API client layer in an Android app.,1
+N-00314,Improve Excel macros for monthly finance workbook.,0
+N-00355,Create a PowerPoint deck for investor updates.,0
+A-00240,Improve instrumentation test reliability with Espresso and JUnit.,1
+A-00370,Build navigation graph with nested routes with Compose navigation.,1
+N-00082,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00591,Optimize synchronization between API and Room using Kotlin data classes.,1
+A-00913,Add pagination for feed API in an Android app.,1
+A-00633,Improve lint and static analysis quality gate with Espresso and JUnit.,1
+A-00630,Stabilize DAO queries for dashboard with repository layer updates.,1
+A-00859,Refactor password reset screen with unit tests and lint checks.,1
+A-00105,Redesign state-driven settings screen with Compose navigation.,1
+N-00241,Generate SQL queries for warehouse ETL dashboard.,0
+A-00296,Optimize DAO queries for dashboard with instrumentation tests.,1
+A-00332,Stabilize local cache invalidation strategy for Android app.,1
+A-00307,Build biometric login using Kotlin and Compose.,1
+N-00150,Generate SQL queries for warehouse ETL dashboard.,0
+A-01158,Stabilize Room database schema for tasks with instrumentation tests.,1
+A-00686,Design API client layer using Retrofit and coroutines.,1
+A-00349,Build pagination for feed API with offline cache fallback.,1
+A-00089,Optimize local cache invalidation strategy using Kotlin data classes.,1
+N-00299,Create a PowerPoint deck for investor updates.,0
+A-01127,Build retry and timeout handling in an Android app.,1
+A-00775,Increase test coverage for ViewModel layer with Espresso and JUnit.,1
+A-00327,Implement Material 3 dashboard layout for Android 14+.,1
+N-00352,Improve Excel macros for monthly finance workbook.,0
+A-01047,Improve lint and static analysis quality gate with flaky test mitigation.,1
+A-00786,Migrate local cache invalidation strategy for Android app.,1
+N-00387,Design a WordPress blog theme for travel agency.,0
+A-00174,Ship Jetpack Compose profile screen for Android 14+.,1
+A-00743,Add error mapping for network responses with offline cache fallback.,1
+N-00098,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00920,Improve instrumentation test reliability with Gradle CI tasks.,1
+A-00233,Stabilize DAO queries for dashboard for Android app.,1
+A-00186,Stabilize lint and static analysis quality gate with Espresso and JUnit.,1
+A-00253,Optimize API client layer with clean architecture boundaries.,1
+N-00324,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+N-00128,Create a Photoshop workflow for product photos.,0
+N-00216,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00663,Implement Jetpack Compose profile screen with UI tests for critical paths.,1
+A-00512,Ship state-driven settings screen with UI tests for critical paths.,1
+A-00184,Build navigation graph with nested routes with ViewModel state handling.,1
+A-00931,Improve password reset screen with MVVM and repository pattern.,1
+A-00413,Build navigation graph with nested routes with ViewModel state handling.,1
+N-00008,Design a WordPress blog theme for travel agency.,0
+A-00929,Refactor login and signup flow using Kotlin and Compose.,1
+A-00366,Migrate local cache invalidation strategy with repository layer updates.,1
+A-00051,Optimize pagination for feed API with clean architecture boundaries.,1
+A-00923,Enforce instrumentation test reliability with Gradle CI tasks.,1
+A-00662,Implement Jetpack Compose profile screen for Android 14+.,1
+A-00846,Stabilize lint and static analysis quality gate with Gradle CI tasks.,1
+A-00805,Refactor login and signup flow with unit tests and lint checks.,1
+A-00277,Ship Jetpack Compose profile screen with UI tests for critical paths.,1
+A-01119,Optimize synchronization between API and Room with repository layer updates.,1
+N-00225,Improve Excel macros for monthly finance workbook.,0
+A-01198,Implement local cache invalidation strategy for Android app.,1
+A-00368,Implement OAuth token refresh integrated with Retrofit APIs.,1
+A-00231,Improve biometric login with MVVM and repository pattern.,1
+A-01025,Ship Jetpack Compose profile screen for Android 14+.,1
+A-00185,Stabilize instrumentation test reliability for Android project.,1
+A-00925,Optimize Room database schema for tasks using Kotlin data classes.,1
+N-00123,Design a WordPress blog theme for travel agency.,0
+A-00949,Stabilize lint and static analysis quality gate with Gradle CI tasks.,1
+A-00291,Improve OAuth token refresh with MVVM and repository pattern.,1
+A-01058,Optimize retry and timeout handling with clean architecture boundaries.,1
+N-00213,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00111,Redesign navigation graph with nested routes for Android 14+.,1
+N-00055,Create a Photoshop workflow for product photos.,0
+A-00602,Stabilize DAO queries for dashboard for Android app.,1
+A-00865,Implement local cache invalidation strategy with instrumentation tests.,1
+A-00340,Stabilize crash-free startup flow with Espresso and JUnit.,1
+A-00944,Stabilize lint and static analysis quality gate with Gradle CI tasks.,1
+A-00585,Optimize error mapping for network responses with offline cache fallback.,1
+A-00623,Stabilize synchronization between API and Room using Kotlin data classes.,1
+A-00815,Implement synchronization between API and Room for Android app.,1
+A-00900,Improve biometric login with MVVM and repository pattern.,1
+A-00596,Design API client layer with offline cache fallback.,1
+A-00388,Build state-driven settings screen with Compose navigation.,1
+A-00100,Stabilize DAO queries for dashboard using Kotlin data classes.,1
+N-00091,Improve Excel macros for monthly finance workbook.,0
+A-01057,Stabilize DAO queries for dashboard for Android app.,1
+N-00328,Build an iOS SwiftUI shopping app checkout flow.,0
+A-01142,Build state-driven settings screen with UI tests for critical paths.,1
+A-00080,Add retry and timeout handling using Retrofit and coroutines.,1
+A-00810,Implement navigation graph with nested routes with ViewModel state handling.,1
+A-01101,Implement Room database schema for tasks using Kotlin data classes.,1
+A-01062,Optimize synchronization between API and Room using Kotlin data classes.,1
+A-00503,Enforce test coverage for ViewModel layer with Gradle CI tasks.,1
+A-00086,Stabilize local cache invalidation strategy with instrumentation tests.,1
+A-00935,Add retry and timeout handling with clean architecture boundaries.,1
+A-00924,Refactor password reset screen with MVVM and repository pattern.,1
+A-00223,Create biometric login with unit tests and lint checks.,1
+A-01066,Implement OAuth token refresh integrated with Retrofit APIs.,1
+A-00078,Migrate synchronization between API and Room with repository layer updates.,1
+N-00242,Improve Excel macros for monthly finance workbook.,0
+N-00113,Improve Excel macros for monthly finance workbook.,0
+A-01075,Create biometric login with unit tests and lint checks.,1
+A-01098,Build API client layer with offline cache fallback.,1
+N-00016,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-01171,Implement biometric login with MVVM and repository pattern.,1
+N-00052,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00807,Improve biometric login with MVVM and repository pattern.,1
+A-00640,Refactor OAuth token refresh with MVVM and repository pattern.,1
+N-00274,Improve Excel macros for monthly finance workbook.,0
+A-00779,Build error mapping for network responses with clean architecture boundaries.,1
+N-00045,Generate SQL queries for warehouse ETL dashboard.,0
+A-00085,Optimize API client layer using Retrofit and coroutines.,1
+A-00829,Migrate Room database schema for tasks with repository layer updates.,1
+A-00875,Implement navigation graph with nested routes with Compose navigation.,1
+A-00505,Refactor OAuth token refresh integrated with Retrofit APIs.,1
+A-00937,Optimize pagination for feed API with offline cache fallback.,1
+A-00665,Optimize DAO queries for dashboard with instrumentation tests.,1
+N-00208,Build an iOS SwiftUI shopping app checkout flow.,0
+A-01003,Optimize retry and timeout handling with clean architecture boundaries.,1
+N-00351,Improve Excel macros for monthly finance workbook.,0
+A-00899,Stabilize DAO queries for dashboard using Kotlin data classes.,1
+A-00362,Add retry and timeout handling in an Android app.,1
+A-00135,Stabilize DAO queries for dashboard for Android app.,1
+A-00418,Design retry and timeout handling in an Android app.,1
+A-00415,Build pagination for feed API with offline cache fallback.,1
+N-00174,Create a Photoshop workflow for product photos.,0
+A-00455,Migrate Room database schema for tasks with repository layer updates.,1
+A-00845,Refactor login and signup flow with MVVM and repository pattern.,1
+A-00552,Improve test coverage for ViewModel layer for Android project.,1
+A-00030,Build Material 3 dashboard layout with Compose navigation.,1
+A-00836,Improve OAuth token refresh using Kotlin and Compose.,1
+A-00066,Stabilize local cache invalidation strategy with instrumentation tests.,1
+A-00463,Implement Material 3 dashboard layout with ViewModel state handling.,1
+A-00395,Build biometric login using Kotlin and Compose.,1
+A-00335,Ship navigation graph with nested routes with ViewModel state handling.,1
+A-00281,Ship Jetpack Compose profile screen for Android 14+.,1
+A-00970,Stabilize lint and static analysis quality gate for Android project.,1
+A-01006,Ship Material 3 dashboard layout with ViewModel state handling.,1
+A-00793,Optimize Room database schema for tasks for Android app.,1
+A-00376,Create OAuth token refresh using Kotlin and Compose.,1
+A-00765,Improve lint and static analysis quality gate with flaky test mitigation.,1
+N-00130,Create a PowerPoint deck for investor updates.,0
+N-00258,Design a WordPress blog theme for travel agency.,0
+A-00960,Ship Material 3 dashboard layout for Android 14+.,1
+N-00038,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-01028,Implement DAO queries for dashboard with repository layer updates.,1
+A-00274,Ship Material 3 dashboard layout for Android 14+.,1
+A-00976,Create biometric login using Kotlin and Compose.,1
+N-00209,Create a Photoshop workflow for product photos.,0
+A-00162,Implement Material 3 dashboard layout with UI tests for critical paths.,1
+A-00735,Build API client layer using Retrofit and coroutines.,1
+N-00353,Design a WordPress blog theme for travel agency.,0
+N-00207,Create a Photoshop workflow for product photos.,0
+N-00346,Create a PowerPoint deck for investor updates.,0
+A-00475,Implement biometric login with unit tests and lint checks.,1
+N-00021,Improve Excel macros for monthly finance workbook.,0
+A-00472,Increase crash-free startup flow with Gradle CI tasks.,1
+N-00054,Generate SQL queries for warehouse ETL dashboard.,0
+A-01161,Design error mapping for network responses in an Android app.,1
+N-00040,Write a LinkedIn marketing campaign plan for SaaS launch.,0
+A-00546,Add retry and timeout handling with offline cache fallback.,1
+N-00063,Design a WordPress blog theme for travel agency.,0
+N-00053,Improve Excel macros for monthly finance workbook.,0
+A-00053,Improve test coverage for ViewModel layer for Android project.,1
+A-00378,Optimize local cache invalidation strategy with repository layer updates.,1
+N-00399,Create a Photoshop workflow for product photos.,0
+A-00218,Ship navigation graph with nested routes with UI tests for critical paths.,1
+A-00384,Create password reset screen using Kotlin and Compose.,1
+A-00311,Build error mapping for network responses using Retrofit and coroutines.,1
+A-00560,Implement OAuth token refresh with MVVM and repository pattern.,1
+N-00312,Create a PowerPoint deck for investor updates.,0
+N-00104,Create a Photoshop workflow for product photos.,0
+N-00327,Improve Excel macros for monthly finance workbook.,0
+A-00907,Stabilize Room database schema for tasks for Android app.,1
+A-00621,Implement password reset screen using Kotlin and Compose.,1
+A-00842,Design error mapping for network responses with offline cache fallback.,1
+A-00847,Design error mapping for network responses in an Android app.,1
+A-00652,Enforce lint and static analysis quality gate with Gradle CI tasks.,1
+N-00367,Design a WordPress blog theme for travel agency.,0
+A-00060,Implement Room database schema for tasks with repository layer updates.,1
+N-00289,Design a WordPress blog theme for travel agency.,0
+A-00298,Build login and signup flow using Kotlin and Compose.,1
+N-00379,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00377,Increase lint and static analysis quality gate for Android project.,1
+A-00242,Increase lint and static analysis quality gate for Android project.,1
+N-00273,Improve Excel macros for monthly finance workbook.,0
+A-01091,Build error mapping for network responses using Retrofit and coroutines.,1
+A-01141,Stabilize crash-free startup flow with Espresso and JUnit.,1
+A-00138,Build API client layer using Retrofit and coroutines.,1
+A-00650,Optimize Room database schema for tasks with repository layer updates.,1
+A-00323,Migrate local cache invalidation strategy using Kotlin data classes.,1
+A-01156,Add error mapping for network responses using Retrofit and coroutines.,1
+N-00143,Build an iOS SwiftUI shopping app checkout flow.,0
+A-00297,Build OAuth token refresh integrated with Retrofit APIs.,1
+N-00377,Improve Excel macros for monthly finance workbook.,0
+A-00880,Create OAuth token refresh using Kotlin and Compose.,1
+A-00276,Build Jetpack Compose profile screen with UI tests for critical paths.,1
+A-01072,Increase lint and static analysis quality gate for Android project.,1
+N-00244,Build an iOS SwiftUI shopping app checkout flow.,0
+N-00210,Create a Photoshop workflow for product photos.,0
+A-00632,Stabilize local cache invalidation strategy with instrumentation tests.,1
+A-00282,Stabilize instrumentation test reliability with flaky test mitigation.,1
+A-00414,Refactor biometric login with unit tests and lint checks.,1
+N-00200,Build an iOS SwiftUI shopping app checkout flow.,0
+A-01108,Stabilize lint and static analysis quality gate for Android project.,1
+A-01189,Improve login and signup flow using Kotlin and Compose.,1
+A-00283,Optimize retry and timeout handling with offline cache fallback.,1
+N-00136,Generate SQL queries for warehouse ETL dashboard.,0
+A-00423,Enforce test coverage for ViewModel layer with flaky test mitigation.,1
+A-00269,Migrate local cache invalidation strategy with instrumentation tests.,1

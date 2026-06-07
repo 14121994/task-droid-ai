@@ -1,0 +1,78 @@
+{
+  "total_examples": 240,
+  "schema_validity_rate": 1.0,
+  "android_relevance_accuracy": 0.9416666666666667,
+  "avg_task_count": 4.133333333333334,
+  "sample_failures": [
+    {
+      "id": "A-00252",
+      "kind": "domain",
+      "error": "expected=True got=False"
+    },
+    {
+      "id": "A-00620",
+      "kind": "domain",
+      "error": "expected=True got=False"
+    },
+    {
+      "id": "A-00328",
+      "kind": "domain",
+      "error": "expected=True got=False"
+    },
+    {
+      "id": "A-00998",
+      "kind": "domain",
+      "error": "expected=True got=False"
+    },
+    {
+      "id": "A-00935",
+      "kind": "domain",
+      "error": "expected=True got=False"
+    },
+    {
+      "id": "A-00597",
+      "kind": "domain",
+      "error": "expected=True got=False"
+    },
+    {
+      "id": "A-00418",
+      "kind": "domain",
+      "error": "expected=True got=False"
+    },
+    {
+      "id": "A-00339",
+      "kind": "domain",
+      "error": "expected=True got=False"
+    },
+    {
+      "id": "A-01087",
+      "kind": "domain",
+      "error": "expected=True got=False"
+    },
+    {
+      "id": "A-00065",
+      "kind": "domain",
+      "error": "expected=True got=False"
+    },
+    {
+      "id": "A-01125",
+      "kind": "domain",
+      "error": "expected=True got=False"
+    },
+    {
+      "id": "A-01157",
+      "kind": "domain",
+      "error": "expected=True got=False"
+    },
+    {
+      "id": "A-01010",
+      "kind": "domain",
+      "error": "expected=True got=False"
+    },
+    {
+      "id": "A-01003",
+      "kind": "domain",
+      "error": "expected=True got=False"
+    }
+  ]
+}

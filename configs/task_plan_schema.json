@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TaskPlan",
+  "type": "object",
+  "required": [
+    "is_android_related",
+    "confidence",
+    "feature_summary",
+    "files_or_modules",
+    "implementation_tasks",
+    "acceptance_checks",
+    "risks",
+    "questions_for_user"
+  ],
+  "properties": {
+    "is_android_related": {
+      "type": "boolean"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "plan_quality_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "confidence_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "plan_category": {
+      "type": "string",
+      "enum": ["implementation", "discovery", "unsafe_refusal", "non_android_refusal"]
+    },
+    "refusal_category": {
+      "type": "string",
+      "enum": ["none", "unsafe_android_request", "non_android_request"]
+    },
+    "detected_intents": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "crash_triage",
+          "gradle_build",
+          "security_privacy",
+          "permissions_privacy",
+          "performance",
+          "accessibility",
+          "database",
+          "dependency_injection",
+          "modularization",
+          "release_deployment",
+          "background_work",
+          "notifications",
+          "location_maps",
+          "media_camera",
+          "billing_payments",
+          "analytics",
+          "localization",
+          "deep_links",
+          "authentication",
+          "networking",
+          "ui_compose",
+          "testing_quality"
+        ]
+      }
+    },
+    "requires_user_clarification": {
+      "type": "boolean"
+    },
+    "feature_summary": {
+      "type": "string"
+    },
+    "files_or_modules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "implementation_tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "description",
+          "layer",
+          "estimated_effort",
+          "dependencies"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "layer": {
+            "type": "string",
+            "enum": ["ui", "data", "domain", "testing", "build", "cross-cutting"]
+          },
+          "estimated_effort": {
+            "type": "string",
+            "enum": ["S", "M", "L"]
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "acceptance_checks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "questions_for_user": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
