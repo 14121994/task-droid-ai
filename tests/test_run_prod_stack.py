@@ -118,4 +118,5 @@ def test_run_prod_stack_validates_completions_and_chat_before_api(tmp_path):
     assert "Planner vLLM timeout: 120s" in result.stdout
     assert "Planner vLLM max tokens: 1024" in result.stdout
     assert "Planner vLLM response_format JSON: 1" in result.stdout
+    assert "Planner primary validation retries: 1" in result.stdout
     assert "fallback disabled" in result.stdout

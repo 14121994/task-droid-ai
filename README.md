@@ -343,12 +343,13 @@ data/
 - `TASKDROID_ALLOW_LOCAL_MACOS_VLLM=0`: default guard that refuses local macOS Qwen 3B vLLM startup for assistant readiness. Use `START_VLLM=0` with an accelerated OpenAI-compatible endpoint instead.
 - `PLANNER_VLLM_COMPLETION_MAX_TOKENS=1024`: max tokens for vLLM chat/completion generation; this allows fuller structured plans while leaving prompt headroom inside the default 32768-token context.
 - `PLANNER_VLLM_RESPONSE_FORMAT_JSON=1`: sends OpenAI-compatible JSON response mode for vLLM chat completions. If the selected runtime rejects `response_format`, startup fails instead of serving malformed planner output.
+- `PLANNER_PRIMARY_RETRIES=1`: retries the same vLLM backend once when the model returns JSON that fails the planner schema, appending the schema validation error to the retry prompt. This is not a rule fallback.
 - `PLANNER_HEALTH_GENERATION_PROBE=1`: production launcher default; `/health` marks readiness degraded if a bounded one-token generation probe fails.
 - `VLLM_STARTUP_GENERATION_PROBE=1`: production launcher default; stack startup fails before starting the API if vLLM cannot complete direct generation from `taskdroid-android-planner-v1`.
 - `VLLM_VALIDATE_COMPLETIONS=1` and `VLLM_VALIDATE_CHAT=1`: production launcher defaults; both `/v1/completions` and `/v1/chat/completions` must generate before the API starts.
 - `VLLM_STARTUP_PROBE_MAX_TOKENS=<tokens>`: defaults to `32` for the startup readiness probe, so startup validates generation without requiring a full planner-sized response.
 - The launcher appends `--generation-config vllm` to `VLLM_ARGS` when it is missing, so request-level deterministic sampling settings are not overridden by a model `generation_config.json`.
-- `PLANNER_PRIMARY_RETRIES=0`: extra primary-backend retries after the first failed attempt.
+- `PLANNER_PRIMARY_RETRIES=1`: extra primary-backend schema-validation retry after the first failed attempt.
 
 ## Intelligence Levels
 

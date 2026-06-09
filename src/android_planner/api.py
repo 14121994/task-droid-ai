@@ -283,7 +283,7 @@ def _status_code_for_backend_error(exc: Exception) -> int:
         return 504
     if "unavailable" in message or "in-flight generation" in message:
         return 503
-    if "malformed" in message or "non-json" in message:
+    if "malformed" in message or "non-json" in message or "failed validation" in message or "validating" in message:
         return 502
     return 500
 
