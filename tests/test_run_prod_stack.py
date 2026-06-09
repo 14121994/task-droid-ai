@@ -63,8 +63,6 @@ def _stubbed_env(tmp_path: Path, uname_value: str = "Linux") -> dict:
             "MODEL_ALIAS": "taskdroid-android-planner-v1",
             "VLLM_STARTUP_TIMEOUT_SECONDS": "2",
             "VLLM_GENERATION_PROBE_TIMEOUT_SECONDS": "2",
-            "PLANNER_VLLM_TIMEOUT_SECONDS": "25",
-            "PLANNER_VLLM_COMPLETION_MAX_TOKENS": "16",
         }
     )
     return env
@@ -113,5 +111,11 @@ def test_run_prod_stack_validates_completions_and_chat_before_api(tmp_path):
     assert "/v1/models" in curl_log
     assert "/v1/completions" in curl_log
     assert "/v1/chat/completions" in curl_log
+    assert '"max_tokens":32' in curl_log
+    assert '"response_format":{"type":"json_object"}' in curl_log
     assert "uvicorn android_planner.api:app" in python_log
+    assert "--max-model-len 32768" in python_log
+    assert "Planner vLLM timeout: 120s" in result.stdout
+    assert "Planner vLLM max tokens: 1024" in result.stdout
+    assert "Planner vLLM response_format JSON: 1" in result.stdout
     assert "fallback disabled" in result.stdout

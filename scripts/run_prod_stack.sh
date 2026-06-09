@@ -23,7 +23,7 @@ MODEL_NAME="${MODEL_NAME:-Qwen/Qwen2.5-3B-Instruct}"
 MODEL_ALIAS="${MODEL_ALIAS:-taskdroid-android-planner-v1}"
 START_VLLM="${START_VLLM:-1}"
 VLLM_STARTUP_TIMEOUT_SECONDS="${VLLM_STARTUP_TIMEOUT_SECONDS:-1800}"
-VLLM_MAX_MODEL_LEN="${VLLM_MAX_MODEL_LEN:-1024}"
+VLLM_MAX_MODEL_LEN="${VLLM_MAX_MODEL_LEN:-32768}"
 TASKDROID_ALLOW_LOCAL_MACOS_VLLM="${TASKDROID_ALLOW_LOCAL_MACOS_VLLM:-0}"
 TASKDROID_ALLOW_FLOAT32_VLLM="${TASKDROID_ALLOW_FLOAT32_VLLM:-0}"
 DEFAULT_VLLM_PYTHON_BIN="$HOME/.taskdroid/vllm313/bin/python"
@@ -39,7 +39,7 @@ elif [[ -x ".venv/bin/python" ]]; then
 else
   API_PYTHON_BIN="${API_PYTHON_BIN:-python}"
 fi
-VLLM_ARGS="${VLLM_ARGS:---gpu-memory-utilization 0.45 --dtype auto}"
+VLLM_ARGS="${VLLM_ARGS:---gpu-memory-utilization 0.90 --dtype auto}"
 if [[ " $VLLM_ARGS " != *" --generation-config "* ]]; then
   VLLM_ARGS="${VLLM_ARGS} --generation-config vllm"
 fi
@@ -68,14 +68,14 @@ unset PLANNER_HIGH_FALLBACK_BACKEND
 unset PLANNER_HIGH_FALLBACK_MODEL_PATH
 unset PLANNER_XHIGH_FALLBACK_BACKEND
 unset PLANNER_XHIGH_FALLBACK_MODEL_PATH
-export PLANNER_VLLM_TIMEOUT_SECONDS="${PLANNER_VLLM_TIMEOUT_SECONDS:-25}"
-export PLANNER_VLLM_COMPLETION_MAX_TOKENS="${PLANNER_VLLM_COMPLETION_MAX_TOKENS:-160}"
-export PLANNER_VLLM_RESPONSE_FORMAT_JSON="${PLANNER_VLLM_RESPONSE_FORMAT_JSON:-0}"
+export PLANNER_VLLM_TIMEOUT_SECONDS="${PLANNER_VLLM_TIMEOUT_SECONDS:-120}"
+export PLANNER_VLLM_COMPLETION_MAX_TOKENS="${PLANNER_VLLM_COMPLETION_MAX_TOKENS:-1024}"
+export PLANNER_VLLM_RESPONSE_FORMAT_JSON="${PLANNER_VLLM_RESPONSE_FORMAT_JSON:-1}"
 export PLANNER_HEALTH_GENERATION_PROBE="${PLANNER_HEALTH_GENERATION_PROBE:-1}"
 export PLANNER_HEALTH_PROBE_TIMEOUT_SECONDS="${PLANNER_HEALTH_PROBE_TIMEOUT_SECONDS:-5}"
 VLLM_STARTUP_GENERATION_PROBE="${VLLM_STARTUP_GENERATION_PROBE:-1}"
 VLLM_GENERATION_PROBE_TIMEOUT_SECONDS="${VLLM_GENERATION_PROBE_TIMEOUT_SECONDS:-180}"
-VLLM_STARTUP_PROBE_MAX_TOKENS="${VLLM_STARTUP_PROBE_MAX_TOKENS:-${PLANNER_VLLM_COMPLETION_MAX_TOKENS}}"
+VLLM_STARTUP_PROBE_MAX_TOKENS="${VLLM_STARTUP_PROBE_MAX_TOKENS:-32}"
 VLLM_VALIDATE_COMPLETIONS="${VLLM_VALIDATE_COMPLETIONS:-1}"
 VLLM_VALIDATE_CHAT="${VLLM_VALIDATE_CHAT:-1}"
 if [[ -z "${PLANNER_VLLM_API_MODE:-}" ]]; then
@@ -209,7 +209,13 @@ validate_vllm_generation() {
   local completion_payload
   completion_payload="{\"model\":\"${MODEL_ALIAS}\",\"prompt\":\"Return compact JSON only for Android planner readiness with keys is_android_related, confidence, feature_summary, files_or_modules, implementation_tasks, acceptance_checks, risks, questions_for_user. JSON:\",\"temperature\":0,\"max_tokens\":${VLLM_STARTUP_PROBE_MAX_TOKENS}}"
   local chat_payload
-  chat_payload="{\"model\":\"${MODEL_ALIAS}\",\"messages\":[{\"role\":\"system\",\"content\":\"Return compact JSON only.\"},{\"role\":\"user\",\"content\":\"Plan Android readiness check for passkey sign-in with recovery fallback. JSON:\"}],\"temperature\":0,\"max_tokens\":${VLLM_STARTUP_PROBE_MAX_TOKENS}}"
+  chat_payload="{\"model\":\"${MODEL_ALIAS}\",\"messages\":[{\"role\":\"system\",\"content\":\"Return compact JSON only.\"},{\"role\":\"user\",\"content\":\"Plan Android readiness check for passkey sign-in with recovery fallback. JSON:\"}],\"temperature\":0,\"max_tokens\":${VLLM_STARTUP_PROBE_MAX_TOKENS}"
+  case "$PLANNER_VLLM_RESPONSE_FORMAT_JSON" in
+    1|true|TRUE|yes|YES|on|ON)
+      chat_payload="${chat_payload},\"response_format\":{\"type\":\"json_object\"}"
+      ;;
+  esac
+  chat_payload="${chat_payload}}"
 
   if [[ "$VLLM_VALIDATE_COMPLETIONS" == "1" ]]; then
     run_vllm_generation_probe "completions" "/v1/completions" "$completion_payload"
