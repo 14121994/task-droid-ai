@@ -7,8 +7,8 @@ set -euo pipefail
 #
 # Usage:
 #   bash scripts/run_prod_stack.sh
-#   MODEL_NAME="Qwen/Qwen2.5-3B-Instruct" bash scripts/run_prod_stack.sh
-#   MODEL_ALIAS="taskdroid-android-planner-v1" MODEL_NAME="Qwen/Qwen2.5-3B-Instruct" bash scripts/run_prod_stack.sh
+#   MODEL_NAME="openai/gpt-oss-20b" bash scripts/run_prod_stack.sh
+#   MODEL_ALIAS="taskdroid-android-planner-v1" MODEL_NAME="openai/gpt-oss-20b" bash scripts/run_prod_stack.sh
 #   START_VLLM=0 VLLM_BASE_URL="http://127.0.0.1:8001" MODEL_ALIAS="taskdroid-android-planner-v1" bash scripts/run_prod_stack.sh
 
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
@@ -19,12 +19,20 @@ API_PORT="${API_PORT:-8000}"
 VLLM_HOST="${VLLM_HOST:-127.0.0.1}"
 VLLM_PORT="${VLLM_PORT:-8001}"
 VLLM_BASE_URL="${VLLM_BASE_URL:-http://${VLLM_HOST}:${VLLM_PORT}}"
-MODEL_NAME="${MODEL_NAME:-Qwen/Qwen2.5-3B-Instruct}"
+MODEL_NAME="${MODEL_NAME:-openai/gpt-oss-20b}"
 MODEL_ALIAS="${MODEL_ALIAS:-taskdroid-android-planner-v1}"
 START_VLLM="${START_VLLM:-1}"
 VLLM_STARTUP_TIMEOUT_SECONDS="${VLLM_STARTUP_TIMEOUT_SECONDS:-1800}"
-VLLM_MAX_MODEL_LEN="${VLLM_MAX_MODEL_LEN:-32768}"
-TASKDROID_ALLOW_LOCAL_MACOS_VLLM="${TASKDROID_ALLOW_LOCAL_MACOS_VLLM:-0}"
+if [[ -z "${VLLM_MAX_MODEL_LEN:-}" ]]; then
+  case "$MODEL_NAME" in
+    *gpt-oss-20b*)
+      VLLM_MAX_MODEL_LEN="65536"
+      ;;
+    *)
+      VLLM_MAX_MODEL_LEN="32768"
+      ;;
+  esac
+fi
 TASKDROID_ALLOW_FLOAT32_VLLM="${TASKDROID_ALLOW_FLOAT32_VLLM:-0}"
 DEFAULT_VLLM_PYTHON_BIN="$HOME/.taskdroid/vllm313/bin/python"
 if [[ -x "$DEFAULT_VLLM_PYTHON_BIN" ]]; then
@@ -44,7 +52,7 @@ if [[ " $VLLM_ARGS " != *" --generation-config "* ]]; then
   VLLM_ARGS="${VLLM_ARGS} --generation-config vllm"
 fi
 case "$MODEL_NAME" in
-  *Qwen2.5-3B-Instruct*)
+  *gpt-oss-20b*)
     if [[ " $VLLM_ARGS " != *" --max-model-len "* && " $VLLM_ARGS " != *" --max_model_len "* ]]; then
       VLLM_ARGS="${VLLM_ARGS} --max-model-len ${VLLM_MAX_MODEL_LEN}"
     fi
@@ -69,7 +77,7 @@ unset PLANNER_HIGH_FALLBACK_MODEL_PATH
 unset PLANNER_XHIGH_FALLBACK_BACKEND
 unset PLANNER_XHIGH_FALLBACK_MODEL_PATH
 export PLANNER_VLLM_TIMEOUT_SECONDS="${PLANNER_VLLM_TIMEOUT_SECONDS:-120}"
-export PLANNER_VLLM_COMPLETION_MAX_TOKENS="${PLANNER_VLLM_COMPLETION_MAX_TOKENS:-1024}"
+export PLANNER_VLLM_COMPLETION_MAX_TOKENS="${PLANNER_VLLM_COMPLETION_MAX_TOKENS:-2048}"
 export PLANNER_VLLM_RESPONSE_FORMAT_JSON="${PLANNER_VLLM_RESPONSE_FORMAT_JSON:-1}"
 export PLANNER_PRIMARY_RETRIES="${PLANNER_PRIMARY_RETRIES:-1}"
 export PLANNER_HEALTH_GENERATION_PROBE="${PLANNER_HEALTH_GENERATION_PROBE:-1}"
@@ -77,7 +85,16 @@ export PLANNER_HEALTH_PROBE_TIMEOUT_SECONDS="${PLANNER_HEALTH_PROBE_TIMEOUT_SECO
 VLLM_STARTUP_GENERATION_PROBE="${VLLM_STARTUP_GENERATION_PROBE:-1}"
 VLLM_GENERATION_PROBE_TIMEOUT_SECONDS="${VLLM_GENERATION_PROBE_TIMEOUT_SECONDS:-180}"
 VLLM_STARTUP_PROBE_MAX_TOKENS="${VLLM_STARTUP_PROBE_MAX_TOKENS:-32}"
-VLLM_VALIDATE_COMPLETIONS="${VLLM_VALIDATE_COMPLETIONS:-1}"
+if [[ -z "${VLLM_VALIDATE_COMPLETIONS:-}" ]]; then
+  case "$MODEL_NAME" in
+    *gpt-oss-20b*)
+      VLLM_VALIDATE_COMPLETIONS="0"
+      ;;
+    *)
+      VLLM_VALIDATE_COMPLETIONS="1"
+      ;;
+  esac
+fi
 VLLM_VALIDATE_CHAT="${VLLM_VALIDATE_CHAT:-1}"
 if [[ -z "${PLANNER_VLLM_API_MODE:-}" ]]; then
   case "$MODEL_NAME" in
@@ -100,17 +117,6 @@ cleanup() {
 }
 trap cleanup EXIT INT TERM
 
-is_qwen_3b_model() {
-  case "$MODEL_NAME" in
-    *Qwen2.5-3B-Instruct*)
-      return 0
-      ;;
-    *)
-      return 1
-      ;;
-  esac
-}
-
 enforce_runtime_guardrails() {
   if [[ "$START_VLLM" != "1" ]]; then
     return
@@ -121,16 +127,6 @@ enforce_runtime_guardrails() {
       echo "Refusing to start production vLLM with --dtype float32." >&2
       echo "Use --dtype auto, fp16/bfloat16 where supported, or a quantized/accelerated endpoint." >&2
       echo "Set TASKDROID_ALLOW_FLOAT32_VLLM=1 only for diagnostics, not assistant integration." >&2
-      exit 1
-    fi
-  fi
-
-  if [[ "$(uname -s)" == "Darwin" ]] && is_qwen_3b_model; then
-    if [[ "$TASKDROID_ALLOW_LOCAL_MACOS_VLLM" != "1" ]]; then
-      echo "Refusing to start local macOS vLLM for ${MODEL_NAME} in production mode." >&2
-      echo "The observed local macOS vLLM path serves this model on CPU and stalls during generation." >&2
-      echo "Use START_VLLM=0 with a CUDA/Linux vLLM endpoint, or another OpenAI-compatible accelerated endpoint." >&2
-      echo "Set TASKDROID_ALLOW_LOCAL_MACOS_VLLM=1 only for diagnostics, not assistant integration." >&2
       exit 1
     fi
   fi

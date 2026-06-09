@@ -1,6 +1,6 @@
 PYTHON ?= python3
 
-.PHONY: install test coverage lint generate-data gold-data gold-approved gold-ready release-gates train-baseline eval-baseline train-torch build-sft eval-planner api prod
+.PHONY: install test coverage lint generate-data gold-data gold-approved gold-ready release-gates train-baseline eval-baseline train-torch build-sft train-gpt-oss eval-planner api prod
 
 install:
 	$(PYTHON) -m pip install -r requirements.txt
@@ -42,6 +42,9 @@ train-torch:
 
 build-sft:
 	$(PYTHON) scripts/build_sft_dataset.py
+
+train-gpt-oss:
+	$(PYTHON) scripts/train_gpt_oss_planner.py
 
 eval-planner:
 	$(PYTHON) scripts/evaluate_planner_outputs.py

@@ -27,16 +27,18 @@ def _format_row(example: Dict[str, Any], tokenizer: AutoTokenizer) -> Dict[str, 
     return {"text": text}
 
 
-def _target_modules(model_name: str) -> list[str]:
+def _target_modules(model_name: str) -> str | list[str]:
     lower = model_name.lower()
     if "gpt2" in lower:
         return ["c_attn", "c_proj"]
+    if "gpt-oss" in lower or "gpt_oss" in lower:
+        return "all-linear"
     return ["q_proj", "k_proj", "v_proj", "o_proj", "up_proj", "down_proj", "gate_proj"]
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Fine-tune planner model with LoRA.")
-    parser.add_argument("--model-name", type=str, default="Qwen/Qwen2.5-3B-Instruct")
+    parser.add_argument("--model-name", type=str, default="openai/gpt-oss-20b")
     parser.add_argument("--train-file", type=str, default="data/processed/sft_train.jsonl")
     parser.add_argument("--val-file", type=str, default="data/processed/sft_val.jsonl")
     parser.add_argument("--output-dir", type=str, default="data/models/android-lora-planner")
@@ -47,8 +49,9 @@ def main() -> int:
     parser.add_argument("--learning-rate", type=float, default=2e-4)
     parser.add_argument("--use-bf16", action="store_true")
     parser.add_argument("--target-modules", nargs="+", default=None)
+    parser.add_argument("--trust-remote-code", action="store_true")
     parser.add_argument("--cache-dir", type=str, default="data/cache/huggingface")
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
 
     if not os.path.exists(args.train_file) or not os.path.exists(args.val_file):
         raise ValueError("SFT files missing. Run scripts/build_sft_dataset.py first.")
@@ -64,7 +67,12 @@ def main() -> int:
         cache_dir=args.cache_dir,
     )
 
-    tokenizer = AutoTokenizer.from_pretrained(args.model_name, use_fast=True, cache_dir=args.cache_dir)
+    tokenizer = AutoTokenizer.from_pretrained(
+        args.model_name,
+        use_fast=True,
+        cache_dir=args.cache_dir,
+        trust_remote_code=args.trust_remote_code,
+    )
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
     tokenizer.model_max_length = args.max_seq_length
@@ -83,14 +91,19 @@ def main() -> int:
         torch_dtype=dtype,
         device_map="auto" if has_cuda else None,
         cache_dir=args.cache_dir,
+        trust_remote_code=args.trust_remote_code,
     )
+
+    target_modules = args.target_modules or _target_modules(args.model_name)
+    if target_modules == ["all-linear"]:
+        target_modules = "all-linear"
 
     peft_config = LoraConfig(
         r=16,
         lora_alpha=32,
         lora_dropout=0.05,
         bias="none",
-        target_modules=args.target_modules or _target_modules(args.model_name),
+        target_modules=target_modules,
         task_type="CAUSAL_LM",
     )
 

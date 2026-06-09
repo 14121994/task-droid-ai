@@ -61,12 +61,15 @@ def test_vllm_backend_uses_chat_completions(monkeypatch):
     monkeypatch.setattr("urllib.request.urlopen", fake_urlopen)
 
     backend = VLLMPlannerBackend(base_url="http://127.0.0.1:8001", model_name="chat-model")
-    plan = backend.plan("Build Android login flow")
+    plan = backend.plan("Build Android login flow", intelligence_level="high")
 
     assert plan.feature_summary == plan_dict["feature_summary"]
     assert calls == ["http://127.0.0.1:8001/v1/chat/completions"]
     assert payloads[0]["max_tokens"] == 256
     assert "response_format" not in payloads[0]
+    assert payloads[0]["messages"][0]["role"] == "system"
+    assert "Planner intelligence_level: high" in payloads[0]["messages"][0]["content"]
+    assert payloads[0]["messages"][1] == {"role": "user", "content": "Build Android login flow"}
 
 
 def test_vllm_backend_can_opt_into_chat_response_format(monkeypatch):

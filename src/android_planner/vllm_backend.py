@@ -9,34 +9,8 @@ import urllib.error
 import urllib.request
 from typing import Dict
 
+from .prompting import build_completion_prompt, build_planner_messages
 from .schemas import TaskPlan
-
-SYSTEM_PROMPT = (
-    "You are taskdroid-android-planner-v1. Return exactly one JSON object and no markdown, commentary, "
-    "code fences, or trailing prose. The object must include these top-level keys: is_android_related, "
-    "confidence, plan_quality_score, confidence_reasons, plan_category, refusal_category, detected_intents, "
-    "requires_user_clarification, feature_summary, files_or_modules, implementation_tasks, acceptance_checks, "
-    "risks, questions_for_user. Use arrays even when empty. detected_intents must contain only these enum ids: "
-    "crash_triage, gradle_build, security_privacy, permissions_privacy, performance, accessibility, database, "
-    "dependency_injection, modularization, release_deployment, background_work, notifications, location_maps, "
-    "media_camera, billing_payments, analytics, localization, deep_links, authentication, networking, "
-    "ui_compose, testing_quality. Never invent human-readable detected_intents such as account recovery; map "
-    "passkeys, sign-in, login, account recovery, credentials, sessions, and tokens to authentication. Map unit "
-    "tests and regression coverage to testing_quality. plan_category must be one of implementation, "
-    "discovery, unsafe_refusal, non_android_refusal. refusal_category must be one of none, "
-    "unsafe_android_request, non_android_request. implementation_tasks must contain 1-3 objects with id, title, "
-    "description, layer, estimated_effort, dependencies. layer must be one of ui, data, domain, testing, build, "
-    "cross-cutting. estimated_effort must be S, M, or L. Example shape: "
-    '{"is_android_related":true,"confidence":0.88,"plan_quality_score":0.86,'
-    '"confidence_reasons":["Android authentication request"],"plan_category":"implementation",'
-    '"refusal_category":"none","detected_intents":["authentication"],"requires_user_clarification":false,'
-    '"feature_summary":"Plan passkey sign-in with recovery fallback",'
-    '"files_or_modules":["AuthViewModel.kt","AuthRepository.kt"],'
-    '"implementation_tasks":[{"id":"T1","title":"Define auth state","description":"Model passkey and recovery states.",'
-    '"layer":"domain","estimated_effort":"M","dependencies":[]}],'
-    '"acceptance_checks":["Unit tests cover passkey success and recovery fallback"],'
-    '"risks":["Credential provider differences"],"questions_for_user":[]}'
-)
 
 
 class VLLMBackendError(RuntimeError):
@@ -121,15 +95,12 @@ class VLLMPlannerBackend:
             "error": None if ok else "vLLM generation probe returned no choices",
         }
 
-    def _plan_unlocked(self, prompt: str, intelligence_level: str = "medium") -> TaskPlan:  # noqa: ARG002
+    def _plan_unlocked(self, prompt: str, intelligence_level: str = "medium") -> TaskPlan:
         if self.api_mode == "chat":
             payload: Dict = {
                 "model": self.model_name,
                 "temperature": 0,
-                "messages": [
-                    {"role": "system", "content": SYSTEM_PROMPT},
-                    {"role": "user", "content": prompt},
-                ],
+                "messages": build_planner_messages(prompt, intelligence_level),
                 "max_tokens": self.completion_max_tokens,
             }
             if self.use_response_format:
@@ -156,7 +127,7 @@ class VLLMPlannerBackend:
         completion_payload: Dict = {
             "model": self.model_name,
             "temperature": 0,
-            "prompt": self._build_completion_prompt(prompt),
+            "prompt": build_completion_prompt(prompt, intelligence_level),
             "max_tokens": self.completion_max_tokens,
         }
         try:
@@ -197,20 +168,11 @@ class VLLMPlannerBackend:
             raise
         except urllib.error.URLError as exc:
             reason = exc.reason
-            if isinstance(reason, TimeoutError | socket.timeout) or "timed out" in str(reason).lower():
+            if isinstance(reason, (TimeoutError, socket.timeout)) or "timed out" in str(reason).lower():
                 raise VLLMBackendError(f"vLLM request timed out after {timeout:g}s.") from exc
             raise
         except (TimeoutError, socket.timeout) as exc:
             raise VLLMBackendError(f"vLLM request timed out after {timeout:g}s.") from exc
-
-    @staticmethod
-    def _build_completion_prompt(prompt: str) -> str:
-        return (
-            f"{SYSTEM_PROMPT}\n"
-            "Return valid JSON only.\n"
-            f"User request: {prompt}\n"
-            "JSON:"
-        )
 
     @staticmethod
     def _extract_json_object(text: str) -> Dict:

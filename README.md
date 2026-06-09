@@ -51,6 +51,25 @@ PYTHONPATH=src python scripts/train_lora_planner.py \
   --epochs 1 --batch-size 1 --grad-accum 1 --max-seq-length 256
 ```
 
+Build a mode-aware SFT dataset and fine-tune the planner on `openai/gpt-oss-20b`:
+
+```bash
+PYTHONPATH=src python scripts/train_gpt_oss_planner.py \
+  --model-name openai/gpt-oss-20b \
+  --input-file data/raw/prompt_plans.jsonl \
+  --processed-dir data/processed/gpt_oss_20b \
+  --output-dir data/models/taskdroid-gpt-oss-20b-lora \
+  --epochs 2 \
+  --batch-size 1 \
+  --grad-accum 16 \
+  --max-seq-length 4096
+```
+
+This expands each source prompt into low, medium, high, and xhigh training rows and uses the same
+intelligence-level prompt contract as the vLLM backend. Full `openai/gpt-oss-20b` training requires a suitable
+GPU setup and model download; use `--skip-build-dataset` to resume training from an already-built
+`data/processed/gpt_oss_20b` directory.
+
 Run API:
 
 ```bash
@@ -83,19 +102,25 @@ Use custom vLLM launcher settings on a Linux/CUDA host or another runtime that c
 ```bash
 VLLM_PYTHON_BIN="$HOME/.taskdroid/vllm313/bin/python" \
 VLLM_ARGS="--gpu-memory-utilization 0.90 --dtype auto --generation-config vllm" \
-VLLM_MAX_MODEL_LEN=32768 \
+VLLM_MAX_MODEL_LEN=65536 \
 PLANNER_VLLM_TIMEOUT_SECONDS=120 \
-PLANNER_VLLM_COMPLETION_MAX_TOKENS=1024 \
+PLANNER_VLLM_COMPLETION_MAX_TOKENS=2048 \
 MODEL_ALIAS="taskdroid-android-planner-v1" \
-MODEL_NAME="Qwen/Qwen2.5-3B-Instruct" \
+MODEL_NAME="openai/gpt-oss-20b" \
 bash scripts/run_prod_stack.sh
 ```
 
-The production launcher refuses the known-bad local macOS Qwen 3B vLLM path by default because that path was
-observed serving on CPU and stalling during generation. For macOS, run an OpenAI-compatible accelerated local
-server if available, or point `START_VLLM=0` at a Linux/CUDA vLLM endpoint. Diagnostic overrides exist
-(`TASKDROID_ALLOW_LOCAL_MACOS_VLLM=1`, `TASKDROID_ALLOW_FLOAT32_VLLM=1`), but do not use them for AI Assistant
-integration readiness.
+Serve a gpt-oss based runtime under the same public planner alias:
+
+```bash
+MODEL_ALIAS="taskdroid-android-planner-v1" \
+MODEL_NAME="openai/gpt-oss-20b" \
+bash scripts/run_prod_stack.sh
+```
+
+For macOS, run an OpenAI-compatible accelerated local server if available, or point `START_VLLM=0` at a
+Linux/CUDA vLLM endpoint. The diagnostic `TASKDROID_ALLOW_FLOAT32_VLLM=1` override exists, but do not use it
+for AI Assistant integration readiness.
 
 ### vLLM Setup Notes (macOS / paths with spaces)
 
@@ -146,9 +171,9 @@ Stable integration model name:
 Notes:
 - `sshleifer/tiny-gpt2` is useful for startup smoke checks but is not ideal for production planning quality.
 - Prefer an instruct/chat model for better JSON planning output quality.
-- The launcher sets `Qwen/Qwen2.5-3B-Instruct` to `VLLM_MAX_MODEL_LEN=32768` by default and uses `--gpu-memory-utilization 0.90`. This requires an accelerated runtime with enough KV-cache memory; the known local macOS CPU vLLM path remains blocked by default.
+- The launcher sets `openai/gpt-oss-20b` to `VLLM_MAX_MODEL_LEN=65536` by default and uses `--gpu-memory-utilization 0.90`. This requires an accelerated runtime with enough KV-cache memory.
 - API fallback is disabled in the production launcher. If vLLM fails, times out, or returns invalid planner JSON, `/plan` returns an error instead of serving a deterministic rule-based plan.
-- The production launcher runs both `/v1/completions` and `/v1/chat/completions` generation probes before starting the API. A model-listing-only `/v1/models` success is not considered enough for assistant readiness.
+- The production launcher runs the `/v1/chat/completions` generation probe before starting the API. A model-listing-only `/v1/models` success is not considered enough for assistant readiness.
 - Higher levels only become materially smarter after you configure stronger underlying models for those levels.
 
 ## Output Contract
@@ -338,15 +363,14 @@ data/
 - `PLANNER_BACKEND=hf` and `PLANNER_MODEL_PATH=<local-model-dir>`: local HF model.
 - `PLANNER_BACKEND=vllm` and `PLANNER_MODEL_PATH=http://host:port::model_alias`: vLLM OpenAI-compatible backend.
 - `PLANNER_VLLM_TIMEOUT_SECONDS=120`: per-request timeout for vLLM HTTP calls before the API returns a structured vLLM-only error.
-- `VLLM_MAX_MODEL_LEN=32768`: default vLLM context length appended for `Qwen/Qwen2.5-3B-Instruct` unless `VLLM_ARGS` already includes a max-model-len option.
+- `VLLM_MAX_MODEL_LEN`: defaults to `65536` for `openai/gpt-oss-20b` and `32768` for other model names; appended for `openai/gpt-oss-20b` unless `VLLM_ARGS` already includes a max-model-len option.
 - `VLLM_ARGS="--gpu-memory-utilization 0.90 --dtype auto --generation-config vllm"`: default vLLM args for a GPU-backed runtime with enough KV-cache memory. The production launcher refuses `--dtype float32` unless `TASKDROID_ALLOW_FLOAT32_VLLM=1` is set for diagnostics.
-- `TASKDROID_ALLOW_LOCAL_MACOS_VLLM=0`: default guard that refuses local macOS Qwen 3B vLLM startup for assistant readiness. Use `START_VLLM=0` with an accelerated OpenAI-compatible endpoint instead.
-- `PLANNER_VLLM_COMPLETION_MAX_TOKENS=1024`: max tokens for vLLM chat/completion generation; this allows fuller structured plans while leaving prompt headroom inside the default 32768-token context.
+- `PLANNER_VLLM_COMPLETION_MAX_TOKENS=2048`: production max tokens for vLLM chat/completion generation; this allows fuller structured plans while leaving prompt headroom inside the configured context window.
 - `PLANNER_VLLM_RESPONSE_FORMAT_JSON=1`: sends OpenAI-compatible JSON response mode for vLLM chat completions. If the selected runtime rejects `response_format`, startup fails instead of serving malformed planner output.
 - `PLANNER_PRIMARY_RETRIES=1`: retries the same vLLM backend once when the model returns JSON that fails the planner schema, appending the schema validation error to the retry prompt. This is not a rule fallback.
 - `PLANNER_HEALTH_GENERATION_PROBE=1`: production launcher default; `/health` marks readiness degraded if a bounded one-token generation probe fails.
 - `VLLM_STARTUP_GENERATION_PROBE=1`: production launcher default; stack startup fails before starting the API if vLLM cannot complete direct generation from `taskdroid-android-planner-v1`.
-- `VLLM_VALIDATE_COMPLETIONS=1` and `VLLM_VALIDATE_CHAT=1`: production launcher defaults; both `/v1/completions` and `/v1/chat/completions` must generate before the API starts.
+- `VLLM_VALIDATE_COMPLETIONS`: defaults to `1`, except `openai/gpt-oss-20b` defaults to `0`; `VLLM_VALIDATE_CHAT=1` remains enabled so chat generation must work before the API starts.
 - `VLLM_STARTUP_PROBE_MAX_TOKENS=<tokens>`: defaults to `32` for the startup readiness probe, so startup validates generation without requiring a full planner-sized response.
 - The launcher appends `--generation-config vllm` to `VLLM_ARGS` when it is missing, so request-level deterministic sampling settings are not overridden by a model `generation_config.json`.
 - `PLANNER_PRIMARY_RETRIES=1`: extra primary-backend schema-validation retry after the first failed attempt.
