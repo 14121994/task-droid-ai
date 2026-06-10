@@ -25,6 +25,16 @@ SYSTEM_PROMPT = (
     "cross-cutting. estimated_effort must be S, M, or L."
 )
 
+OUTPUT_TEMPLATE = (
+    'Required JSON shape: {"is_android_related":true,"confidence":0.0,"plan_quality_score":0.0,'
+    '"confidence_reasons":["reason"],"plan_category":"implementation","refusal_category":"none",'
+    '"detected_intents":["authentication"],"requires_user_clarification":false,'
+    '"feature_summary":"short summary","files_or_modules":["FileOrModule.kt"],'
+    '"implementation_tasks":[{"id":"T1","title":"Task title","description":"Task detail","layer":"ui",'
+    '"estimated_effort":"M","dependencies":[]}],"acceptance_checks":["check"],"risks":["risk"],'
+    '"questions_for_user":[]}.'
+)
+
 DEPTH_GUIDANCE: dict[IntelligenceLevel, str] = {
     "low": (
         "Produce a concise plan: 1-3 implementation tasks, the minimum useful files/modules, core risks, and "
@@ -71,6 +81,7 @@ def build_system_prompt(intelligence_level: str) -> str:
         f"Reasoning: {gpt_oss_reasoning_level(level)}\n"
         f"Planner intelligence_level: {level}\n"
         f"{SYSTEM_PROMPT}\n"
+        f"{OUTPUT_TEMPLATE}\n"
         f"Depth guidance: {DEPTH_GUIDANCE[level]}"
     )
 

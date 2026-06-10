@@ -85,6 +85,7 @@ export PLANNER_HEALTH_PROBE_TIMEOUT_SECONDS="${PLANNER_HEALTH_PROBE_TIMEOUT_SECO
 VLLM_STARTUP_GENERATION_PROBE="${VLLM_STARTUP_GENERATION_PROBE:-1}"
 VLLM_GENERATION_PROBE_TIMEOUT_SECONDS="${VLLM_GENERATION_PROBE_TIMEOUT_SECONDS:-180}"
 VLLM_STARTUP_PROBE_MAX_TOKENS="${VLLM_STARTUP_PROBE_MAX_TOKENS:-32}"
+VLLM_MODEL_LIST_PROBE_TIMEOUT_SECONDS="${VLLM_MODEL_LIST_PROBE_TIMEOUT_SECONDS:-2}"
 if [[ -z "${VLLM_VALIDATE_COMPLETIONS:-}" ]]; then
   case "$MODEL_NAME" in
     *gpt-oss-20b*)
@@ -163,7 +164,9 @@ enforce_runtime_guardrails
 wait_for_vllm_models() {
   echo "Waiting up to ${VLLM_STARTUP_TIMEOUT_SECONDS}s for vLLM readiness at ${VLLM_BASE_URL}/v1/models"
   for ((elapsed = 0; elapsed < VLLM_STARTUP_TIMEOUT_SECONDS; elapsed += 2)); do
-    if curl -fsS "${VLLM_BASE_URL}/v1/models" >/dev/null 2>&1; then
+    if curl --connect-timeout "$VLLM_MODEL_LIST_PROBE_TIMEOUT_SECONDS" \
+      --max-time "$VLLM_MODEL_LIST_PROBE_TIMEOUT_SECONDS" \
+      -fsS "${VLLM_BASE_URL}/v1/models" >/dev/null 2>&1; then
       echo "vLLM is ready"
       return
     fi

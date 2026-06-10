@@ -162,6 +162,74 @@ def test_vllm_backend_extracts_noisy_chat_json_with_braces_in_strings(monkeypatc
     assert plan.questions_for_user == ["Should the UI show literal braces like {retry}?"]
 
 
+def test_vllm_backend_normalizes_schema_drifted_chat_json(monkeypatch):
+    drifted_plan = {
+        "plan": {
+            "is_android_related": "yes",
+            "confidence": "92",
+            "quality_score": "88",
+            "summary": "Plan passkey sign-in with account recovery fallback",
+            "files": "AuthViewModel.kt",
+            "tasks": [
+                {
+                    "task_id": "T1",
+                    "name": "Define ViewModel boundary",
+                    "details": "Keep UI state and sign-in events in AuthViewModel.",
+                    "layer": "ViewModel",
+                    "effort": "medium",
+                },
+                {
+                    "task_id": "T2",
+                    "name": "Own passkey operations in repository",
+                    "details": "Route Credential Manager and recovery calls through AuthRepository.",
+                    "layer": "repository",
+                    "effort": "large",
+                    "depends_on": "T1",
+                },
+            ],
+            "acceptance_criteria": "Unit tests cover passkey success and recovery fallback",
+            "risks": None,
+            "questions": "none",
+            "detected_intents": ["login", "unit tests"],
+        }
+    }
+
+    class FakeResponse:
+        def __enter__(self):
+            return self
+
+        def __exit__(self, exc_type, exc, tb):  # noqa: ANN001
+            return False
+
+        def read(self) -> bytes:
+            payload = {"choices": [{"message": {"content": json.dumps(drifted_plan)}}]}
+            return json.dumps(payload).encode("utf-8")
+
+    def fake_urlopen(request, timeout=60):  # noqa: ANN001, ARG001
+        return FakeResponse()
+
+    monkeypatch.setattr("urllib.request.urlopen", fake_urlopen)
+
+    backend = VLLMPlannerBackend(base_url="http://127.0.0.1:8001", model_name="chat-model")
+    plan = backend.plan(
+        "Plan Android work for passkey sign-in with account recovery fallback.",
+        intelligence_level="low",
+    )
+
+    assert plan.confidence == 0.92
+    assert plan.plan_quality_score == 0.88
+    assert plan.feature_summary == "Plan passkey sign-in with account recovery fallback"
+    assert plan.files_or_modules == ["AuthViewModel.kt"]
+    assert plan.implementation_tasks[0].layer == "ui"
+    assert plan.implementation_tasks[1].layer == "data"
+    assert plan.implementation_tasks[1].estimated_effort == "L"
+    assert plan.implementation_tasks[1].dependencies == ["T1"]
+    assert plan.acceptance_checks == ["Unit tests cover passkey success and recovery fallback"]
+    assert plan.risks == []
+    assert plan.questions_for_user == []
+    assert plan.detected_intents == ["authentication", "testing_quality"]
+
+
 def test_vllm_backend_uses_configured_timeout(monkeypatch):
     plan_dict = _sample_plan_dict()
     observed_timeouts = []
