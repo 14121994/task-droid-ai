@@ -18,9 +18,8 @@ else
   export PYTHONPATH="src"
 fi
 
-RELOAD_ARGS=()
 if [[ "$API_RELOAD" == "1" ]]; then
-  RELOAD_ARGS=(--reload)
+  "$API_PYTHON_BIN" -m uvicorn android_planner.api:app --host "$API_HOST" --port "$API_PORT" --reload
+else
+  "$API_PYTHON_BIN" -m uvicorn android_planner.api:app --host "$API_HOST" --port "$API_PORT"
 fi
-
-"$API_PYTHON_BIN" -m uvicorn android_planner.api:app --host "$API_HOST" --port "$API_PORT" "${RELOAD_ARGS[@]}"

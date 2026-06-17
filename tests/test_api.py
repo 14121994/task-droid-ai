@@ -210,6 +210,45 @@ def test_plan_endpoint_blocks_unsafe_android_prompt():
     assert body["backend"] == "rule"
 
 
+def test_quota_status_endpoint_returns_current_preferences(monkeypatch):
+    monkeypatch.setattr(
+        "android_planner.api.build_quota_status",
+        lambda: {
+            "project_id": "taskdroid-planner-training",
+            "refreshed_at": "2026-06-12T16:01:33+00:00",
+            "quotas": [
+                {
+                    "service": "compute.googleapis.com",
+                    "quota_id": "GPUS-ALL-REGIONS-per-project",
+                    "scope": "Global",
+                    "requested": "1",
+                    "granted": "1",
+                    "status": "Approved",
+                    "trace_id": "trace-global",
+                }
+            ],
+        },
+    )
+
+    client = TestClient(create_app())
+    response = client.get("/quota-status")
+
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["project_id"] == "taskdroid-planner-training"
+    assert payload["quotas"][0]["quota_id"] == "GPUS-ALL-REGIONS-per-project"
+
+
+def test_quota_dashboard_endpoint_returns_refreshable_page():
+    client = TestClient(create_app())
+    response = client.get("/quota-dashboard")
+
+    assert response.status_code == 200
+    assert "text/html" in response.headers["content-type"]
+    assert 'id="refresh"' in response.text
+    assert "fetch(\"/quota-status\"" in response.text
+
+
 def test_plan_endpoint_returns_crash_triage_tasks():
     client = TestClient(create_app())
     response = client.post(

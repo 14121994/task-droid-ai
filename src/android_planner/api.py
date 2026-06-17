@@ -8,10 +8,12 @@ from dataclasses import dataclass
 from typing import Literal
 
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import HTMLResponse
 from pydantic import BaseModel, Field, field_validator
 
 from .guardrails import PlanValidator, plan_with_retry
 from .inference import build_backend
+from .quota_status import QuotaStatusError, build_quota_status, quota_dashboard_html
 from .schemas import TaskPlan
 
 IntelligenceLevel = Literal["low", "medium", "high", "xhigh"]
@@ -178,6 +180,23 @@ def create_app() -> FastAPI:
                     "latency_ms": _elapsed_ms(started_at),
                 },
             ) from exc
+
+    @app.get("/quota-status")
+    def quota_status_endpoint() -> dict:
+        try:
+            return build_quota_status()
+        except QuotaStatusError as exc:
+            raise HTTPException(
+                status_code=503,
+                detail={
+                    "error": "quota_status_unavailable",
+                    "message": str(exc),
+                },
+            ) from exc
+
+    @app.get("/quota-dashboard", response_class=HTMLResponse)
+    def quota_dashboard_endpoint() -> HTMLResponse:
+        return HTMLResponse(quota_dashboard_html())
 
     return app
 
