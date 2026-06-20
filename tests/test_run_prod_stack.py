@@ -1,7 +1,10 @@
 import os
+import shutil
 import subprocess
 import textwrap
 from pathlib import Path
+
+import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "scripts" / "run_prod_stack.sh"
@@ -68,6 +71,8 @@ def _stubbed_env(tmp_path: Path, uname_value: str = "Linux") -> dict:
 
 
 def _run_stack(env: dict) -> subprocess.CompletedProcess:
+    if shutil.which("bash") is None:
+        pytest.skip("bash is required to exercise run_prod_stack.sh")
     return subprocess.run(
         ["bash", str(SCRIPT)],
         cwd=ROOT,

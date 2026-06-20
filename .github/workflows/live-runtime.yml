@@ -1,0 +1,73 @@
+name: Live Runtime Smoke Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PYTHONPATH: src
+  MODEL_ALIAS: taskdroid-android-planner-v1
+  API_HOST: 127.0.0.1
+  API_PORT: "8000"
+
+jobs:
+  live-runtime:
+    name: API against vLLM endpoint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Require remote vLLM endpoint
+        env:
+          VLLM_BASE_URL: ${{ secrets.VLLM_BASE_URL }}
+        run: |
+          if [ -z "$VLLM_BASE_URL" ]; then
+            echo "::error::Set repository secret VLLM_BASE_URL, for example http://your-vllm-host:8001"
+            exit 1
+          fi
+
+      - name: Start planner API
+        env:
+          START_VLLM: "0"
+          VLLM_BASE_URL: ${{ secrets.VLLM_BASE_URL }}
+          PLANNER_VLLM_TIMEOUT_SECONDS: "120"
+          PLANNER_VLLM_COMPLETION_MAX_TOKENS: "2048"
+          PLANNER_VLLM_RESPONSE_FORMAT_JSON: "1"
+          PLANNER_PRIMARY_RETRIES: "1"
+          PLANNER_HEALTH_GENERATION_PROBE: "1"
+        run: |
+          bash scripts/run_prod_stack.sh &
+          for attempt in $(seq 1 60); do
+            if curl -fsS "http://${API_HOST}:${API_PORT}/health" >/tmp/taskdroid-health.json; then
+              cat /tmp/taskdroid-health.json
+              exit 0
+            fi
+            sleep 2
+          done
+          echo "::error::Planner API did not become reachable"
+          exit 1
+
+      - name: Runtime release gates
+        run: |
+          python scripts/release_gates.py \
+            --min-approved 50 \
+            --run-tests \
+            --check-runtime \
+            --api-base-url "http://${API_HOST}:${API_PORT}" \
+            --vllm-base-url "${{ secrets.VLLM_BASE_URL }}" \
+            --expected-model-alias "${MODEL_ALIAS}"
