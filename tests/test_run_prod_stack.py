@@ -86,12 +86,24 @@ def _run_stack(env: dict) -> subprocess.CompletedProcess:
 
 def test_run_prod_stack_rejects_float32_vllm_args(tmp_path):
     env = _stubbed_env(tmp_path, uname_value="Linux")
+    env["VLLM_DEVICE"] = "gpu"
     env["VLLM_ARGS"] = "--gpu-memory-utilization 0.45 --dtype float32 --generation-config vllm"
 
     result = _run_stack(env)
 
     assert result.returncode == 1
     assert "Refusing to start production vLLM with --dtype float32" in result.stderr
+
+
+def test_run_prod_stack_rejects_gpu_args_in_cpu_profile(tmp_path):
+    env = _stubbed_env(tmp_path, uname_value="Linux")
+    env["VLLM_DEVICE"] = "cpu"
+    env["VLLM_ARGS"] = "--gpu-memory-utilization 0.45 --dtype auto --generation-config vllm"
+
+    result = _run_stack(env)
+
+    assert result.returncode == 1
+    assert "Refusing to start CPU vLLM with --gpu-memory-utilization" in result.stderr
 
 
 def test_run_prod_stack_allows_default_model_on_macos(tmp_path):
@@ -119,6 +131,8 @@ def test_run_prod_stack_defaults_gpt_oss_20b_to_65536_context_and_chat_probe(tmp
     assert "uvicorn android_planner.api:app" in python_log
     assert "--model openai/gpt-oss-20b" in python_log
     assert "--max-model-len 65536" in python_log
+    assert "--dtype bfloat16" in python_log
+    assert "--gpu-memory-utilization" not in python_log
     assert "Planner vLLM timeout: 120s" in result.stdout
     assert "Planner vLLM max tokens: 2048" in result.stdout
     assert "Planner vLLM response_format JSON: 1" in result.stdout

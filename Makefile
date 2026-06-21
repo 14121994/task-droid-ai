@@ -1,6 +1,6 @@
 PYTHON ?= python3
 
-.PHONY: install test coverage lint generate-data gold-data gold-approved gold-ready release-gates train-baseline eval-baseline train-torch build-sft train-gpt-oss eval-planner api prod
+.PHONY: install test coverage lint generate-data gold-data gold-approved gold-ready release-gates release-gates-runtime verify-runtime deploy-up deploy-down train-baseline eval-baseline train-torch build-sft train-gpt-oss eval-planner api prod
 
 install:
 	$(PYTHON) -m pip install -r requirements.txt
@@ -30,6 +30,18 @@ gold-ready:
 
 release-gates:
 	$(PYTHON) scripts/release_gates.py --min-approved 50 --run-tests
+
+release-gates-runtime:
+	$(PYTHON) scripts/release_gates.py --min-approved 50 --run-tests --check-runtime --expected-model-alias taskdroid-android-planner-v1
+
+verify-runtime:
+	$(PYTHON) scripts/verify_taskdroid_deployment.py
+
+deploy-up:
+	docker compose --env-file deploy/taskdroid.prod.env -f deploy/docker-compose.taskdroid.yml up -d
+
+deploy-down:
+	docker compose --env-file deploy/taskdroid.prod.env -f deploy/docker-compose.taskdroid.yml down
 
 train-baseline:
 	$(PYTHON) scripts/train_baseline_classifier.py

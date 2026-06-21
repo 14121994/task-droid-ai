@@ -82,11 +82,11 @@ Optional API launcher settings:
 API_HOST=127.0.0.1 API_PORT=8080 API_RELOAD=0 bash scripts/run_api.sh
 ```
 
-Run production profile (`vLLM only; deterministic rule fallback disabled`) with an accelerated endpoint:
+Run production profile (`vLLM only; deterministic rule fallback disabled`) with an existing OpenAI-compatible endpoint:
 
 ```bash
 START_VLLM=0 \
-VLLM_BASE_URL="http://<accelerated-vllm-host>:8001" \
+VLLM_BASE_URL="http://<vllm-host>:8001" \
 MODEL_ALIAS="taskdroid-android-planner-v1" \
 bash scripts/run_prod_stack.sh
 ```
@@ -97,11 +97,14 @@ If you already have a running vLLM endpoint:
 START_VLLM=0 VLLM_BASE_URL="http://127.0.0.1:8001" MODEL_ALIAS="taskdroid-android-planner-v1" bash scripts/run_prod_stack.sh
 ```
 
-Use custom vLLM launcher settings on a Linux/CUDA host or another runtime that can actually generate tokens:
+Use custom vLLM launcher settings on a Linux CPU host:
 
 ```bash
 VLLM_PYTHON_BIN="$HOME/.taskdroid/vllm313/bin/python" \
-VLLM_ARGS="--gpu-memory-utilization 0.90 --dtype auto --generation-config vllm" \
+VLLM_DEVICE=cpu \
+VLLM_ARGS="--dtype bfloat16 --generation-config vllm" \
+VLLM_CPU_KVCACHE_SPACE=16 \
+VLLM_CPU_NUM_OF_RESERVED_CPU=1 \
 VLLM_MAX_MODEL_LEN=65536 \
 PLANNER_VLLM_TIMEOUT_SECONDS=120 \
 PLANNER_VLLM_COMPLETION_MAX_TOKENS=2048 \
@@ -109,6 +112,8 @@ MODEL_ALIAS="taskdroid-android-planner-v1" \
 MODEL_NAME="openai/gpt-oss-20b" \
 bash scripts/run_prod_stack.sh
 ```
+
+For a GPU-backed vLLM process, set `VLLM_DEVICE=gpu` and use GPU-specific `VLLM_ARGS`.
 
 Serve a gpt-oss based runtime under the same public planner alias:
 
@@ -118,9 +123,9 @@ MODEL_NAME="openai/gpt-oss-20b" \
 bash scripts/run_prod_stack.sh
 ```
 
-For macOS, run an OpenAI-compatible accelerated local server if available, or point `START_VLLM=0` at a
-Linux/CUDA vLLM endpoint. The diagnostic `TASKDROID_ALLOW_FLOAT32_VLLM=1` override exists, but do not use it
-for AI Assistant integration readiness.
+For macOS, run an OpenAI-compatible local server if available, or point `START_VLLM=0` at a Linux vLLM endpoint.
+The diagnostic `TASKDROID_ALLOW_FLOAT32_VLLM=1` override exists for GPU profiles, but do not use it for AI
+Assistant integration readiness.
 
 ### vLLM Setup Notes (macOS / paths with spaces)
 
@@ -171,7 +176,7 @@ Stable integration model name:
 Notes:
 - `sshleifer/tiny-gpt2` is useful for startup smoke checks but is not ideal for production planning quality.
 - Prefer an instruct/chat model for better JSON planning output quality.
-- The launcher sets `openai/gpt-oss-20b` to `VLLM_MAX_MODEL_LEN=65536` by default and uses `--gpu-memory-utilization 0.90`. This requires an accelerated runtime with enough KV-cache memory.
+- The launcher sets `openai/gpt-oss-20b` to `VLLM_MAX_MODEL_LEN=65536` by default. The default local vLLM profile is CPU (`VLLM_DEVICE=cpu`) and uses `--dtype bfloat16`; set `VLLM_DEVICE=gpu` for accelerated hosts.
 - API fallback is disabled in the production launcher. If vLLM fails, times out, or returns invalid planner JSON, `/plan` returns an error instead of serving a deterministic rule-based plan.
 - The production launcher runs the `/v1/chat/completions` generation probe before starting the API. A model-listing-only `/v1/models` success is not considered enough for assistant readiness.
 - Higher levels only become materially smarter after you configure stronger underlying models for those levels.
@@ -364,7 +369,8 @@ data/
 - `PLANNER_BACKEND=vllm` and `PLANNER_MODEL_PATH=http://host:port::model_alias`: vLLM OpenAI-compatible backend.
 - `PLANNER_VLLM_TIMEOUT_SECONDS=120`: per-request timeout for vLLM HTTP calls before the API returns a structured vLLM-only error.
 - `VLLM_MAX_MODEL_LEN`: defaults to `65536` for `openai/gpt-oss-20b` and `32768` for other model names; appended for `openai/gpt-oss-20b` unless `VLLM_ARGS` already includes a max-model-len option.
-- `VLLM_ARGS="--gpu-memory-utilization 0.90 --dtype auto --generation-config vllm"`: default vLLM args for a GPU-backed runtime with enough KV-cache memory. The production launcher refuses `--dtype float32` unless `TASKDROID_ALLOW_FLOAT32_VLLM=1` is set for diagnostics.
+- `VLLM_DEVICE=cpu`: default local vLLM launcher profile. It sets CPU runtime environment defaults and rejects GPU-only `--gpu-memory-utilization` flags.
+- `VLLM_ARGS="--dtype bfloat16 --generation-config vllm"`: default CPU vLLM args. For a GPU-backed runtime, set `VLLM_DEVICE=gpu`; the production launcher refuses GPU `--dtype float32` unless `TASKDROID_ALLOW_FLOAT32_VLLM=1` is set for diagnostics.
 - `PLANNER_VLLM_COMPLETION_MAX_TOKENS=2048`: production max tokens for vLLM chat/completion generation; this allows fuller structured plans while leaving prompt headroom inside the configured context window.
 - `PLANNER_VLLM_RESPONSE_FORMAT_JSON=1`: sends OpenAI-compatible JSON response mode for vLLM chat completions. If the selected runtime rejects `response_format`, startup fails instead of serving malformed planner output.
 - `PLANNER_PRIMARY_RETRIES=1`: retries the same vLLM backend once when the model returns JSON that fails the planner schema, appending the schema validation error to the retry prompt. This is not a rule fallback.
@@ -463,7 +469,20 @@ Makefile shortcuts:
 ```bash
 make gold-ready
 make release-gates
+make verify-runtime
 ```
+
+Production deployment artifacts live in `deploy/`:
+
+```bash
+cp deploy/taskdroid.prod.env.example deploy/taskdroid.prod.env
+make deploy-up
+python scripts/verify_taskdroid_deployment.py \
+  --vllm-base-url http://YOUR_VLLM_HOST:8001 \
+  --api-base-url http://YOUR_API_HOST:8000
+```
+
+See `docs/taskdroid_production_release.md` for the release runbook and Ask The Assistant connection steps.
 
 ## Reference Resources
 

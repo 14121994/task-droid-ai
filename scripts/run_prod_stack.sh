@@ -22,6 +22,7 @@ VLLM_BASE_URL="${VLLM_BASE_URL:-http://${VLLM_HOST}:${VLLM_PORT}}"
 MODEL_NAME="${MODEL_NAME:-openai/gpt-oss-20b}"
 MODEL_ALIAS="${MODEL_ALIAS:-taskdroid-android-planner-v1}"
 START_VLLM="${START_VLLM:-1}"
+VLLM_DEVICE="${VLLM_DEVICE:-cpu}"
 VLLM_STARTUP_TIMEOUT_SECONDS="${VLLM_STARTUP_TIMEOUT_SECONDS:-1800}"
 if [[ -z "${VLLM_MAX_MODEL_LEN:-}" ]]; then
   case "$MODEL_NAME" in
@@ -47,7 +48,23 @@ elif [[ -x ".venv/bin/python" ]]; then
 else
   API_PYTHON_BIN="${API_PYTHON_BIN:-python}"
 fi
-VLLM_ARGS="${VLLM_ARGS:---gpu-memory-utilization 0.90 --dtype auto}"
+case "$VLLM_DEVICE" in
+  cpu)
+    export VLLM_CPU_KVCACHE_SPACE="${VLLM_CPU_KVCACHE_SPACE:-16}"
+    export VLLM_CPU_NUM_OF_RESERVED_CPU="${VLLM_CPU_NUM_OF_RESERVED_CPU:-1}"
+    if [[ -n "${VLLM_CPU_OMP_THREADS_BIND:-}" ]]; then
+      export VLLM_CPU_OMP_THREADS_BIND
+    fi
+    VLLM_ARGS="${VLLM_ARGS:---dtype bfloat16}"
+    ;;
+  gpu|cuda)
+    VLLM_ARGS="${VLLM_ARGS:---gpu-memory-utilization 0.90 --dtype auto}"
+    ;;
+  *)
+    echo "Unsupported VLLM_DEVICE: ${VLLM_DEVICE}. Expected cpu, gpu, or cuda." >&2
+    exit 1
+    ;;
+esac
 if [[ " $VLLM_ARGS " != *" --generation-config "* ]]; then
   VLLM_ARGS="${VLLM_ARGS} --generation-config vllm"
 fi
@@ -123,13 +140,19 @@ enforce_runtime_guardrails() {
     return
   fi
 
-  if [[ " $VLLM_ARGS " == *" --dtype float32 "* || " $VLLM_ARGS " == *" --dtype=float32 "* ]]; then
+  if [[ "$VLLM_DEVICE" != "cpu" ]] && [[ " $VLLM_ARGS " == *" --dtype float32 "* || " $VLLM_ARGS " == *" --dtype=float32 "* ]]; then
     if [[ "$TASKDROID_ALLOW_FLOAT32_VLLM" != "1" ]]; then
       echo "Refusing to start production vLLM with --dtype float32." >&2
       echo "Use --dtype auto, fp16/bfloat16 where supported, or a quantized/accelerated endpoint." >&2
       echo "Set TASKDROID_ALLOW_FLOAT32_VLLM=1 only for diagnostics, not assistant integration." >&2
       exit 1
     fi
+  fi
+
+  if [[ "$VLLM_DEVICE" == "cpu" && " $VLLM_ARGS " == *" --gpu-memory-utilization "* ]]; then
+    echo "Refusing to start CPU vLLM with --gpu-memory-utilization." >&2
+    echo "Set VLLM_DEVICE=gpu for accelerated hosts, or remove GPU-only flags from VLLM_ARGS." >&2
+    exit 1
   fi
 }
 
@@ -246,6 +269,7 @@ PY
   echo "Starting vLLM server on ${VLLM_HOST}:${VLLM_PORT}"
   echo "Base model: ${MODEL_NAME}"
   echo "Served model alias: ${MODEL_ALIAS}"
+  echo "vLLM device profile: ${VLLM_DEVICE}"
   echo "Using vLLM python: ${VLLM_PYTHON_BIN}"
   echo "vLLM args: ${VLLM_ARGS}"
   # shellcheck disable=SC2086

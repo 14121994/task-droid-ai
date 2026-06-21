@@ -1,0 +1,65 @@
+services:
+  vllm:
+    image: ${TASKDROID_VLLM_IMAGE:-vllm/vllm-openai-cpu:latest-x86_64}
+    restart: unless-stopped
+    shm_size: ${TASKDROID_VLLM_SHM_SIZE:-4g}
+    cap_add:
+      - SYS_NICE
+    security_opt:
+      - seccomp=unconfined
+    environment:
+      MODEL_NAME: ${MODEL_NAME:-openai/gpt-oss-20b}
+      MODEL_ALIAS: ${MODEL_ALIAS:-taskdroid-android-planner-v1}
+      VLLM_MAX_MODEL_LEN: ${VLLM_MAX_MODEL_LEN:-65536}
+      VLLM_DTYPE: ${VLLM_DTYPE:-bfloat16}
+      VLLM_CPU_KVCACHE_SPACE: ${VLLM_CPU_KVCACHE_SPACE:-16}
+      VLLM_CPU_NUM_OF_RESERVED_CPU: ${VLLM_CPU_NUM_OF_RESERVED_CPU:-1}
+      VLLM_EXTRA_ARGS: ${VLLM_EXTRA_ARGS:-}
+      HUGGING_FACE_HUB_TOKEN: ${HUGGING_FACE_HUB_TOKEN:-}
+    entrypoint: ["/bin/sh", "-lc"]
+    command:
+      - >
+        python -m vllm.entrypoints.openai.api_server
+        --model "${MODEL_NAME:-openai/gpt-oss-20b}"
+        --served-model-name "${MODEL_ALIAS:-taskdroid-android-planner-v1}"
+        --host 0.0.0.0
+        --port 8001
+        --dtype "${VLLM_DTYPE:-bfloat16}"
+        --generation-config vllm
+        --max-model-len "${VLLM_MAX_MODEL_LEN:-65536}"
+        ${VLLM_EXTRA_ARGS:-}
+    ports:
+      - "${TASKDROID_VLLM_HOST_PORT:-8001}:8001"
+    healthcheck:
+      test: ["CMD-SHELL", "python - <<'PY'\nimport json, urllib.request\nbody = json.loads(urllib.request.urlopen('http://127.0.0.1:8001/v1/models', timeout=3).read())\nids = [row.get('id') for row in body.get('data', [])]\nraise SystemExit(0 if '${MODEL_ALIAS:-taskdroid-android-planner-v1}' in ids else 1)\nPY"]
+      interval: 30s
+      timeout: 5s
+      start_period: 20m
+      retries: 20
+
+  taskdroid-api:
+    image: ${TASKDROID_API_IMAGE:-ghcr.io/14121994/task-droid-ai:main}
+    restart: unless-stopped
+    depends_on:
+      vllm:
+        condition: service_healthy
+    environment:
+      API_HOST: 0.0.0.0
+      API_PORT: 8000
+      PLANNER_BACKEND: vllm
+      PLANNER_MODEL_PATH: http://vllm:8001::${MODEL_ALIAS:-taskdroid-android-planner-v1}
+      PLANNER_MODEL_ALIAS: ${MODEL_ALIAS:-taskdroid-android-planner-v1}
+      PLANNER_VLLM_TIMEOUT_SECONDS: ${PLANNER_VLLM_TIMEOUT_SECONDS:-120}
+      PLANNER_VLLM_COMPLETION_MAX_TOKENS: ${PLANNER_VLLM_COMPLETION_MAX_TOKENS:-2048}
+      PLANNER_VLLM_RESPONSE_FORMAT_JSON: ${PLANNER_VLLM_RESPONSE_FORMAT_JSON:-1}
+      PLANNER_PRIMARY_RETRIES: ${PLANNER_PRIMARY_RETRIES:-1}
+      PLANNER_HEALTH_GENERATION_PROBE: ${PLANNER_HEALTH_GENERATION_PROBE:-1}
+      PLANNER_HEALTH_PROBE_TIMEOUT_SECONDS: ${PLANNER_HEALTH_PROBE_TIMEOUT_SECONDS:-5}
+    ports:
+      - "${TASKDROID_API_HOST_PORT:-8000}:8000"
+    healthcheck:
+      test: ["CMD-SHELL", "python - <<'PY'\nimport json, urllib.request\nbody = json.loads(urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=5).read())\nraise SystemExit(0 if body.get('ready') is True else 1)\nPY"]
+      interval: 30s
+      timeout: 10s
+      start_period: 2m
+      retries: 10

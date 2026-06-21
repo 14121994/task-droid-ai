@@ -41,7 +41,7 @@ docker run --rm -p 8000:8000 \
   -e PLANNER_VLLM_COMPLETION_MAX_TOKENS=2048 \
   -e PLANNER_VLLM_RESPONSE_FORMAT_JSON=1 \
   -e PLANNER_PRIMARY_RETRIES=1 \
-  ghcr.io/OWNER/REPO:main
+  ghcr.io/14121994/task-droid-ai:main
 ```
 
 Then verify:
@@ -52,3 +52,24 @@ curl -X POST http://127.0.0.1:8000/plan \
   -H "Content-Type: application/json" \
   -d '{"prompt":"Build Android login with Compose, ViewModel, Retrofit, and tests.","intelligence_level":"high"}'
 ```
+
+## Full Production Compose Stack
+
+For a Linux CPU host that should run both vLLM and the API container:
+
+```bash
+cp deploy/taskdroid.prod.env.example deploy/taskdroid.prod.env
+docker compose --env-file deploy/taskdroid.prod.env \
+  -f deploy/docker-compose.taskdroid.yml up -d
+```
+
+Then verify the full chain:
+
+```bash
+python scripts/verify_taskdroid_deployment.py \
+  --vllm-base-url http://YOUR_VLLM_HOST:8001 \
+  --api-base-url http://YOUR_API_HOST:8000 \
+  --expected-model-alias taskdroid-android-planner-v1
+```
+
+See `docs/taskdroid_production_release.md` for the end-to-end release and Ask The Assistant setup runbook.
